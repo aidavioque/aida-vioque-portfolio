@@ -3,11 +3,12 @@ import { useState } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-// import Link from 'next/link'
+import Link from 'next/link'
 import { InView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import cx from 'classnames';
 
-const Section = ({ children, className }) => {
+const Section = ({ children, className, id }) => {
   const [isInView, setIsInView] = useState(false);
   const variants = {
     visible: { opacity: 1, scale: 1, y: 0 },
@@ -20,7 +21,8 @@ const Section = ({ children, className }) => {
   return (
     <InView as="div" onChange={(inView) => setIsInView(inView)}>
       <motion.div
-        className={className}
+        id={id}
+        className={cx("pt-24", className)}
         animate={isInView ? 'visible' : 'hidden'}
         transition={{ duration: 2, ease: 'easeOut' }}
         variants={variants}
@@ -30,6 +32,41 @@ const Section = ({ children, className }) => {
    </InView>
   )
 };
+
+const Menu = () => (
+  <ul className="flex">
+      <li className="pr-6">
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </li>
+      <li className="pr-6">
+        <Link href="/#work">
+          <a>Work</a>
+        </Link>
+      </li>
+      <li className="pr-6">
+        <Link href="/#soft-skills">
+          <a>Soft skills</a>
+        </Link>
+      </li>
+      <li className="pr-6">
+        <Link href="/#projects">
+          <a>Projects</a>
+        </Link>
+      </li>
+      <li className="pr-6">
+        <Link href="/#other-work">
+          <a>Other work</a>
+        </Link>
+      </li>
+      <li className="pr-6">
+        <Link href="/#contact">
+          <a>Contact</a>
+        </Link>
+      </li>
+    </ul>
+);
 
 export default function Home() {
   return (
@@ -41,7 +78,7 @@ export default function Home() {
       </Head>
       <main className="min-h-screen p-8 overflow-auto relative bg-backround">
         <section className="min-h-screen relative">
-          <h1 className="font-sans text-9xl pb-24">
+          <h1 className="font-sans text-9xl pb-24 text-primary">
             <div>
               Aida
             </div>
@@ -57,13 +94,15 @@ export default function Home() {
                 aspectRatio: '819/668' }}>
             <Image src="/aida.avif" alt="Aida photo" layout="fill" />
           </div>
-          <a href="mailto:aida.aranvio@gmail.com" className="absolute top-4 right-4 font-sans text-primary">
-            Contact
-            <img src="/ufo.svg" alt="contact" height={60} width={60}  className={styles.contact}/>
-          </a>
+          <div className="absolute top-4 right-4 font-sans text-primary flex">
+            <Menu />
+          </div>
         </section>
-        <Section className="min-h-screen text-primary">
+        <Section id="work" className="min-h-screen text-primary">
           <div>
+            <h3 className="font-sans text-right text-6xl mb-36">
+              Work
+            </h3>
             <div className="font-sans text-3xl">
               Product designer
             </div>
@@ -74,14 +113,56 @@ export default function Home() {
               Oh no
             </div>
           </div>
-          Yar Pirate Ipsum
-          Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
-
-          Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
-
-          Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.
+        </Section>
+        <Section id="soft-skills" className="min-h-screen text-primary">
+          <div>
+            <h3 className="font-sans text-right text-6xl mb-36">
+              Soft Skills
+            </h3>
+            <div className="font-sans text-3xl">
+              Product designer
+            </div>
+            <div className="font-sans text-3xl">
+              Alligator
+            </div>
+            <div className="font-sans text-3xl">
+              Oh no
+            </div>
+          </div>
+        </Section>
+        <Section id="projects" className="min-h-screen text-primary">
+          <div>
+            <h3 className="font-sans text-right text-6xl mb-36">
+              Projects
+            </h3>
+            <div className="font-sans text-3xl">
+              Product designer
+            </div>
+            <div className="font-sans text-3xl">
+              Alligator
+            </div>
+            <div className="font-sans text-3xl">
+              Oh no
+            </div>
+          </div>
+        </Section>
+        <Section id="contact" className="min-h-screen text-primary">
+          <div>
+            <a href="mailto:aida.aranvio@gmail.com">
+              Contact
+              <img src="/ufo.svg" alt="contact" height={60} width={60}  className={styles.contact}/>
+            </a>
+          </div>
         </Section>
       </main>
+      <footer className="text-primary fixed bottom-0 left-0 pb-6 pt-2 pl-12 w-full bg-backround">
+        <a href="mailto:aida.aranvio@gmail.com">
+          aida.vioque@gmail.com
+        </a>
+        <Link href="/" >
+          <a className="text-right pl-6 text-primary">⬆</a>
+        </Link>
+      </footer>
     </div>
   )
 }
