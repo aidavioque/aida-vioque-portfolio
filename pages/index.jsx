@@ -4,10 +4,10 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import Header from '../components/header';
+import Footer from '../components/footer';
 import { InView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import cx from 'classnames';
-import aidaVioque from '../public/aida.avif';
 
 const Section = ({ children, className, id }) => {
   const [isInView, setIsInView] = useState(false);
@@ -43,14 +43,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-h-screen p-8 overflow-auto relative bg-backround">
-        <section className="min-h-screen relative">
-          <h1 className="font-sans text-9xl pb-24 text-primary">
-            <div>Aida</div>
-            <div>Aranguren</div>
-          </h1>
-          <h2 className="font-sans text-4xl pb-24 text-primary">
-            Hi! I'm a Product designer
-          </h2>
+        <section className="min-h-screen relative flex justify-center">
+          <div className="container">
+            <h1 className="font-sans text-9xl pb-24 text-primary">
+              <div>Aida</div>
+              <div>Aranguren</div>
+            </h1>
+            <h2 className="font-sans text-4xl pb-24 text-primary">
+              Hi! I'm a Product designer
+            </h2>
+          </div>
         </section>
         <Header />
         <Section id="about" className="min-h-screen text-primary">
@@ -126,14 +128,7 @@ export default function Home() {
           </div>
         </Section>
       </main>
-      <footer className="text-primary fixed bottom-0 left-0 pb-6 pt-2 pl-12 w-full bg-backround">
-        <a href="mailto:aida.aranvio@gmail.com" className="hover:scale-110">
-          aida.aranvio@gmail.com
-        </a>
-        <Link href="/">
-          <a className="text-right pl-6 text-primary hover:scale-110">⬆</a>
-        </Link>
-      </footer>
+      <Footer />
     </div>
   );
 }
