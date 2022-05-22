@@ -50,7 +50,7 @@ export default function Home() {
               <div>Aranguren</div>
             </h1>
             <h2 className="font-sans text-4xl pb-24 text-primary">
-              Hi! I'm a Product designer
+              Hi! I'm a great Product designer
             </h2>
           </div>
         </section>
