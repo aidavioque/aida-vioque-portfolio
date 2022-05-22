@@ -44,8 +44,8 @@ export default function Home() {
         <meta name="description" content="Aida Aranguren Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="p-8 overflow-auto relative bg-backround">
-        <section className="min-h-screen relative flex justify-center">
+      <main className="min-h-screen p-8 overflow-auto relative bg-backround">
+        <section className="relative flex justify-center">
           <div className="container flex flex-col lg:flex-row justify-between">
             <div className="min-w-1/2 flex-1 ">
               <h1 className="font-sans text-7xl lg:text-9xl pb-12 lg:pb-24 text-primary">
