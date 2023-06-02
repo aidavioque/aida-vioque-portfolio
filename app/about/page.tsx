@@ -4,7 +4,17 @@ import Link from 'next/link';
 import cx from 'classnames';
 import Section from 'app/components/section/section';
 
-const AboutComponent = ({ children }) => (
+interface AboutField {
+  title: string;
+  isEven?: boolean;
+  children?: React.ReactNode;
+}
+
+interface AboutComponentProps {
+  children: React.ReactNode;
+}
+
+const AboutComponent = ({ children }: AboutComponentProps) => (
   <div className="container relative grid grid-cols-2 gap-16">
     <div className="absolute top-0 flex h-full w-full items-center justify-center">
       <div className="h-full w-1 bg-primary" />
@@ -13,7 +23,7 @@ const AboutComponent = ({ children }) => (
   </div>
 );
 
-const AboutField = ({ title, children, isEven }) => (
+const AboutField = ({ title, children, isEven }: AboutField) => (
   <div
     className={cx('flex flex-col', {
       'items-start': !isEven,

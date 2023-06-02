@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Link from 'next/link';
+// import styles from '../styles/Home.module.css';
+// import Link from 'next/link';
 import Header from 'app/components/header';
 import Footer from 'app/components/footer';
-import Section from 'app/components/footer';
+// import Section from 'app/components/section';
 export { metadata } from './metadata';
 
 const NEXT_PUBLIC_WIP = process.env.NEXT_PUBLIC_WIP === 'true';
@@ -14,15 +13,31 @@ export default function Home() {
     <div>
       <section className="relative flex justify-center">
         <div className="container flex flex-col justify-between lg:flex-row">
-          <div className="min-w-1/2 flex-1 ">
-            <h1 className="pb-8 font-sans text-3xl text-primary lg:pb-8 lg:text-7xl">
+          <div className="min-w-1/2 flex-1">
+            <h1 className="pb-4 font-sans text-4xl text-primary lg:text-[64px]">
               Aida Vioque
             </h1>
-            <h2 className="pb-24 font-sans text-xl leading-relaxed text-primary">
+            <h2 className="pb-2 font-sans text-lg leading-relaxed text-primary">
               I am a Product Designer committed to integrating code and business
               needs to create innovative solutions centered around user
               experience.
             </h2>
+            <div className="flex">
+              <a
+                className="mr-4 text-gray-300 underline"
+                href="mailto:aida.aranvio@gmail.com"
+                target="_blank"
+              >
+                Email
+              </a>
+              <a
+                className="text-gray-300 underline"
+                href="https://www.linkedin.com/in/aida-aranvio/"
+                target="_blank"
+              >
+                Linkedin
+              </a>
+            </div>
           </div>
           {NEXT_PUBLIC_WIP && (
             <div className="min-w-1/2 lg:pl-16">
@@ -39,7 +54,7 @@ export default function Home() {
         </div>
       </section>
       {!NEXT_PUBLIC_WIP && <Header />}
-      {!NEXT_PUBLIC_WIP && (
+      {/* {!NEXT_PUBLIC_WIP && (
         <Section id="about" className="min-h-screen text-primary">
           <div>
             <h3 className="mb-16 text-center font-sans text-6xl">About</h3>
@@ -116,7 +131,7 @@ export default function Home() {
             </a>
           </div>
         </Section>
-      )}
+      )} */}
       <Footer />
     </div>
   );

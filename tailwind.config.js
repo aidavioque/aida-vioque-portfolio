@@ -5,14 +5,12 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
-      primary: '#0b4168',
+      primary: '#020C14',
       backround: '#fff',
       cream: '#f8eee3',
     },
     fontFamily: {
-      sans: ['Karla', 'sans-serif'],
-      serif: ['ui-serif', 'Georgia'],
-      mono: ['ui-monospace', 'SFMono-Regular'],
+      sans: ['var(--font-montserrat)'],
     },
     extend: {},
   },
