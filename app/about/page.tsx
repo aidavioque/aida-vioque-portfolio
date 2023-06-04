@@ -1,93 +1,108 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-import Head from 'next/head';
-import Link from 'next/link';
-import cx from 'classnames';
-import Section from 'app/components/section/section';
-
-interface AboutField {
-  title: string;
-  isEven?: boolean;
-  children?: React.ReactNode;
-}
-
-interface AboutComponentProps {
-  children: React.ReactNode;
-}
-
-const AboutComponent = ({ children }: AboutComponentProps) => (
-  <div className="container relative grid grid-cols-2 gap-16">
-    <div className="absolute top-0 flex h-full w-full items-center justify-center">
-      <div className="h-full w-1 bg-primary" />
-    </div>
-    {children}
-  </div>
-);
-
-const AboutField = ({ title, children, isEven }: AboutField) => (
-  <div
-    className={cx('flex flex-col', {
-      'items-start': !isEven,
-      'items-end': isEven,
-    })}
-  >
-    <h4 className={cx('mb-4 text-2xl font-bold', { 'text-right': isEven })}>
-      {title}
-    </h4>
-    {children}
-  </div>
-);
-
-const ABOUT_FIELDS = [
-  {
-    title: 'Product designer',
-    text: 'blablablabalbalbal',
-  },
-  {
-    title: 'Product designer',
-    text: 'blablablabalbalbal',
-  },
-  {
-    title: 'La más linda',
-    text: 'blablablabalbalbal',
-  },
-];
+/* eslint-disable @next/next/no-img-element */
 
 function About() {
   return (
-    <div>
-      <Head>
-        <title>Aida Vioque Portfolio</title>
-        <meta name="description" content="Aida Vioque Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="relative min-h-screen overflow-auto bg-backround p-8">
-        <Section id="about" className="min-h-screen text-primary">
+    <div className="container py-24">
+      <p className="pb-10">
+        Hi! I&rsquo;m Aida, a Product Designer (UX/UI), currently based in
+        Spain.
+      </p>
+      <p>
+        My career path has led me through diverse fields and roles, including
+        illustration and design, education, and editorial. It is my curiosity in
+        understanding people&rsquo;s motivations and my interest for creating
+        impactful solutions that has driven me towards the role of Product
+        Designer.
+      </p>
+      <div className="mt-20 flex">
+        <div className="flex-1 space-y-8">
           <div>
-            <h3 className="mb-36 text-center font-sans text-6xl">About</h3>
-            <div className="flex items-center justify-center">
-              <AboutComponent>
-                {ABOUT_FIELDS.map(({ title, text }, i) => (
-                  <>
-                    {i % 2 !== 0 && <div></div>}
-                    <AboutField isEven={i % 2 === 0} title={title}>
-                      {text}
-                    </AboutField>
-                    {i % 2 === 0 && <div></div>}
-                  </>
-                ))}
-              </AboutComponent>
-            </div>
+            <h3 className="pb-2 font-bold text-primary">Jewelry freelancing</h3>
+            <p>
+              My first attempt at product design was in jewellery. My main goal
+              was to get a harmonic combination between aesthetics and
+              wearability, such as lightness, ergonomic shapes, and material
+              combination.
+            </p>
           </div>
-        </Section>
-      </main>
-      <footer className="fixed bottom-0 left-0 w-full bg-backround pb-6 pt-2 pl-12 text-primary">
-        <a href="mailto:aida.aranvio@gmail.com" className="hover:scale-110">
-          aida.vioque@gmail.com
-        </a>
-        <Link href="/" className="pl-6 text-right text-primary hover:scale-110">
-          ⬆
-        </Link>
-      </footer>
+          <div>
+            <h3 className="pb-2 font-bold text-primary">
+              Clothing design freelancing
+            </h3>
+            <p>
+              I needed to organise my worktime myself, so a friend and I started
+              a little service for people to make personalised gifts. It was a
+              success and it escalated so we had to become more reachable and
+              have a catalogue and a content blog.
+            </p>
+          </div>
+          <div>
+            <h3 className="pb-2 font-bold text-primary">
+              Freelance Illustration and Design
+            </h3>
+            <p>
+              Illustration was my lover. I had some jobs from time to time and
+              commissions, also personal projects which helped to discover
+              organised and understand my style. Also, most importantly, allowed
+              me to grow artistically and as a person.
+            </p>
+          </div>
+          <div>
+            <h3 className="pb-2 font-bold text-primary">
+              History Magazine of UAM
+            </h3>
+            <p>
+              This experience brought me tons of practical experience to work
+              with letters, so I became Editor as a reflection of my love for
+              words and meaning. I was just a few steps ahead of discovering UX
+              Writing.
+            </p>
+          </div>
+          <div>
+            <h3 className="pb-2 font-bold text-primary">
+              Digital Content Editor
+            </h3>
+            <p>
+              Diving completely into the EdTech world: worked with Product &
+              developers to bring innovative educational products. UX writing
+              and Editing on products & LMS. Worked on Instructional Design
+              content and events.
+            </p>
+          </div>
+          <div>
+            <h3 className="pb-2 font-bold text-primary">
+              Teaching Asisstant at The Hero Camp
+            </h3>
+            <p>
+              As a teaching assistant at THC, I contribute to the development of
+              course materials and lead instructional sessions. I provide
+              feedback and identify areas to help improve the overall learning
+              experience.
+            </p>
+          </div>
+          <div>
+            <h3 className="pb-2 font-bold text-primary">Product Designer</h3>
+            <p>
+              As a designer on the Product team, I deliver solutions to expand
+              product awareness. I also design communications for our clients
+              and teams, assist with UX writing, research, redefine flows, and
+              contribute to social media marketing.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-1 flex-col items-center justify-between">
+          <img src="/images/jewelry.png" alt="jewelry icon" className="w-36" />
+          <img src="/images/t-shirt.png" alt="t-shirt icon" className="w-36" />
+          <img src="/images/brush.png" alt="brush icon" className="w-24" />
+          <img src="/images/editor.png" alt="editor icon" className="w-36" />
+          <img
+            src="/images/text-book.png"
+            alt="text-book icon"
+            className="w-36"
+          />
+          <img src="/images/web.png" alt="web icon" className="w-36" />
+        </div>
+      </div>
     </div>
   );
 }

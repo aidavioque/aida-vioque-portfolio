@@ -4,8 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 html,

@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 // import styles from '../styles/Home.module.css';
 // import Link from 'next/link';
-import Header from 'app/components/header';
 import Footer from 'app/components/footer';
 // import Section from 'app/components/section';
 export { metadata } from './metadata';
@@ -11,13 +11,13 @@ const NEXT_PUBLIC_WIP = process.env.NEXT_PUBLIC_WIP === 'true';
 export default function Home() {
   return (
     <div>
-      <section className="relative flex justify-center">
-        <div className="container flex flex-col justify-between lg:flex-row">
-          <div className="min-w-1/2 flex-1">
-            <h1 className="pb-4 font-sans text-4xl text-primary lg:text-[64px]">
+      <section className="relative flex justify-center pt-36 lg:pt-1">
+        <div className="container flex flex-col items-center justify-between lg:flex-row">
+          <div className="flex-1">
+            <h1 className="pb-8 font-sans text-4xl lg:text-[64px]">
               Aida Vioque
             </h1>
-            <h2 className="pb-2 font-sans text-lg leading-relaxed text-primary">
+            <h2 className="pb-2 font-sans text-lg leading-relaxed">
               I am a Product Designer committed to integrating code and business
               needs to create innovative solutions centered around user
               experience.
@@ -39,23 +39,25 @@ export default function Home() {
               </a>
             </div>
           </div>
-          {NEXT_PUBLIC_WIP && (
+          <div className="flex flex-1 items-center justify-end">
+            <img src="/images/bouquet.png" className="mb-10 w-[450px]" alt="" />
+          </div>
+          {/* {NEXT_PUBLIC_WIP && (
             <div className="min-w-1/2 lg:pl-16">
               <img
                 src="/wip.gif"
                 className="mb-10"
                 style={{ height: '320px' }}
               />
-              <h2 className="pb-24 font-sans text-4xl text-primary">
+              <h2 className="pb-24 font-sans text-4xl">
                 Work in progress
               </h2>
             </div>
-          )}
+          )} */}
         </div>
       </section>
-      {!NEXT_PUBLIC_WIP && <Header />}
       {/* {!NEXT_PUBLIC_WIP && (
-        <Section id="about" className="min-h-screen text-primary">
+        <Section id="about" className="min-h-screen">
           <div>
             <h3 className="mb-16 text-center font-sans text-6xl">About</h3>
             <div className="flex justify-center">
@@ -76,7 +78,7 @@ export default function Home() {
         </Section>
       )}
       {!NEXT_PUBLIC_WIP && (
-        <Section id="projects" className="min-h-screen text-primary">
+        <Section id="projects" className="min-h-screen">
           <div>
             <h3 className="mb-36 text-center font-sans text-6xl">Projects</h3>
             <div className="flex justify-center">
@@ -117,7 +119,7 @@ export default function Home() {
         </Section>
       )}
       {!NEXT_PUBLIC_WIP && (
-        <Section id="contact" className="min-h-screen text-primary">
+        <Section id="contact" className="min-h-screen">
           <div>
             <a href="mailto:aida.aranvio@gmail.com">
               Contact
