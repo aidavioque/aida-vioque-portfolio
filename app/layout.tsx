@@ -9,8 +9,6 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 });
 
-const NEXT_PUBLIC_WIP = process.env.NEXT_PUBLIC_WIP === 'true';
-
 export default async function RootLayout({
   children,
 }: {
@@ -19,7 +17,7 @@ export default async function RootLayout({
   return (
     <html lang="es" className={montserrat.variable}>
       <body className="relative font-sans text-soft">
-        {!NEXT_PUBLIC_WIP && <Header />}
+        <Header />
         <main className="w-full">{children}</main>
       </body>
     </html>
