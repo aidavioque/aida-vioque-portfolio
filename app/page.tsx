@@ -6,7 +6,7 @@ export { metadata } from './metadata';
 export default function Home() {
   return (
     <div>
-      <section className="relative flex justify-center pt-36 lg:pt-1">
+      <section className="relative flex justify-center pt-10 md:pt-36 lg:pt-1">
         <div className="container flex flex-col items-center justify-between lg:flex-row">
           <div className="flex-1">
             <h1 className="pb-8 font-sans text-4xl lg:text-[64px]">
