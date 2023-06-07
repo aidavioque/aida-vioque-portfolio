@@ -35,7 +35,11 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-1 items-center justify-end">
-            <img src="/images/bouquet.png" className="mb-10 w-[450px]" alt="" />
+            <img
+              src="/images/cohete.gif"
+              className="mb-10 w-[450px] translate-y-16"
+              alt=""
+            />
           </div>
         </div>
       </section>
