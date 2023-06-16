@@ -1,36 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Footer from 'app/components/footer';
+import Card from 'app/components/card';
+import MiniFooter from 'app/components/mini-footer';
 export { metadata } from './metadata';
-
-const Card = ({
-  title,
-  description,
-  image,
-  link,
-}: {
-  title: string;
-  description: string;
-  image?: string;
-  link?: string;
-}) => (
-  <div className="mb-10 flex h-[400px] w-full justify-between gap-10 rounded-lg p-8 shadow-main">
-    <div className="flex flex-col justify-between py-8">
-      <h3 className="text-4xl font-bold">{title}</h3>
-      <p className="font-sans text-lg leading-relaxed text-gray">
-        {description}
-      </p>
-      <a
-        className="mr-2 mb-2 rounded-3xl bg-primaryButton px-4 py-2 text-sm font-medium text-white hover:brightness-125 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:hover:brightness-75 dark:focus:ring-blue-800"
-        href={link}
-        target="_blank"
-      >
-        see more
-      </a>
-    </div>
-    <img src={image} className="h-[314px] w-[314px]" alt="" />
-  </div>
-);
+import {
+  DialogDescription,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+} from '@/components/ui/dialog';
 
 export default function Home() {
   return (
@@ -75,18 +54,37 @@ export default function Home() {
       <section className="container relative pt-10 pb-48 md:pt-36 lg:pt-1">
         <h2 className="pb-16 text-5xl text-primary">Product design</h2>
         <div className="pl-16">
-          <Card title="Titulo" description="Hi there" />
-          <Card title="Titulo" description="Hi there" />
-          <Card title="Titulo" description="Hi there" />
+          <Card
+            title="Sign up form flow"
+            description="Descripción del caso de estudio"
+            image="/images/projects/monstera.jpg"
+            content={
+              <div className="overflow-auto">
+                <DialogHeader>
+                  <DialogTitle className="font-sans text-4xl font-normal text-black">
+                    Sign up form flow
+                  </DialogTitle>
+                  <DialogDescription>
+                    Descripción del caso de estudio
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="py-4">
+                  <img
+                    src="/images/projects/full/monstera.jpg"
+                    alt="sign up image"
+                  />
+                </div>
+                <DialogFooter>
+                  <MiniFooter />
+                </DialogFooter>
+              </div>
+            }
+          />
         </div>
       </section>
       <section className="container relative pt-10 pb-48 md:pt-36 lg:pt-1">
         <h2 className="pb-16 text-5xl text-primary">Design and Illustration</h2>
-        <div className="pl-16">
-          <Card title="Titulo" description="Hi there" />
-          <Card title="Titulo" description="Hi there" />
-          <Card title="Titulo" description="Hi there" />
-        </div>
+        <div className="pl-16"></div>
       </section>
       <Footer />
     </>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const Footer = () => (
-  <footer className="fixed bottom-0 ml-8 w-full bg-backround pb-6 pt-2 text-primary sm:ml-0">
+  <footer className="bg-backround fixed bottom-0 ml-8 w-full pb-6 pt-2 text-primary sm:ml-0">
     <div className="flex justify-center">
       <div className="container">
         <a href="mailto:aida.aranvio@gmail.com" className="hover:scale-110">

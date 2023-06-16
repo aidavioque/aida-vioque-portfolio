@@ -5,7 +5,7 @@ import Header from 'app/components/header';
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '600'],
-  display: 'swap',
+  // display: 'swap',
   variable: '--font-montserrat',
 });
 
@@ -15,8 +15,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={montserrat.variable}>
-      <body className="relative font-sans text-soft">
+    <html lang="es">
+      <body className={`relative font-sans text-soft ${montserrat.variable}`}>
         <Header />
         <main className="w-full">{children}</main>
       </body>
