@@ -74,9 +74,11 @@ export default function Home() {
                     alt="sign up image"
                   />
                 </div>
-                <DialogFooter>
-                  <MiniFooter />
-                </DialogFooter>
+                <div id="contact">
+                  <DialogFooter>
+                    <MiniFooter />
+                  </DialogFooter>
+                </div>
               </div>
             }
           />
@@ -86,6 +88,9 @@ export default function Home() {
         <h2 className="pb-16 text-5xl text-primary">Design and Illustration</h2>
         <div className="pl-16"></div>
       </section>
+      <DialogFooter>
+        <MiniFooter />
+      </DialogFooter>
       <Footer />
     </>
   );
