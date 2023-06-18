@@ -3,6 +3,7 @@
 import Footer from 'app/components/footer';
 import Card from 'app/components/card';
 import MiniFooter from 'app/components/mini-footer';
+import Mosaic from 'app/components/mosaic';
 export { metadata } from './metadata';
 import {
   DialogDescription,
@@ -86,7 +87,7 @@ export default function Home() {
       </section>
       <section className="container relative pt-10 pb-48 md:pt-36 lg:pt-1">
         <h2 className="pb-16 text-5xl text-primary">Design and Illustration</h2>
-        <div className="pl-16"></div>
+        <Mosaic />
       </section>
       <DialogFooter>
         <MiniFooter />

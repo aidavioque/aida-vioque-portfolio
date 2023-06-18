@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://aidaaranvio.com/'),
   title: 'Aida Aranguren Portfolio',
   description: 'Aida Aranguren Portfolio',
   keywords: 'Aida Aranguren, Portfolio, designer',
