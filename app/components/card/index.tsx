@@ -13,8 +13,8 @@ const Card = ({
   image?: string;
   content: React.ReactNode;
 }) => (
-  <div className="mb-10 flex h-[400px] w-full justify-between gap-10 rounded-lg p-8 shadow-main">
-    <div className="flex flex-col items-start justify-between py-8">
+  <div className="mb-10 flex w-full flex-col items-center justify-between gap-10 rounded-lg p-8 shadow-main lg:h-[400px] lg:flex-row lg:items-start">
+    <div className="flex h-full flex-col items-start justify-between space-y-8 py-8">
       <h3 className="text-4xl font-bold">{title}</h3>
       <p className="font-sans text-lg leading-relaxed text-gray">
         {description}
@@ -33,7 +33,11 @@ const Card = ({
         }
       />
     </div>
-    <img src={image} className="h-[314px] w-[314px]" alt="" />
+    <img
+      src={image}
+      className="aspect-square h-[314px] w-[314px] min-w-[314px]"
+      alt=""
+    />
   </div>
 );
 

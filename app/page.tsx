@@ -54,7 +54,7 @@ export default function Home() {
       </section>
       <section className="container relative pt-10 pb-48 md:pt-36 lg:pt-1">
         <h2 className="pb-16 text-5xl text-primary">Product design</h2>
-        <div className="pl-16">
+        <div className="lg:pl-16">
           <Card
             title="Sign up form flow"
             description="Descripción del caso de estudio"
