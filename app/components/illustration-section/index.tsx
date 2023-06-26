@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from 'react';
 import Mosaic from 'app/components/mosaic';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useIsMobile } from '#/lib/utils';
+import { useIsMobile } from '#/lib/isMobile';
 
 const IllustrationSection = () => {
   const [screenWidth, setScreenWidth] = useState<number>(0);
