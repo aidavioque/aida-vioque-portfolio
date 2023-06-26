@@ -1,6 +1,6 @@
 'use client';
 
-const Arrow = ({ bottom = false }: { bottom: boolean }) => {
+const Arrow = ({ bottom = false }: { bottom?: boolean }) => {
   const scrollToNext = () =>
     bottom
       ? scrollTo({
