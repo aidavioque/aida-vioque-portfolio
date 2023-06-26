@@ -52,6 +52,7 @@ module.exports = {
       background: '#fff',
       gray: '#4A5B66',
       cream: '#f8eee3',
+      infoBg: '#3B4660',
     },
     fontFamily: {
       sans: ['var(--font-montserrat)'],

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aidaaranvio.com/'),
-  title: 'Aida Aranguren Portfolio',
-  description: 'Aida Aranguren Portfolio',
-  keywords: 'Aida Aranguren, Portfolio, designer',
+  title: 'Aida Aranguren Monuments of the world',
+  description: 'Aida Aranguren Monuments of the world',
+  keywords: 'Aida Aranguren, Monuments of the world, designer, monuments',
   manifest: '/images/site.webmanifest',
   themeColor: '#ffffff',
   icons: [
@@ -42,21 +42,21 @@ export const metadata: Metadata = {
         url: '/images/android-chrome-512x512.png',
         width: 512,
         height: 512,
-        alt: 'Blues Cavaliers',
+        alt: 'Monuments of the world',
       },
     ],
   },
   openGraph: {
-    title: 'Blues Cavaliers',
-    description: 'Una banda de blues acústico de Madrid',
+    title: 'Monuments of the world',
+    description: 'Monuments of the world by Aida Aranguren',
     locale: 'es_ES',
-    url: 'https://bluescavaliers.com',
+    url: 'https://aidaaranvio.com/infografia',
     images: [
       {
         url: '/images/android-chrome-512x512.png',
         width: 512,
         height: 512,
-        alt: 'Blues Cavaliers',
+        alt: 'Monuments of the world',
       },
     ],
     videos: [
