@@ -3,10 +3,12 @@
 import { useRef, useState, useEffect } from 'react';
 import Mosaic from 'app/components/mosaic';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useIsMobile } from '#/lib/utils';
 
 const IllustrationSection = () => {
   const [screenWidth, setScreenWidth] = useState<number>(0);
   const [screenHeight, setScreenHeight] = useState<number>(0);
+  const isMobile = useIsMobile();
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
@@ -26,7 +28,11 @@ const IllustrationSection = () => {
   });
 
   const x = useTransform(scrollYProgress, [0, 1], [-320, screenWidth + 850]);
-  const y = useTransform(scrollYProgress, [0, 1], [0, screenHeight * 4]);
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, screenHeight * (isMobile ? 8 : 4)],
+  );
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.2, 0.48, 0.55],
