@@ -4,7 +4,7 @@ import Footer from 'app/components/footer';
 import Card from 'app/components/card';
 import MiniFooter from 'app/components/mini-footer';
 import Arrow from 'app/components/arrow';
-import Mosaic from 'app/components/mosaic';
+import IllustrationSection from 'app/components/illustration-section';
 import { Button } from '#/components/ui/button';
 export { metadata } from './metadata';
 import {
@@ -13,6 +13,7 @@ import {
   DialogFooter,
   DialogTitle,
 } from '@/components/ui/dialog';
+
 import Link from 'next/link';
 
 export default function Home() {
@@ -168,7 +169,7 @@ export default function Home() {
                   <div className="py-4">
                     <Link href="/infografia" target="_blank">
                       <img
-                        className="max-w-[500px]"
+                        className="max-w-[600px]"
                         src="/images/projects/monuments.png"
                         alt="monuments of the world"
                       />
@@ -190,10 +191,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="container relative pt-10 pb-48 md:pt-36 lg:pt-1">
-        <h2 className="pb-16 text-5xl text-primary">Design and Illustration</h2>
-        <Mosaic />
-      </section>
+      <IllustrationSection />
       <Footer />
     </>
   );
