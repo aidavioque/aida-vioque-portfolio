@@ -4,8 +4,9 @@ function About() {
   return (
     <div className="container py-24">
       <p className="pb-10">
-        Hi! I&rsquo;m Aida, a Product Designer (UX/UI), currently based in
-        Spain.
+        Hi! I&rsquo;m <span className="font-bold">Aida</span>, a{' '}
+        <span className="font-bold">Product Designer</span> (UX/UI), currently
+        based in Spain.
       </p>
       <p>
         My career path has led me through diverse fields and roles, including

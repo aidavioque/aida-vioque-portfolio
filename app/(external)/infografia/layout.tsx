@@ -14,7 +14,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body
         className={`relative bg-infoBg font-sans text-soft ${inter.variable}`}
       >

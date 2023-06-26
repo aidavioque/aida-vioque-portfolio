@@ -15,8 +15,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className={`relative font-sans text-soft ${montserrat.variable}`}>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`relative font-sans text-soft ${montserrat.variable} scroll-smooth`}
+      >
         <Header />
         <main className="w-full">{children}</main>
       </body>

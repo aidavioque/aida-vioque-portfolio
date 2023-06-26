@@ -27,7 +27,7 @@ const Card = ({
               className="mr-2 mb-2 cursor-pointer rounded-3xl bg-primaryButton px-4 py-2 text-sm font-medium text-white hover:brightness-125 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:hover:brightness-75 dark:focus:ring-blue-800"
               target="_blank"
             >
-              see more
+              View case study
             </a>
           </DialogTrigger>
         }
@@ -35,7 +35,7 @@ const Card = ({
     </div>
     <img
       src={image}
-      className="aspect-square h-[314px] w-[314px] min-w-[314px]"
+      className="aspect-square h-[314px] w-[314px] min-w-[314px] object-cover"
       alt=""
     />
   </div>
