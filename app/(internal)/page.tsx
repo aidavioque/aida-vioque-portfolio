@@ -26,9 +26,8 @@ export default function Home() {
               Aida Vioque
             </h1>
             <p className="pb-2 font-sans text-lg leading-relaxed">
-              I am a Product Designer committed to integrating code and business
-              needs to create innovative solutions centered around user
-              experience.
+              I am a Product Designer and illustrator, with a Pedagogy
+              background trying to make meaningful and usable experiences.
             </p>
             <div className="flex">
               <a
@@ -58,7 +57,7 @@ export default function Home() {
         <div className="flex justify-center">{<Arrow />}</div>
       </section>
       <section
-        className="container relative pt-10 pb-48 md:pt-36 lg:pt-1"
+        className="container relative pt-10 pb-24 md:pt-36 lg:pt-1"
         id="product-design"
       >
         <h2 className="pb-16 text-5xl text-primary">Product design</h2>
@@ -69,7 +68,7 @@ export default function Home() {
             image="/images/projects/package.png"
             content={
               <div className="overflow-auto">
-                <DialogHeader>
+                {/* <DialogHeader>
                   <DialogTitle className="font-sans text-4xl font-normal text-black">
                     <div className="w-[600px] text-[32px] font-normal leading-9 text-slate-800">
                       Minimizing obstacles: Information request proposal in a
@@ -80,10 +79,144 @@ export default function Home() {
                     Informative flow to reduce anxiety, increase confidence, and
                     achieve higher user activation.
                   </DialogDescription>
+                </DialogHeader> */}
+                <div className="container mt-24">
+                  <div className="mb-12 flex gap-12">
+                    <div className="space-y-2 pt-1 text-sm">
+                      <div className="text-xl">
+                        Minimizing obstacles: Information request proposal in a
+                        shipping company
+                      </div>
+                      <p>
+                        My main goal is to design a simple, informative flow
+                        accompanied by a UX Writing proposal to reduce anxiety,
+                        increase confidence, and achieve higher user activation.
+                      </p>
+                      <h4 className="pt-4 font-bold uppercase">My role</h4>
+                      <ul className="space-y-2">
+                        <li>Product Designer</li>
+                        <li>UX writer</li>
+                      </ul>
+                      <h4 className="pt-4 font-bold uppercase">
+                        Why did I take this approach
+                      </h4>
+                      <ul className="space-y-2">
+                        <li>Based on Hick&apos;s Law</li>
+                        <li>
+                          The time it takes to make a decision increases with
+                          the number and complexity of choices.
+                        </li>
+                        <li>The Law of Conservation of Complexity</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <img
+                        src="/images/projects/full/packing1.jpg"
+                        alt="package"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-12 flex gap-12">
+                    <div className="space-y-2 pt-1 text-sm">
+                      <img
+                        src="/images/projects/full/packing2.jpg"
+                        alt="package"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="pt-4 font-bold uppercase">
+                        Setting up the tone
+                      </h4>
+                      <p>
+                        My main goal is to design a simple, informative flow
+                        accompanied by a UX Writing proposal to reduce anxiety,
+                        increase confidence, and achieve higher user activation.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mb-12 flex gap-12">
+                    <div className="space-y-2 pt-1 text-sm">
+                      <h4 className="pt-4 font-bold uppercase">
+                        Setting up the tone
+                      </h4>
+                      <p className="text-sm">
+                        My main goal is to design a simple, informative flow
+                        accompanied by a UX Writing proposal to reduce anxiety,
+                        increase confidence, and achieve higher user activation.
+                      </p>
+                    </div>
+                    <div>
+                      <img
+                        src="/images/projects/full/packing3.jpg"
+                        alt="package"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-12 flex gap-12">
+                    <div>
+                      <img
+                        src="/images/projects/full/packing4.jpg"
+                        alt="package"
+                      />
+                    </div>
+                    <div className="space-y-2 pt-1 text-sm">
+                      <h4 className="pt-4 font-bold uppercase">
+                        Setting up the tone
+                      </h4>
+                      <p>
+                        My main goal is to design a simple, informative flow
+                        accompanied by a UX Writing proposal to reduce anxiety,
+                        increase confidence, and achieve higher user activation.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mb-12 flex gap-12">
+                    <div className="space-y-2 pt-1 text-sm">
+                      <h4 className="pt-4 font-bold uppercase">
+                        Setting up the tone
+                      </h4>
+                      <p>
+                        My main goal is to design a simple, informative flow
+                        accompanied by a UX Writing proposal to reduce anxiety,
+                        increase confidence, and achieve higher user activation.
+                      </p>
+                    </div>
+                    <div>
+                      <img
+                        src="/images/projects/full/packing5.jpg"
+                        alt="package"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div id="contact">
+                  <DialogFooter>
+                    <MiniFooter />
+                  </DialogFooter>
+                </div>
+              </div>
+            }
+          />
+          <Card
+            title="Monstera contest registration flow"
+            description="Registration flow to participate in a contest to win a Monstera plant."
+            image="/images/projects/monstera.jpg"
+            content={
+              <div className="overflow-auto">
+                <DialogHeader>
+                  <DialogTitle className="font-sans text-4xl font-normal text-black">
+                    Monstera contest registration flow
+                  </DialogTitle>
+                  <DialogDescription>
+                    Registration flow for an contest where participants have the
+                    chance to win a Monstera plant. This design aims to simplify
+                    the registration process, providing a easy and efficient
+                    experience for users.
+                  </DialogDescription>
                 </DialogHeader>
                 <div className="py-4">
                   <img
-                    src="/images/projects/full/package.png"
+                    src="/images/projects/full/monstera.jpeg"
                     alt="sign up image"
                   />
                 </div>
@@ -96,22 +229,22 @@ export default function Home() {
             }
           />
           <Card
-            title="Sign up form flow"
-            description="Descripción del caso de estudio"
-            image="/images/projects/monstera.jpg"
+            title="Simple payment screens"
+            description="Simple design exercise to investigate and test with forms."
+            image="/images/projects/payment.jpg"
             content={
               <div className="overflow-auto">
                 <DialogHeader>
                   <DialogTitle className="font-sans text-4xl font-normal text-black">
-                    Sign up form flow
+                    Simple payment screens
                   </DialogTitle>
                   <DialogDescription>
-                    Descripción del caso de estudio
+                    Simple design exercise to investigate and test with forms.
                   </DialogDescription>
                 </DialogHeader>
                 <div className="py-4">
                   <img
-                    src="/images/projects/full/monstera.jpg"
+                    src="/images/projects/full/payment.jpeg"
                     alt="sign up image"
                   />
                 </div>

@@ -13,10 +13,10 @@ const Card = ({
   image?: string;
   content: React.ReactNode;
 }) => (
-  <div className="mb-10 flex w-full flex-col items-center justify-between gap-10 rounded-lg p-8 shadow-main lg:h-[400px] lg:flex-row lg:items-start">
-    <div className="flex h-full flex-col items-start justify-between space-y-8 py-8">
-      <h3 className="text-4xl font-bold">{title}</h3>
-      <p className="font-sans text-lg leading-relaxed text-gray">
+  <div className="mb-10 flex h-full w-full flex-col items-center justify-between gap-10 rounded-lg px-8 shadow-main lg:flex-row lg:items-start">
+    <div className="flex h-full min-h-[230px] flex-col items-start justify-between space-y-2 pt-4 pb-6">
+      <h3 className="text-3xl font-bold">{title}</h3>
+      <p className="text-md font-sans leading-relaxed text-gray">
         {description}
       </p>
       <DialogComponent
@@ -35,7 +35,7 @@ const Card = ({
     </div>
     <img
       src={image}
-      className="aspect-square h-[314px] w-[314px] min-w-[314px] object-cover"
+      className="my-auto aspect-square h-[214px] w-[214px] object-cover pb-4 lg:pb-0"
       alt=""
     />
   </div>

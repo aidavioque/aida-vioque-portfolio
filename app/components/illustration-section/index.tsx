@@ -40,7 +40,7 @@ const IllustrationSection = () => {
   );
   return (
     <div className="overflow-hidden" ref={illustrationSectionRef}>
-      <section className="container relative pt-10 pb-48 md:pt-36 lg:pt-1 ">
+      <section className="container relative pt-10 pb-24 md:pt-36 lg:pt-1 ">
         <h2 className="pb-16 text-5xl text-primary">Design and Illustration</h2>
         {
           <motion.div
