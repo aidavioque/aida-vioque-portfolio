@@ -67,7 +67,7 @@ export default function Home() {
             description="Informative flow  to reduce anxiety, increase confidence, and achieve higher user activation."
             image="/images/projects/package.png"
             content={
-              <div className="overflow-auto">
+              <div className="h-screen overflow-auto md:h-full">
                 {/* <DialogHeader>
                   <DialogTitle className="font-sans text-4xl font-normal text-black">
                     <div className="w-[600px] text-[32px] font-normal leading-9 text-slate-800">
@@ -202,7 +202,7 @@ export default function Home() {
             description="Registration flow to participate in a contest to win a Monstera plant."
             image="/images/projects/monstera.jpg"
             content={
-              <div className="overflow-auto">
+              <div className="h-screen overflow-auto md:h-full">
                 <DialogHeader>
                   <DialogTitle className="font-sans text-4xl font-normal text-black">
                     Monstera contest registration flow
@@ -233,7 +233,7 @@ export default function Home() {
             description="Simple design exercise to investigate and test with forms."
             image="/images/projects/payment.jpg"
             content={
-              <div className="overflow-auto">
+              <div className="h-screen overflow-auto md:h-full">
                 <DialogHeader>
                   <DialogTitle className="font-sans text-4xl font-normal text-black">
                     Simple payment screens
@@ -261,7 +261,7 @@ export default function Home() {
             description="Marketing campaign in different media platforms"
             image="/images/projects/smart-protection.jpg"
             content={
-              <div className="overflow-auto">
+              <div className="h-screen overflow-auto md:h-full">
                 <DialogHeader>
                   <DialogTitle className="font-sans text-4xl font-normal text-black">
                     Smart Protection
@@ -289,7 +289,7 @@ export default function Home() {
             description="Interactive illustration of monuments of the world"
             image="/images/projects/monuments.png"
             content={
-              <div className="overflow-auto">
+              <div className="h-screen overflow-auto md:h-full">
                 <DialogHeader>
                   <DialogTitle className="font-sans text-4xl font-normal text-black">
                     Monuments of the world
