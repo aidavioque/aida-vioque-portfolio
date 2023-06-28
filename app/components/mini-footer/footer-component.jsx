@@ -9,10 +9,10 @@ const MiniFooter = () => (
     <p className="mb-6 text-gray">Rocket up!</p>
     <div className="flex flex-col gap-4">
       <Button asChild>
-        <Link href="mailto:aida.aranvio@gmail.com" scroll={false}>
+        <a href="mailto:aida.aranvio@gmail.com">
           <img src="/images/mail.png" alt=" mail logo" className="mr-1" />
           Let&apos;s talk
-        </Link>
+        </a>
       </Button>
       <Button>
         <Link
