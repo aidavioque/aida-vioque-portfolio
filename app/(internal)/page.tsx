@@ -57,29 +57,17 @@ export default function Home() {
         <div className="flex justify-center">{<Arrow />}</div>
       </section>
       <section
-        className="container relative pt-10 pb-24 md:pt-36 lg:pt-1"
+        className="container relative pt-10 pb-48 md:pt-36 lg:pt-1"
         id="product-design"
       >
         <h2 className="pb-16 text-5xl text-primary">Product design</h2>
-        <div className="lg:pl-16">
+        <div className="flex flex-col items-center justify-center lg:pl-16">
           <Card
-            title="Information request proposal in a shipping company"
-            description="Informative flow  to reduce anxiety, increase confidence, and achieve higher user activation."
+            title="Information request proposal"
+            description="Informative flow in a shipping company to reduce anxiety, increase confidence, and achieve higher user activation."
             image="/images/projects/package.png"
             content={
               <div className="h-screen overflow-auto md:h-full">
-                {/* <DialogHeader>
-                  <DialogTitle className="font-sans text-4xl font-normal text-black">
-                    <div className="w-[600px] text-[32px] font-normal leading-9 text-slate-800">
-                      Minimizing obstacles: Information request proposal in a
-                      shipping company
-                    </div>
-                  </DialogTitle>
-                  <DialogDescription>
-                    Informative flow to reduce anxiety, increase confidence, and
-                    achieve higher user activation.
-                  </DialogDescription>
-                </DialogHeader> */}
                 <div className="container mt-24">
                   <div className="mb-12 flex gap-12">
                     <div className="space-y-2 pt-1 text-sm">
@@ -198,7 +186,7 @@ export default function Home() {
             }
           />
           <Card
-            title="Monstera contest registration flow"
+            title="Contest registration flow"
             description="Registration flow to participate in a contest to win a Monstera plant."
             image="/images/projects/monstera.jpg"
             content={
