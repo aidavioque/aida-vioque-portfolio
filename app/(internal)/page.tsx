@@ -62,7 +62,7 @@ export default function Home() {
       >
         <h2 className="pb-16 text-5xl text-primary">Product design</h2>
         <div className="flex flex-col items-center justify-center lg:pl-16">
-          <Card
+          {/* <Card
             title="Information request proposal"
             description="Informative flow in a shipping company to reduce anxiety, increase confidence, and achieve higher user activation."
             image="/images/projects/package.png"
@@ -184,7 +184,7 @@ export default function Home() {
                 </div>
               </div>
             }
-          />
+          /> */}
           <Card
             title="Contest registration flow"
             description="Registration flow to participate in a contest to win a Monstera plant."
@@ -244,7 +244,7 @@ export default function Home() {
               </div>
             }
           />
-          <Card
+          {/* <Card
             title="Smart Protection"
             description="Marketing campaign in different media platforms"
             image="/images/projects/smart-protection.jpg"
@@ -271,7 +271,7 @@ export default function Home() {
                 </div>
               </div>
             }
-          />
+          /> */}
           <Card
             title="Monuments of the world"
             description="Interactive illustration of monuments of the world"
