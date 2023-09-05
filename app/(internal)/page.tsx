@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
-import Footer from 'app/components/footer';
+// import Footer from 'app/components/footer';
 import Card from 'app/components/card';
 import MiniFooter from 'app/components/mini-footer';
 import Arrow from 'app/components/arrow';
-import IllustrationSection from 'app/components/illustration-section';
+// import IllustrationSection from 'app/components/illustration-section';
 import { Button } from '#/components/ui/button';
 export { metadata } from './metadata';
 import {
@@ -17,7 +17,7 @@ import {
 import Link from 'next/link';
 
 const Highlighted = ({ text }: { text: string }) => (
-  <div className="inline-flex h-20 items-center justify-start gap-6 rounded-[10px] bg-orange-300 bg-opacity-20 px-6 py-4">
+  <div className="inline-flex items-center justify-start gap-6 rounded-[10px] bg-orange-300 bg-opacity-20 px-6 py-4">
     <div className="text-center text-base font-normal leading-normal text-slate-700">
       {text}
     </div>
@@ -30,23 +30,23 @@ export default function Home() {
       <section className="relative flex min-h-[calc(100vh-40px)] flex-col justify-evenly pt-10 md:pt-36 lg:pt-1">
         <div className="container flex flex-col items-center justify-between lg:flex-row">
           <div className="flex-1">
-            <h1 className="pb-8 font-sans text-4xl lg:text-[64px]">
+            <h1 className="pb-8 font-sans text-4xl lg:text-[52px]">
               Aida Vioque
             </h1>
-            <p className="pb-2 font-sans text-lg leading-relaxed">
-              I am a Product Designer and illustrator, with a Pedagogy
-              background trying to make meaningful and usable experiences.
+            <p className="text-gray-600 pb-2 font-sans text-lg leading-relaxed">
+              I am a Product Designer with background in Illustration, Edition
+              and Pedagogy, trying to make meaningful and usable things.
             </p>
             <div className="flex">
               <a
-                className="text-gray-300 mr-4 underline"
+                className="mr-4 font-semibold text-sky-700 underline"
                 href="mailto:aida.aranvio@gmail.com"
                 target="_blank"
               >
                 Email
               </a>
               <a
-                className="text-gray-300 underline"
+                className="font-semibold text-sky-700 underline"
                 href="https://www.linkedin.com/in/aida-aranvio/"
                 target="_blank"
               >
@@ -341,8 +341,13 @@ export default function Home() {
           />
         </div>
       </section>
-      <IllustrationSection />
-      <Footer />
+      {/* <IllustrationSection />
+      <Footer /> */}
+      <div className="flex justify-end">
+        <div className="container absolute bottom-6 text-right">
+          <Arrow bottom />
+        </div>
+      </div>
     </>
   );
 }
