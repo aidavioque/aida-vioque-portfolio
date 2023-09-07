@@ -1,15 +1,15 @@
 'use client';
 
-const Arrow = ({ bottom = false, id }: { bottom?: boolean; id: any }) => {
+const Arrow = ({ bottom = false, id }: { bottom?: boolean; id?: string }) => {
   const scrollToNext = () =>
     bottom && !id
       ? scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        })
+        top: 0,
+        behavior: 'smooth',
+      })
       : document
-          .getElementById(id || 'product-design')
-          ?.scrollIntoView({ behavior: 'smooth' });
+        .getElementById(id || 'product-design')
+        ?.scrollIntoView({ behavior: 'smooth' });
 
   return (
     <button

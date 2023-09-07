@@ -186,17 +186,17 @@ const mood = (
     </h3>
     <div className="flex max-w-full items-center justify-between">
       <img
-        className="flex-1"
+        className="flex-1 max-w-[30%]"
         src="/images/projects/mood-1.jpg"
         alt="moodboard"
       />
       <img
-        className="flex-1"
+        className="flex-1 max-w-[30%]"
         src="/images/projects/mood-2.jpg"
         alt="moodboard 2"
       />
       <img
-        className="flex-1"
+        className="flex-1 max-w-[30%]"
         src="/images/projects/mood-3.jpg"
         alt="moodboard 3"
       />
@@ -275,11 +275,7 @@ const takeaways = (
     <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
       Takeaways
     </h3>
-    <p className="text-xl font-normal leading-relaxed text-slate-700">
-      Once the data was guiding my process, the content of the screens and the
-      flow was defined, I created a rough design of it, and defining the fonts,
-      the sizes and the colour palette.
-    </p>
+    <p className="text-slate-700 text-xl font-normal leading-relaxed">This process has yielded valuable insights, such as the importance of data-driven decision-making and the integration of an ethical code into Product design practices.<br /><br />On one hand, we&apos;ve achieved a more user-friendly design in terms of flow and UX writing. On the other hand, we&apos;ve affected acquisition rates, thereby uncovering potential edge cases and identifying additional areas for research and improvement.</p>
   </div>
 );
 const PackagingCase = () => {
@@ -336,99 +332,84 @@ const PackagingCase = () => {
           <h3 className="mb-10 text-[32px] font-semibold leading-9 text-slate-800">
             Desk research and insights
           </h3>
-          <div className="text-xl font-normal leading-relaxed text-slate-700">
-            When designing user experiences, it's crucial to consider both
-            physical and cognitive accessibility. When applied with the business
-            in mind, it provides users with a sense of security and confidence
-            in choosing our services.
-          </div>
-          <div>
-            <span className="text-xl font-normal leading-relaxed text-slate-700">
-              The number of apps in the market addressing mental health is
-              overwhelming, undoubtedly responding to a high demand. An
-              interesting article titled '
-            </span>
-            <span className="text-xl font-medium leading-relaxed text-blue-400 underline">
-              Responsible Design: Approaches for Reducing Uncertainty and
-              Anxiety
-            </span>
-            <span className="text-xl font-normal leading-relaxed text-slate-700">
-              ' on uxpamagazine.org it emphasizes the users' reality even before
-              they use the products we design:
-            </span>
-          </div>
-          <div className="inline-flex items-center justify-start gap-[35px]">
-            <div className="h-[70px] w-[3px] bg-blue-400" />
-            <div className="flex h-[52px] items-center justify-start gap-[10.14px]">
-              <div className="text-xl font-normal leading-relaxed text-slate-700">
-                We are living in a time when people are experiencing a
-                heightened level of uncertainty and anxiety even before they
-                ever make first contact with our products or services.
-              </div>
+          <div className='space-y-6'>
+            <div className="text-xl font-normal leading-relaxed text-slate-700">
+              When designing user experiences, it&apos;s crucial to consider both
+              physical and cognitive accessibility. When applied with the business
+              in mind, it provides users with a sense of security and confidence
+              in choosing our services.
             </div>
-          </div>
-          <div className="text-xl font-normal leading-relaxed text-slate-700">
-            And provides valuable insights on how to take action:
-          </div>
-          <div className="relative">
-            <div className="bg-blue-400" />
             <div>
               <span className="text-xl font-normal leading-relaxed text-slate-700">
-                There is an identifiable set of environmental conditions that
-                manifest in our experience designs that contribute to user
-                discomfort, including:
-                <br />
-                <br />
+                The number of apps in the market addressing mental health is
+                overwhelming, undoubtedly responding to a high demand. An
+                interesting article titled{' '}
               </span>
+              <a href='https://uxpamagazine.org/responsible-design/' target='_blank' rel='noopener noreferrer' className="text-xl font-medium leading-relaxed text-blue-400 underline">
+                &apos;Responsible Design: Approaches for Reducing Uncertainty and
+                Anxiety&apos;
+              </a>
               <span className="text-xl font-normal leading-relaxed text-slate-700">
-                Too much complexity
-                <br />
-                Overwhelming choices
-                <br />
-                Lack of information
-                <br />
-                Endless information
-                <br />
-                Artificial urgency
+                {' '}on uxpamagazine.org it emphasizes the users&apos; reality even before
+                they use the products we design:
               </span>
             </div>
-          </div>
-          <div className="flex justify-between">
-            <div>
-              <p>
-                The{' '}
-                <a href="#" className="link text-blue-500 underline">
-                  figures
-                </a>{' '}
-                from the Ministry of Health of the Spanish Government reveal
-                alarming data regarding the presence of anxiety disorders.
-              </p>
-              <div className="relative h-[172px] w-[293px]">
-                <div className="absolute left-[177px] top-0 inline-flex h-[122.40px] w-[116px] flex-col items-center justify-start gap-2">
-                  <div className="h-[88.40px] w-[88.80px] rounded-full bg-orange-300" />
-                  <div className="text-[32px] font-normal leading-relaxed text-slate-700">
-                    88.4 ‰
-                  </div>
-                </div>
-                <div className="absolute left-[196px] top-[146px] text-xl font-normal leading-relaxed text-slate-700 opacity-80">
-                  women
-                </div>
-                <div className="absolute left-0 top-[42px] inline-flex h-[80.20px] w-[111px] flex-col items-center justify-start gap-[9px]">
-                  <div className="h-[45.20px] w-[45.20px] rounded-full bg-blue-400" />
-                  <div className="text-[32px] font-normal leading-relaxed text-slate-700">
-                    45.2 ‰
-                  </div>
-                </div>
-                <div className="absolute left-[32px] top-[146px] text-xl font-normal leading-relaxed text-slate-700 opacity-80">
-                  men
+            <div className="inline-flex items-center justify-start gap-[35px] border-blue-400 border-l-2 pl-8">
+              <div className="flex items-center justify-start gap-[10.14px]">
+                <div className="text-xl font-normal leading-relaxed text-slate-700">
+                  We are living in a time when people are experiencing a
+                  heightened level of uncertainty and anxiety even before they
+                  ever make first contact with our products or services.
                 </div>
               </div>
             </div>
-            <img
-              className="h-[454px] w-[655px]"
-              src="/images/projects/chart.jpg"
-              alt="Chart on anxiety"
-            />
+            <div className="text-xl font-normal leading-relaxed text-slate-700">
+              And provides valuable insights on how to take action:
+            </div>
+            <div className="relative">
+              <div className='border-blue-400 border-l-2 pl-8'>
+                <span className="text-xl font-normal leading-relaxed text-slate-700">
+                  There is an identifiable set of environmental conditions that
+                  manifest in our experience designs that contribute to user
+                  discomfort, including:
+                </span>
+                <ul className="text-xl font-normal leading-relaxed text-slate-700 list-disc m-10">
+                  <li>
+                    Too much complexity
+                  </li>
+                  <li>
+                    Overwhelming choices
+                  </li>
+                  <li>
+                    Lack of information
+                  </li>
+                  <li>
+                    Endless information
+                  </li>
+                  <li>
+                    Artificial urgency
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <div className='mr-2 max-w-[40%] flex flex-col items-center justify-between'>
+                <p className='mr-2 pt-6'>
+                  The{' '}
+                  <a href="https://www.sanidad.gob.es/estadEstudios/estadisticas/estadisticas/estMinisterio/SIAP/Salud_mental_datos.pdf" target="_blank" rel="noreferrer noopener" className="link text-blue-500 underline">
+                    figures
+                  </a>{' '}
+                  from the Ministry of Health of the Spanish Government reveal
+                  alarming data regarding the presence of anxiety disorders.
+                </p>
+                <img src="/images/projects/gender.svg" alt="Gender chart on anxiety" />
+              </div>
+              <img
+                className="w-[655px] max-w-[50%]"
+                src="/images/projects/chart.jpg"
+                alt="Chart on anxiety"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -439,6 +420,9 @@ const PackagingCase = () => {
       {uiDesigns}
       {takeaways}
       <div className="container">
+        <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
+          Final flow
+        </h3>
         <div className="mb-12 flex gap-12">
           <div className="flex max-w-[50%] flex-col justify-center space-y-8 pt-1 text-center text-sm">
             <div>
