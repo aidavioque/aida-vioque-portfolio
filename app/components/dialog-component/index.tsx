@@ -16,7 +16,7 @@ const DialogComponent = ({
       className={
         small
           ? 'overflow-auto sm:max-h-[70%] sm:min-h-[200px] sm:max-w-[300px]'
-          : 'overflow-auto sm:max-h-[90%] sm:min-h-[500px] sm:max-w-6xl'
+          : 'overflow-auto sm:max-h-[90%] sm:min-h-[500px] sm:max-w-[90%]'
       }
     >
       {content}
