@@ -15,37 +15,54 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 
+import Contact from 'app/components/contact';
 import Link from 'next/link';
+const CardContent = ({
+  image,
+  title,
+  description,
+  children,
+}: {
+  image?: React.ReactNode;
+  title: string;
+  description: string;
+  children?: React.ReactNode;
+}) => (
+  <div className="h-screen overflow-auto md:h-full">
+    <div className="flex justify-center">
+      <DialogHeader className="max-w-[75%]">
+        <DialogTitle className="pb-2 text-center text-2xl text-[38px] font-normal leading-[67px]">
+          {title}
+        </DialogTitle>
+        <DialogDescription className="text-center text-xl font-normal leading-[30px] text-black">
+          {description}
+        </DialogDescription>
+      </DialogHeader>
+    </div>
+    <div className="py-4">{image}</div>
+    {children}
+    <div id="contact">
+      <DialogFooter>
+        <MiniFooter />
+      </DialogFooter>
+    </div>
+  </div>
+);
 
 export default function Home() {
   return (
     <>
       <section className="relative flex min-h-[calc(100vh-40px)] flex-col justify-evenly pt-10 md:pt-36 lg:pt-1">
-        <div className="container flex flex-col items-center justify-between lg:flex-row">
-          <div className="flex-1">
+        <div className="container flex flex-col items-center justify-between space-x-16 lg:flex-row">
+          <div className="min-w-[65%] flex-1">
             <h1 className="pb-8 font-sans text-4xl lg:text-[52px]">
               Aida Vioque
             </h1>
-            <p className="text-gray-600 pb-2 font-sans text-lg leading-relaxed">
+            <p className="text-gray-600 mb-4 font-sans text-2xl leading-[36.95px]">
               I am a Product Designer with background in Illustration, Edition
               and Pedagogy, trying to make meaningful and usable things.
             </p>
-            <div className="flex">
-              <a
-                className="mr-4 font-semibold text-sky-700 underline"
-                href="mailto:aida.aranvio@gmail.com"
-                target="_blank"
-              >
-                Email
-              </a>
-              <a
-                className="font-semibold text-sky-700 underline"
-                href="https://www.linkedin.com/in/aida-aranvio/"
-                target="_blank"
-              >
-                Linkedin
-              </a>
-            </div>
+            <Contact />
           </div>
           <div className="flex flex-1 items-center justify-end">
             <img
@@ -61,7 +78,7 @@ export default function Home() {
         className="container relative pt-10 pb-48 md:pt-36 lg:pt-1"
         id="product-design"
       >
-        <h2 className="pb-16 text-5xl text-primary">Product design</h2>
+        <h2 className="pb-16 text-5xl text-primary">Case studies</h2>
         <div className="flex flex-col items-center justify-center lg:pl-16">
           <Card
             title="Information request proposal"
@@ -74,30 +91,16 @@ export default function Home() {
             description="Registration flow to participate in a contest to win a Monstera plant."
             image="/images/projects/monstera.jpg"
             content={
-              <div className="h-screen overflow-auto md:h-full">
-                <DialogHeader>
-                  <DialogTitle className="pb-2 text-center font-sans text-2xl font-normal text-black">
-                    Monstera contest registration flow
-                  </DialogTitle>
-                  <DialogDescription className="text-center">
-                    Registration flow for an contest where participants have the
-                    chance to win a Monstera plant. This design aims to simplify
-                    the registration process, providing a easy and efficient
-                    experience for users.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="py-4">
+              <CardContent
+                title="Monstera contest registration flow"
+                description="Registration flow for an contest where participants have the chance to win a Monstera plant. This design aims to simplify the registration process, providing an easy and efficient experience for users."
+                image={
                   <img
-                    src="/images/projects/full/monstera.jpeg"
-                    alt="sign up image"
+                    src="/images/projects/full/monstera.jpg"
+                    alt="Simple payment screens image"
                   />
-                </div>
-                <div id="contact">
-                  <DialogFooter>
-                    <MiniFooter />
-                  </DialogFooter>
-                </div>
-              </div>
+                }
+              />
             }
           />
           <Card
@@ -105,27 +108,16 @@ export default function Home() {
             description="Simple design exercise to investigate and test with forms."
             image="/images/projects/payment.jpg"
             content={
-              <div className="h-screen overflow-auto md:h-full">
-                <DialogHeader>
-                  <DialogTitle className="pb-2 text-center font-sans text-2xl font-normal text-black">
-                    Simple payment screens
-                  </DialogTitle>
-                  <DialogDescription className="text-center">
-                    Simple design exercise to investigate and test with forms.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="py-4">
+              <CardContent
+                title="Simple payment screens"
+                description="Simple design exercise to investigate and test with forms."
+                image={
                   <img
                     src="/images/projects/full/payment.jpeg"
                     alt="sign up image"
                   />
-                </div>
-                <div id="contact">
-                  <DialogFooter>
-                    <MiniFooter />
-                  </DialogFooter>
-                </div>
-              </div>
+                }
+              />
             }
           />
           {/* <Card
@@ -161,15 +153,10 @@ export default function Home() {
             description="Interactive illustration of monuments of the world"
             image="/images/projects/monuments.png"
             content={
-              <div className="h-screen overflow-auto md:h-full">
-                <DialogHeader>
-                  <DialogTitle className="pb-2 text-center font-sans text-2xl font-normal text-black">
-                    Monuments of the world
-                  </DialogTitle>
-                  <DialogDescription className="text-center">
-                    Interactive illustration of monuments of the world
-                  </DialogDescription>
-                </DialogHeader>
+              <CardContent
+                title="Monuments of the world"
+                description="Interactive illustration of monuments of the world."
+              >
                 <div className="flex w-full flex-col items-center justify-center py-4">
                   <div className="py-4">
                     <Link href="/infografia" target="_blank">
@@ -186,12 +173,7 @@ export default function Home() {
                     </Link>
                   </Button>
                 </div>
-                <div>
-                  <DialogFooter>
-                    <MiniFooter />
-                  </DialogFooter>
-                </div>
-              </div>
+              </CardContent>
             }
           />
         </div>

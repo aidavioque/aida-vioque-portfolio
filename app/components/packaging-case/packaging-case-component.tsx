@@ -186,17 +186,17 @@ const mood = (
     </h3>
     <div className="flex max-w-full items-center justify-between">
       <img
-        className="flex-1 max-w-[30%]"
+        className="max-w-[30%] flex-1"
         src="/images/projects/mood-1.jpg"
         alt="moodboard"
       />
       <img
-        className="flex-1 max-w-[30%]"
+        className="max-w-[30%] flex-1"
         src="/images/projects/mood-2.jpg"
         alt="moodboard 2"
       />
       <img
-        className="flex-1 max-w-[30%]"
+        className="max-w-[30%] flex-1"
         src="/images/projects/mood-3.jpg"
         alt="moodboard 3"
       />
@@ -275,23 +275,35 @@ const takeaways = (
     <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
       Takeaways
     </h3>
-    <p className="text-slate-700 text-xl font-normal leading-relaxed">This process has yielded valuable insights, such as the importance of data-driven decision-making and the integration of an ethical code into Product design practices.<br /><br />On one hand, we&apos;ve achieved a more user-friendly design in terms of flow and UX writing. On the other hand, we&apos;ve affected acquisition rates, thereby uncovering potential edge cases and identifying additional areas for research and improvement.</p>
+    <p className="text-xl font-normal leading-relaxed text-slate-700">
+      This process has yielded valuable insights, such as the importance of
+      data-driven decision-making and the integration of an ethical code into
+      Product design practices.
+      <br />
+      <br />
+      On one hand, we&apos;ve achieved a more user-friendly design in terms of
+      flow and UX writing. On the other hand, we&apos;ve affected acquisition
+      rates, thereby uncovering potential edge cases and identifying additional
+      areas for research and improvement.
+    </p>
   </div>
 );
 const PackagingCase = () => {
   return (
     <div className="h-screen overflow-auto md:h-full">
-      <DialogHeader>
-        <DialogTitle className="pb-2 text-center font-sans text-2xl font-normal text-black">
-          <p>Minimizing obstacles:</p>Information request proposal in a shipping
-          company
-        </DialogTitle>
-        <DialogDescription className="text-center">
-          The goal is to design a simple, informative flow accompanied by a UX
-          Writing proposal to reduce anxiety, increase confidence, and achieve
-          higher user activation.
-        </DialogDescription>
-      </DialogHeader>
+      <div className="mb-4 flex justify-center">
+        <DialogHeader>
+          <DialogTitle className="pb-2 text-center text-[38px] font-normal leading-relaxed">
+            <div>Minimizing obstacles:</div>Information request proposal in a
+            shipping company
+          </DialogTitle>
+          <DialogDescription className="text-center text-xl font-normal leading-[30px] text-black">
+            The goal is to design a simple, informative flow accompanied by a UX
+            Writing proposal to reduce anxiety, increase confidence, and achieve
+            higher user activation.
+          </DialogDescription>
+        </DialogHeader>
+      </div>
       <img
         src="/images/projects/packaging-presentation.jpg"
         alt="project overview"
@@ -332,12 +344,12 @@ const PackagingCase = () => {
           <h3 className="mb-10 text-[32px] font-semibold leading-9 text-slate-800">
             Desk research and insights
           </h3>
-          <div className='space-y-6'>
+          <div className="space-y-6">
             <div className="text-xl font-normal leading-relaxed text-slate-700">
-              When designing user experiences, it&apos;s crucial to consider both
-              physical and cognitive accessibility. When applied with the business
-              in mind, it provides users with a sense of security and confidence
-              in choosing our services.
+              When designing user experiences, it&apos;s crucial to consider
+              both physical and cognitive accessibility. When applied with the
+              business in mind, it provides users with a sense of security and
+              confidence in choosing our services.
             </div>
             <div>
               <span className="text-xl font-normal leading-relaxed text-slate-700">
@@ -345,16 +357,22 @@ const PackagingCase = () => {
                 overwhelming, undoubtedly responding to a high demand. An
                 interesting article titled{' '}
               </span>
-              <a href='https://uxpamagazine.org/responsible-design/' target='_blank' rel='noopener noreferrer' className="text-xl font-medium leading-relaxed text-blue-400 underline">
-                &apos;Responsible Design: Approaches for Reducing Uncertainty and
-                Anxiety&apos;
+              <a
+                href="https://uxpamagazine.org/responsible-design/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-medium leading-relaxed text-blue-400 underline"
+              >
+                &apos;Responsible Design: Approaches for Reducing Uncertainty
+                and Anxiety&apos;
               </a>
               <span className="text-xl font-normal leading-relaxed text-slate-700">
-                {' '}on uxpamagazine.org it emphasizes the users&apos; reality even before
-                they use the products we design:
+                {' '}
+                on uxpamagazine.org it emphasizes the users&apos; reality even
+                before they use the products we design:
               </span>
             </div>
-            <div className="inline-flex items-center justify-start gap-[35px] border-blue-400 border-l-2 pl-8">
+            <div className="inline-flex items-center justify-start gap-[35px] border-l-2 border-blue-400 pl-8">
               <div className="flex items-center justify-start gap-[10.14px]">
                 <div className="text-xl font-normal leading-relaxed text-slate-700">
                   We are living in a time when people are experiencing a
@@ -367,42 +385,40 @@ const PackagingCase = () => {
               And provides valuable insights on how to take action:
             </div>
             <div className="relative">
-              <div className='border-blue-400 border-l-2 pl-8'>
+              <div className="border-l-2 border-blue-400 pl-8">
                 <span className="text-xl font-normal leading-relaxed text-slate-700">
                   There is an identifiable set of environmental conditions that
                   manifest in our experience designs that contribute to user
                   discomfort, including:
                 </span>
-                <ul className="text-xl font-normal leading-relaxed text-slate-700 list-disc m-10">
-                  <li>
-                    Too much complexity
-                  </li>
-                  <li>
-                    Overwhelming choices
-                  </li>
-                  <li>
-                    Lack of information
-                  </li>
-                  <li>
-                    Endless information
-                  </li>
-                  <li>
-                    Artificial urgency
-                  </li>
+                <ul className="m-10 list-disc text-xl font-normal leading-relaxed text-slate-700">
+                  <li>Too much complexity</li>
+                  <li>Overwhelming choices</li>
+                  <li>Lack of information</li>
+                  <li>Endless information</li>
+                  <li>Artificial urgency</li>
                 </ul>
               </div>
             </div>
             <div className="flex justify-between">
-              <div className='mr-2 max-w-[40%] flex flex-col items-center justify-between'>
-                <p className='mr-2 pt-6'>
+              <div className="mr-2 flex max-w-[40%] flex-col items-center justify-between">
+                <p className="mr-2 pt-6">
                   The{' '}
-                  <a href="https://www.sanidad.gob.es/estadEstudios/estadisticas/estadisticas/estMinisterio/SIAP/Salud_mental_datos.pdf" target="_blank" rel="noreferrer noopener" className="link text-blue-500 underline">
+                  <a
+                    href="https://www.sanidad.gob.es/estadEstudios/estadisticas/estadisticas/estMinisterio/SIAP/Salud_mental_datos.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="link text-blue-500 underline"
+                  >
                     figures
                   </a>{' '}
                   from the Ministry of Health of the Spanish Government reveal
                   alarming data regarding the presence of anxiety disorders.
                 </p>
-                <img src="/images/projects/gender.svg" alt="Gender chart on anxiety" />
+                <img
+                  src="/images/projects/gender.svg"
+                  alt="Gender chart on anxiety"
+                />
               </div>
               <img
                 className="w-[655px] max-w-[50%]"
