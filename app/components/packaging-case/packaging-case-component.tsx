@@ -458,9 +458,9 @@ const takeaways = (
     </div>
     <div>
       On one hand, we&apos;ve achieved a more user-friendly design in terms of
-      flow and UX writing. On the other hand, we've affected acquisition rates,
-      thereby uncovering potential edge cases and identifying additional areas
-      for research and improvement.
+      flow and UX writing. On the other hand, we&apos;ve affected acquisition
+      rates, thereby uncovering potential edge cases and identifying additional
+      areas for research and improvement.
     </div>
   </Section>
 );
