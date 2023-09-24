@@ -9,76 +9,92 @@ import {
   DialogFooter,
   DialogTitle,
 } from '@/components/ui/dialog';
+import Slider from 'react-slick';
 
-const Highlighted = ({ text }: { text: string }) => (
-  <div className="inline-flex items-center justify-start gap-6 rounded-[10px] bg-orange-300 bg-opacity-20 px-6 py-4">
-    <div className="text-center text-base font-normal leading-normal text-slate-700">
-      {text}
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+const Carousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+  return (
+    <Slider {...settings}>
+      <div className="!flex items-center justify-center">
+        <img
+          src="/images/projects/full/packing1.jpg"
+          className="max-h-[600px]"
+          alt="final designs 1"
+        />
+      </div>
+      <div className="!flex items-center justify-center">
+        <img
+          src="/images/projects/full/packing2.jpg"
+          className="max-h-[600px]"
+          alt="final designs 2"
+        />
+      </div>
+      <div className="!flex items-center justify-center">
+        <img
+          src="/images/projects/full/packing3.jpg"
+          className="max-h-[600px]"
+          alt="final designs 3"
+        />
+      </div>
+      <div className="!flex items-center justify-center">
+        <img
+          src="/images/projects/full/packing4.jpg"
+          className="max-h-[600px]"
+          alt="final designs 4"
+        />
+      </div>
+      <div className="!flex items-center justify-center">
+        <img
+          src="/images/projects/full/packing5.jpg"
+          className="max-h-[600px]"
+          alt="final designs 5"
+        />
+      </div>
+    </Slider>
+  );
+};
+
+const Section = ({
+  title,
+  description,
+  children,
+}: {
+  title: string;
+  description: string;
+  children?: React.ReactNode;
+}) => (
+  <Container>
+    <div className="text-teal-950 mb-4 text-[32px] font-semibold leading-[48px]">
+      {title}
     </div>
+    <div className="mb-8 text-2xl leading-[33px] text-trueGray-400">
+      {description}
+    </div>
+    <div className="text-teal-950 flex flex-col space-y-8 text-xl leading-9">
+      {children}
+    </div>
+  </Container>
+);
+
+const Quote = ({ children }: { children: React.ReactNode }) => (
+  <div className="w-[559px] text-2xl font-bold leading-[41px] text-sky-700">
+    {children}
   </div>
 );
-const AnchorLink = ({ href, text }: { href: string; text: string }) => (
-  <button
-    type="button"
-    className="mb-6 mr-2 flex h-[45px] items-center justify-center gap-[7.71px] rounded-[43.39px] bg-slate-100 px-4"
-    onClick={() => {
-      const element = document.getElementById(href.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }}
-  >
-    <div className="text-xl font-normal leading-[28.92px] text-slate-800">
-      {text}
-    </div>
-  </button>
-);
-const menuItems = [
-  {
-    href: '#ux-research',
-    text: 'UX research',
-  },
-  {
-    href: '#metrics-and-AARRR-framework',
-    text: 'Metrics and AARRR framework',
-  },
-  {
-    href: '#user-survey',
-    text: 'User survey',
-  },
-  {
-    href: '#desk-research-and-insights',
-    text: 'Desk research and insights',
-  },
-  {
-    href: '#setting-up-the-ux-tone',
-    text: 'Setting up the UX tone',
-  },
-  {
-    href: '#low-wireframes',
-    text: 'Low wireframes',
-  },
-  {
-    href: '#table-of-contents',
-    text: 'Table of contents',
-  },
-  {
-    href: '#moodboard-and-references',
-    text: 'Moordboard and references',
-  },
-  {
-    href: '#ui-designs',
-    text: 'UI designs',
-  },
-  {
-    href: '#takeaways',
-    text: 'Takeaways',
-  },
-];
+
 const ResearchCard = ({ title, text }: { title: string; text: string }) => (
   <div className="inline-flex min-h-[272px] flex-col items-center justify-start gap-[21.93px] rounded-lg border bg-white px-[36.54px] py-[32.89px] shadow-2xl">
-    <div className="flex flex-col items-center justify-end gap-[7.31px]">
-      <div className="text-2xl font-semibold text-slate-800">{title}</div>
+    <div className="flex flex-col items-center justify-end gap-[7.31px] uppercase">
+      <h3 className="text-2xl font-semibold text-slate-800">{title}</h3>
     </div>
     <div className="flex flex-col items-start justify-start gap-[14.62px]">
       <div className="inline-flex items-center justify-start gap-[10.14px]">
@@ -121,19 +137,22 @@ const myRole = (
 );
 
 const aarrrFramework = (
-  <div id="metrics-and-AARRR-framework" className="container mx-auto py-20">
-    <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
-      Metrics and AARRR framework
-    </h3>
-    <div className="flex flex-wrap items-center justify-between">
-      <div className="max-w-[500px] text-xl font-normal text-slate-700">
-        One of the project&apos;s greatest challenges is determining where to
-        focus attention and begin measuring wisely.
-        <br />
-        <br />
-        Based on the results presented in the following section, the
-        conversation among Business, Marketing, and Product leads to the
-        decision to focus attention on the top of the funnel, in acquisition.
+  <Section
+    title="Metrics and AARRR framework"
+    description="Where to focus to get it right."
+  >
+    <div>
+      One of the project&rsquo;s greatest challenges is determining where to
+      focus attention and begin measuring wisely.
+    </div>
+    <div>
+      Based on the results presented in the following section, the conversation
+      among Business, Marketing, and Product leads to the decision to focus
+      attention on the top of the funnel, in acquisition.
+    </div>
+    <div className="flex w-full flex-col items-center justify-center text-center">
+      <div className="text-gray-600 mb-4 text-2xl font-semibold uppercase leading-[30px]">
+        AARRR framework
       </div>
       <img
         className="max-w-[350px]"
@@ -141,166 +160,347 @@ const aarrrFramework = (
         alt="AARRR framework"
       />
     </div>
-  </div>
+  </Section>
 );
-const uxTone = (
-  <div id="setting-up-the-ux-tone" className="container mx-auto py-20">
-    <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
-      Setting up the UX tone
-    </h3>
-    <p className="text-xl font-normal leading-relaxed text-slate-700">
-      Among the 4 dimensions of tone, I have chosen a casual and slightly
-      enthusiastic approach, while maintaining friendliness and generating trust
-      in the user.
-    </p>
-  </div>
-);
+
 const lowWireframes = (
-  <div id="low-wireframes" className="container mx-auto py-20">
-    <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
-      Low wireframes
-    </h3>
+  <>
+    <Section
+      title="Low wireframes"
+      description="We started out with the low-fi wireframes to think about the structure."
+    />
     <img
-      className="max-w-[100%]"
-      src="/images/projects/low-wireframes.jpg"
+      className="-mt-[106px] mb-[106px] max-w-[100%]"
+      src="/images/projects/low.jpg"
       alt="low wireframes"
     />
-  </div>
+  </>
 );
+
+const colourPalette = (
+  <>
+    <Section
+      title="Colour palette"
+      description="Colour scheme based on the 60-30-10 method."
+    >
+      <div className="text-teal-950 text-xl leading-9">
+        Once the data was guiding my process, the content of the screens and the
+        flow was defined, I created a rough design of it, and defining the
+        fonts, the sizes and the colour palette.
+      </div>
+      <img
+        className="-mt-[106px] mb-[106px] max-w-[100%]"
+        src="/images/projects/color-scheme-1.png"
+        alt="applied color scheme"
+      />
+      <div className="text-teal-950 text-xl leading-9">
+        Based on our knowledge of the colour theory, we developed a trustworthy
+        and amicable colour palette. The 70% of the design is clean and white.
+        Body text and different headings has a darker and more grayish variation
+        of the interactive / accent colour.
+      </div>
+      <img
+        className="-mt-[106px] mb-[106px] max-w-[100%]"
+        src="/images/projects/colors.png"
+        alt="color scheme"
+      />
+    </Section>
+  </>
+);
+
 const tableOfContents = (
-  <div id="table-of-contents" className="container mx-auto py-20">
-    <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
-      Table of contents
-    </h3>
-    <img
-      className="max-w-[100%]"
-      src="/images/projects/table-of-contents.jpg"
-      alt="table of contents"
-    />
-  </div>
-);
-const mood = (
-  <div id="moodboard-and-references" className="container mx-auto py-20">
-    <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
-      Moodboard and References
-    </h3>
-    <div className="flex max-w-full items-center justify-between">
+  <>
+    <Section
+      title="Table of contents"
+      description="Screens of the flow and information architecture."
+    >
+      <p>
+        The information that will be crucial to gather is analyzed and
+        determined, as well as which screens will be important for the
+        flow&apos;s development.
+      </p>
+      <p>
+        The content is prioritized in order to organize the information
+        according to the navigation. This would help to star designing the
+        low-fi flows
+      </p>
+    </Section>
+    <div className="-mt-8 mb-[106px] flex justify-center">
       <img
-        className="max-w-[30%] flex-1"
-        src="/images/projects/mood-1.jpg"
-        alt="moodboard"
-      />
-      <img
-        className="max-w-[30%] flex-1"
-        src="/images/projects/mood-2.jpg"
-        alt="moodboard 2"
-      />
-      <img
-        className="max-w-[30%] flex-1"
-        src="/images/projects/mood-3.jpg"
-        alt="moodboard 3"
+        className="max-w-[80%]"
+        src="/images/projects/table-of-contents.jpg"
+        alt="table of contents"
       />
     </div>
-  </div>
+  </>
 );
-const uiDesigns = (
-  <div id="ui-designs" className="container mx-auto py-20">
-    <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
-      UI designs
-    </h3>
-    <p className="text-xl font-normal leading-relaxed text-slate-700">
-      Once the data was guiding my process, the content of the screens and the
-      flow was defined, I created a rough design of it, and defining the fonts,
-      the sizes and the colour palette.
-    </p>
-    <div className="my-10 flex max-w-full items-center justify-between">
-      <img src="/images/projects/colors.jpg" alt="UI designs" />
-      <img src="/images/projects/ui-designs.jpg" alt="UI designs" />
+
+const finalDesigns = (
+  <>
+    <Section title="Final designs" description="UI redesigns of the flow.">
+      {/* Carousel of final images with horizontal scroll */}
+    </Section>
+    <div className="-mt-[106px] mb-[106px]">
+      <Carousel />
     </div>
-  </div>
+  </>
 );
-const userSurvey = (
-  <div id="user-survey" className="container mx-auto py-20">
-    <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
-      User Survey
-    </h3>
-    <div className="flex flex-wrap items-center justify-between">
+
+const deskResearch = (
+  <Section
+    title="Desk research and insights"
+    description="To better understand why and to collect valuable insights to guide the redesign."
+  >
+    <h4 className="text-gray-400 mt-4 text-2xl font-semibold uppercase leading-[30px] text-trueGray-400">
+      We stand for Responsible design
+    </h4>
+    <div className="text-xl font-normal leading-9">
+      When designing user experiences, it&rsquo;s crucial to consider both
+      physical and cognitive accessibility. When applied with the business in
+      mind, it provides users with a sense of security and confidence in
+      choosing our services.
+    </div>
+    <div className="flex items-center justify-center">
       <img
-        className="max-w-[240px]"
-        src="/images/projects/user-survey-1.jpg"
-        alt="user survey"
+        className="max-w-[305px]"
+        src="/images/projects/mente_puzzle_02.png"
+        alt="puzzle"
       />
-      <img
-        className="max-w-[240px]"
-        src="/images/projects/user-survey-2.jpg"
-        alt="user survey 2"
-      />
-      <div className="mt-8 inline-flex flex-col items-start justify-start gap-[45px] lg:mt-0">
-        <div className="flex flex-col items-start justify-start gap-[14.62px]">
-          <div className="inline-flex w-[378px] items-center justify-start gap-[10.14px]">
-            <div className="w-[378px] self-stretch text-xl font-normal leading-relaxed text-slate-700">
-              To gather the necessary information and generate insights to aid
-              further development, a small survey in modal format was
-              implemented through an MVP to understand the reasons for
-              drop-offs.
-            </div>
-          </div>
+    </div>
+    <div className="inline">
+      <span className="text-xl leading-9 text-stone-900">
+        The number of apps in the market addressing mental health is
+        overwhelming, undoubtedly responding to a high demand. An interesting
+        article titled{' '}
+      </span>
+      <span className="text-xl font-semibold leading-9 text-stone-900">
+        &apos;Responsible Design: Approaches for Reducing Uncertainty and
+        Anxiety&apos;{' '}
+      </span>
+      <span className="text-xl font-normal leading-9 text-stone-900">
+        on uxpamagazine.org it emphasizes the users&rsquo; reality even before
+        they use the products we design:
+      </span>
+    </div>
+    <Quote>
+      “We are living in a time when people are experiencing a heightened level
+      of uncertainty and anxiety even before they ever make first contact with
+      our products or services.”
+    </Quote>
+    <div className="text-xl font-normal leading-9 text-stone-900">
+      There is an identifiable set of environmental conditions that manifest in
+      our experience designs that contribute to user discomfort, including:
+    </div>
+    <div className="inline-flex flex-col items-start justify-start gap-2">
+      <div className="inline-flex items-center justify-start gap-6">
+        <div className="h-2 w-2 rounded-full bg-sky-700" />
+        <div className="text-teal-950 text-xl leading-9">
+          Too much complexity
         </div>
-        <div className="flex flex-col items-start justify-start gap-[14.62px]">
-          <div className="inline-flex w-[378px] items-center justify-start gap-[10.14px]">
-            <div className="w-[378px] self-stretch">
-              <span className="text-xl font-normal leading-relaxed text-slate-700">
-                The sample obtained guides us towards the following directions:
-              </span>
-              <ul className="my-4 ml-5 list-disc">
-                <li className="text-xl font-normal leading-relaxed text-slate-700">
-                  Contrasting services
-                </li>
-                <li className="text-xl font-semibold leading-relaxed text-slate-700">
-                  Lack of information <span className="font-normal"> and</span>
-                </li>
-                <li className="text-xl font-semibold leading-relaxed text-slate-700">
-                  Complex process.
-                </li>
-              </ul>
-            </div>
-          </div>
+      </div>
+      <div className="inline-flex items-center justify-start gap-6">
+        <div className="h-2 w-2 rounded-full bg-sky-700" />
+        <div className="text-teal-950 text-xl leading-9">
+          Overwhelming choices
+        </div>
+      </div>
+      <div className="inline-flex items-center justify-start gap-6">
+        <div className="h-2 w-2 rounded-full bg-sky-700" />
+        <div className="text-teal-950 text-xl leading-9">
+          Lack of information
+        </div>
+      </div>
+      <div className="inline-flex items-center justify-start gap-6">
+        <div className="h-2 w-2 rounded-full bg-sky-700" />
+        <div className="text-teal-950 text-xl leading-9">
+          Endless information
+        </div>
+      </div>
+      <div className="inline-flex items-center justify-start gap-6">
+        <div className="h-2 w-2 rounded-full bg-sky-700" />
+        <div className="text-teal-950 text-xl leading-9">
+          Artificial urgency
         </div>
       </div>
     </div>
-  </div>
+    <h4 className="text-gray-400 mt-4 text-2xl font-semibold uppercase leading-[30px] text-trueGray-400">
+      The anxiety in data, Spain
+    </h4>
+    <div className="w-[676px] text-xl leading-9 text-stone-900">
+      The figures from the Ministry of Health of the Spanish Government reveal
+      alarming data regarding the presence of anxiety disorders.{' '}
+    </div>
+    <img
+      className="h-[454px] w-[655px]"
+      src="/images/projects/chart.jpg"
+      alt="anxiety data spain chart"
+    />
+  </Section>
 );
+const dataAnalysis = (
+  <Section
+    title="Data analysis"
+    description="Based on the sources consulted and the data analyzed."
+  >
+    <Quote>
+      “Information anxiety is the black hole between data and knowledge, and it
+      happens when information doesn’t tell us what we want or need to know.”
+    </Quote>
+    <div className="text-xl font-normal leading-9 text-stone-900">
+      in Spain, the percentage of the population experiencing anxiety is on the
+      rise. The data reveals a population that approaches any online process
+      with anxiety. Access to information and how information is accessed is
+      beyond users&apos; control and has much to do with decisions in digital
+      product design.
+    </div>
+    <img
+      className="h-80 w-[400px]"
+      src="/images/projects/app.png"
+      alt="app image"
+    />
+    <div className="text-teal-950 text-xl font-normal leading-9">
+      What can we do from a design perspective for a user seeking to complete
+      online processes in a state of anxiety? How can we adapt flows and make
+      our products more usable?
+    </div>
+    <div className="inline-flex h-[372px] w-[645px] flex-col items-start justify-center gap-6">
+      <div className="inline-flex items-center justify-start gap-6">
+        <div className="h-[8px] w-[20px] rounded-full bg-sky-700" />
+        <div className="text-teal-950 text-xl font-normal leading-9">
+          UX/UI Redesign: The project involves redesigning the entire delivery
+          inquiry flow, including landing pages, data collection screens, and
+          success confirmation pages.
+        </div>
+      </div>
+      <div className="inline-flex items-center justify-start gap-6">
+        <div className="h-[8px] w-[20px] rounded-full bg-sky-700" />
+        <div className="text-teal-950 text-xl font-normal leading-9">
+          User-Centric Design: The focus is on creating a user-centric
+          experience, simplifying complex processes, and ensuring users feel
+          confident throughout the inquiry.
+        </div>
+      </div>
+      <div className="inline-flex w-[645px] items-center justify-start gap-6">
+        <div className="h-[8px] w-[20px] rounded-full bg-sky-700" />
+        <div className="text-teal-950 text-xl font-normal leading-9">
+          Ethical Considerations: Ethical principles are integrated into the
+          design to address concerns about data privacy and security.
+        </div>
+      </div>
+    </div>
+  </Section>
+);
+const userSurvey = (
+  <>
+    <Section
+      title="User survey"
+      description="To identify where the friction is and why, we run a little survey to face the hypothesis."
+    >
+      <div>
+        To gather the necessary information and generate insights to aid further
+        development, a small survey in modal format was implemented through an
+        MVP to understand the reasons for drop-offs. The sample obtained guides
+        us towards the following directions:
+      </div>
+      <div className="inline-flex h-[124px] w-[280px] flex-col items-start justify-start gap-2">
+        <div className="inline-flex items-center justify-start gap-6">
+          <div className="h-2 w-2 rounded-full bg-sky-700" />
+          <div className="text-teal-950 text-xl font-normal leading-9">
+            Contrasting services
+          </div>
+        </div>
+        <div className="inline-flex items-center justify-start gap-6">
+          <div className="h-2 w-2 rounded-full bg-sky-700" />
+          <div className="text-teal-950 text-xl font-medium leading-9">
+            Lack of information
+          </div>
+        </div>
+        <div className="inline-flex items-center justify-start gap-6">
+          <div className="h-2 w-2 rounded-full bg-sky-700" />
+          <div className="text-teal-950 text-xl font-medium leading-9">
+            Complex process.
+          </div>
+        </div>
+      </div>
+    </Section>
+    <div className="mx-24 mb-[52px] flex flex-wrap items-center justify-between">
+      <div className="max-w-[30%]">
+        <img src="/images/projects/user-survey-1.jpg" alt="user survey" />
+        <div className="text-center text-sm font-normal leading-[34px] text-slate-700 text-opacity-50">
+          Checkbox survey
+        </div>
+      </div>
+      <div className="max-w-[30%]">
+        <img src="/images/projects/user-survey-1-bis.jpg" alt="user survey" />
+        <div className="text-center text-sm font-normal leading-[34px] text-slate-700 text-opacity-50">
+          Text area survey
+        </div>
+      </div>
+      <div className="max-w-[30%]">
+        <img src="/images/projects/user-survey-2.jpg" alt="user survey 2" />
+        <div className="text-center text-sm font-normal leading-[34px] text-slate-700 text-opacity-50">
+          Success notification
+        </div>
+      </div>
+    </div>
+  </>
+);
+
 const takeaways = (
-  <div id="takeaways" className="container mx-auto py-20">
-    <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
-      Takeaways
-    </h3>
-    <p className="text-xl font-normal leading-relaxed text-slate-700">
+  <Section
+    title="Takeaways"
+    description="Conclusions we take from the project."
+  >
+    <div>
       This process has yielded valuable insights, such as the importance of
       data-driven decision-making and the integration of an ethical code into
       Product design practices.
-      <br />
-      <br />
+    </div>
+    <div>
       On one hand, we&apos;ve achieved a more user-friendly design in terms of
-      flow and UX writing. On the other hand, we&apos;ve affected acquisition
-      rates, thereby uncovering potential edge cases and identifying additional
-      areas for research and improvement.
-    </p>
+      flow and UX writing. On the other hand, we've affected acquisition rates,
+      thereby uncovering potential edge cases and identifying additional areas
+      for research and improvement.
+    </div>
+  </Section>
+);
+
+const Container = ({ children }: { children: React.ReactNode }) => (
+  <div className="container mb-[106px] max-w-[680px] px-0">{children}</div>
+);
+const NumberSection = ({
+  number,
+  title,
+  description,
+}: {
+  number: string;
+  title: string;
+  description: string;
+}) => (
+  <div className="flex flex-1 flex-col gap-2 rounded-lg px-16 py-6">
+    <img
+      className="h-16 w-16"
+      src={`images/projects/number-${number}.svg`}
+      alt={`number ${number}`}
+    ></img>
+    <h4 className="text-xl font-semibold uppercase leading-[30px] text-slate-700 text-opacity-50">
+      {title}
+    </h4>
+    <div className="text-teal-950 text-lg leading-9">{description}</div>
   </div>
 );
+
 const PackagingCase = () => {
   return (
     <div className="h-screen overflow-auto md:h-full">
       <div className="mb-4 flex justify-center">
         <DialogHeader>
-          <DialogTitle className="pb-2 text-center text-[38px] font-normal leading-relaxed">
-            <div>Minimizing obstacles:</div>Information request proposal in a
-            shipping company
+          <DialogTitle className="text-center text-[38px] font-normal leading-relaxed">
+            Shipping company
           </DialogTitle>
-          <DialogDescription className="text-center text-xl font-normal leading-[30px] text-black">
-            The goal is to design a simple, informative flow accompanied by a UX
-            Writing proposal to reduce anxiety, increase confidence, and achieve
-            higher user activation.
+          <DialogDescription className="max-w-[600px] text-center text-xl font-normal  leading-[30px] text-slate-700 text-opacity-50">
+            Minimizing obstacles: information request proposal in a shipping
+            company
           </DialogDescription>
         </DialogHeader>
       </div>
@@ -308,19 +508,41 @@ const PackagingCase = () => {
         src="/images/projects/packaging-presentation.jpg"
         alt="project overview"
       />
-      <div className="container mt-24" id="menu">
-        <div className="flex flex-wrap justify-start">
-          {menuItems.map((item) => (
-            <AnchorLink key={item.text} {...item} />
-          ))}
+      <div className="container mt-24">{myRole}</div>
+      <Container>
+        <div className="text-teal-950 text-xl leading-9">
+          The goal is to design a simple, informative flow accompanied by a UX
+          Writing proposal to achieve higher user activation by reducing anxiety
+          and increasing confidence through a cleaner design.
         </div>
-        {myRole}
+      </Container>
+      <Section
+        title="Design process"
+        description="To better understand why and to collect valuable insights to guide the redesign."
+      />
+      <div className="flex justify-between">
+        <NumberSection
+          number="one"
+          title="what"
+          description="Identify the problem."
+        />
+        <NumberSection
+          number="two"
+          title="why"
+          description="Investigate the causes of the problem."
+        />
+        <NumberSection
+          number="three"
+          title="how"
+          description="Implement changes based on the data and iterate."
+        />
       </div>
-      <div id="ux-research" className="relative bg-slate-100">
+      <Section
+        title="Background for the UX research"
+        description="What is the problem: context of the situation."
+      />
+      <div id="ux-research" className="relative mb-[106px] bg-sky-50">
         <div className="container mx-auto py-20">
-          <h3 className="mb-10 text-[32px] font-semibold leading-9 text-slate-800">
-            UX research
-          </h3>
           <div className="flex flex-wrap justify-between">
             <ResearchCard
               title="Problem"
@@ -339,202 +561,13 @@ const PackagingCase = () => {
       </div>
       {aarrrFramework}
       {userSurvey}
-      <div id="desk-research-and-insights" className="relative bg-slate-100">
-        <div className="container mx-auto py-20">
-          <h3 className="mb-10 text-[32px] font-semibold leading-9 text-slate-800">
-            Desk research and insights
-          </h3>
-          <div className="space-y-6">
-            <div className="text-xl font-normal leading-relaxed text-slate-700">
-              When designing user experiences, it&apos;s crucial to consider
-              both physical and cognitive accessibility. When applied with the
-              business in mind, it provides users with a sense of security and
-              confidence in choosing our services.
-            </div>
-            <div>
-              <span className="text-xl font-normal leading-relaxed text-slate-700">
-                The number of apps in the market addressing mental health is
-                overwhelming, undoubtedly responding to a high demand. An
-                interesting article titled{' '}
-              </span>
-              <a
-                href="https://uxpamagazine.org/responsible-design/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-medium leading-relaxed text-blue-400 underline"
-              >
-                &apos;Responsible Design: Approaches for Reducing Uncertainty
-                and Anxiety&apos;
-              </a>
-              <span className="text-xl font-normal leading-relaxed text-slate-700">
-                {' '}
-                on uxpamagazine.org it emphasizes the users&apos; reality even
-                before they use the products we design:
-              </span>
-            </div>
-            <div className="inline-flex items-center justify-start gap-[35px] border-l-2 border-blue-400 pl-8">
-              <div className="flex items-center justify-start gap-[10.14px]">
-                <div className="text-xl font-normal leading-relaxed text-slate-700">
-                  We are living in a time when people are experiencing a
-                  heightened level of uncertainty and anxiety even before they
-                  ever make first contact with our products or services.
-                </div>
-              </div>
-            </div>
-            <div className="text-xl font-normal leading-relaxed text-slate-700">
-              And provides valuable insights on how to take action:
-            </div>
-            <div className="relative">
-              <div className="border-l-2 border-blue-400 pl-8">
-                <span className="text-xl font-normal leading-relaxed text-slate-700">
-                  There is an identifiable set of environmental conditions that
-                  manifest in our experience designs that contribute to user
-                  discomfort, including:
-                </span>
-                <ul className="m-10 list-disc text-xl font-normal leading-relaxed text-slate-700">
-                  <li>Too much complexity</li>
-                  <li>Overwhelming choices</li>
-                  <li>Lack of information</li>
-                  <li>Endless information</li>
-                  <li>Artificial urgency</li>
-                </ul>
-              </div>
-            </div>
-            <div className="flex justify-between">
-              <div className="mr-2 flex max-w-[40%] flex-col items-center justify-between">
-                <p className="mr-2 pt-6">
-                  The{' '}
-                  <a
-                    href="https://www.sanidad.gob.es/estadEstudios/estadisticas/estadisticas/estMinisterio/SIAP/Salud_mental_datos.pdf"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="link text-blue-500 underline"
-                  >
-                    figures
-                  </a>{' '}
-                  from the Ministry of Health of the Spanish Government reveal
-                  alarming data regarding the presence of anxiety disorders.
-                </p>
-                <img
-                  src="/images/projects/gender.svg"
-                  alt="Gender chart on anxiety"
-                />
-              </div>
-              <img
-                className="w-[655px] max-w-[50%]"
-                src="/images/projects/chart.jpg"
-                alt="Chart on anxiety"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      {uxTone}
-      {lowWireframes}
+      {deskResearch}
+      {dataAnalysis}
       {tableOfContents}
-      {mood}
-      {uiDesigns}
+      {lowWireframes}
+      {colourPalette}
+      {finalDesigns}
       {takeaways}
-      <div className="container">
-        <h3 className="mb-20 text-[32px] font-semibold leading-9 text-slate-800">
-          Final flow
-        </h3>
-        <div className="mb-12 flex gap-12">
-          <div className="flex max-w-[50%] flex-col justify-center space-y-8 pt-1 text-center text-sm">
-            <div>
-              <h4 className="py-2 font-bold uppercase">
-                Let’s begin the journey
-              </h4>
-              <p>
-                The visitor is on the initial screen of the flow. It features a
-                motivational text, a brief description, and an illustration,
-                simplifying the information on the screen.
-              </p>
-            </div>
-          </div>
-          <div>
-            <img src="/images/projects/full/packing1.jpg" alt="package" />
-          </div>
-        </div>
-        <div className="mb-12 flex gap-12">
-          <div>
-            <img src="/images/projects/full/packing2.jpg" alt="package" />
-          </div>
-          <div className="flex max-w-[50%] flex-col justify-center space-y-2 pt-1 text-center text-sm">
-            <h4 className="py-4 font-bold uppercase">
-              Why did I take this approach
-            </h4>
-            <div className="space-y-8">
-              <ul className="space-y-2">
-                <li className="font-semibold">Based on Hick&apos;s Law</li>
-                <li>
-                  <Highlighted text="The time it takes to make a decision increases with the number and complexity of choices." />
-                </li>
-                <li>
-                  The fewer options, the faster the choice and the less anxiety.
-                </li>
-              </ul>
-              <ul className="space-y-2 ">
-                <li className="font-semibold">
-                  The Law of Conservation of Complexity
-                </li>
-                <li>
-                  <Highlighted text="For any system there is a certain amount of complexity which cannot be reduced." />
-                </li>
-                <li>
-                  Reducing the complexity of the steps and the language (UX
-                  writing) that accompanies the flow.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="mb-12 flex gap-12">
-          <div className="flex max-w-[50%] flex-col justify-center space-y-2 pt-1 text-center text-sm">
-            <h4 className="py-2 font-bold uppercase">Divide and rule</h4>
-            <p className="max-w-[450px] text-sm">
-              To alleviate the anxiety associated with providing data, I have{' '}
-              <span className="font-semibold">
-                divided the form into two blocks
-              </span>
-              , aiming to reduce cognitive load and simplify the process.
-            </p>
-          </div>
-          <div>
-            <img src="/images/projects/full/packing3.jpg" alt="package" />
-          </div>
-        </div>
-        <div className="mb-12 flex gap-12">
-          <div>
-            <img src="/images/projects/full/packing4.jpg" alt="package" />
-          </div>
-          <div className="flex max-w-[50%] flex-col justify-center space-y-2 pt-1 text-center text-sm">
-            <h4 className="py-2 font-bold uppercase">
-              Gathering Relevant Information
-            </h4>
-            <p className="max-w-[450px]">
-              I focused on collecting only the relevant information to avoid
-              potential frictions and ensure that the user stays on track. The
-              solution will be customized according to the needs of the
-              potential client.
-            </p>
-          </div>
-        </div>
-        <div className="mb-12 flex gap-12">
-          <div className="flex max-w-[50%] flex-col justify-center space-y-2 pt-1 text-center text-sm">
-            <h4 className="py-2 font-bold uppercase">Success!</h4>
-            <p className="max-w-[450px]">
-              Overall, my approach is centered around minimizing obstacles and
-              frictions in the information request process in the shipping
-              company, through a proposal designed to reduce anxiety, keep the
-              user informed, and gather only necessary information.
-            </p>
-          </div>
-          <div>
-            <img src="/images/projects/full/packing5.jpg" alt="package" />
-          </div>
-        </div>
-      </div>
       <div id="contact">
         <DialogFooter>
           <MiniFooter />
