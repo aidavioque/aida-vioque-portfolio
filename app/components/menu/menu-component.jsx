@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 
 const Menu = () => {
   const pathName = usePathname();
-  console.log(pathName);
   return (
     <ul className="container flex justify-center">
       <li

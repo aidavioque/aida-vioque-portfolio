@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Aida Aranguren Monuments of the world',
   description: 'Aida Aranguren Monuments of the world',
   keywords: 'Aida Aranguren, Monuments of the world, designer, monuments',
-  manifest: '/images/site.webmanifest',
+  // manifest: '/images/site.webmanifest',
   themeColor: '#ffffff',
   icons: [
     {

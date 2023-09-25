@@ -9,6 +9,7 @@ import {
   DialogFooter,
   DialogTitle,
 } from '@/components/ui/dialog';
+
 import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
@@ -73,13 +74,13 @@ const Section = ({
   children?: React.ReactNode;
 }) => (
   <Container>
-    <div className="text-teal-950 mb-4 text-[32px] font-semibold leading-[48px]">
+    <div className="mb-4 text-[32px] font-semibold leading-[48px] text-teal-950">
       {title}
     </div>
     <div className="mb-8 text-2xl leading-[33px] text-trueGray-400">
       {description}
     </div>
-    <div className="text-teal-950 flex flex-col space-y-8 text-xl leading-9">
+    <div className="flex flex-col space-y-8 text-xl leading-9 text-teal-950">
       {children}
     </div>
   </Container>
@@ -183,7 +184,7 @@ const colourPalette = (
       title="Colour palette"
       description="Colour scheme based on the 60-30-10 method."
     >
-      <div className="text-teal-950 text-xl leading-9">
+      <div className="text-xl leading-9 text-teal-950">
         Once the data was guiding my process, the content of the screens and the
         flow was defined, I created a rough design of it, and defining the
         fonts, the sizes and the colour palette.
@@ -193,7 +194,7 @@ const colourPalette = (
         src="/images/projects/color-scheme-1.png"
         alt="applied color scheme"
       />
-      <div className="text-teal-950 text-xl leading-9">
+      <div className="text-xl leading-9 text-teal-950">
         Based on our knowledge of the colour theory, we developed a trustworthy
         and amicable colour palette. The 70% of the design is clean and white.
         Body text and different headings has a darker and more grayish variation
@@ -294,31 +295,31 @@ const deskResearch = (
     <div className="inline-flex flex-col items-start justify-start gap-2">
       <div className="inline-flex items-center justify-start gap-6">
         <div className="h-2 w-2 rounded-full bg-sky-700" />
-        <div className="text-teal-950 text-xl leading-9">
+        <div className="text-xl leading-9 text-teal-950">
           Too much complexity
         </div>
       </div>
       <div className="inline-flex items-center justify-start gap-6">
         <div className="h-2 w-2 rounded-full bg-sky-700" />
-        <div className="text-teal-950 text-xl leading-9">
+        <div className="text-xl leading-9 text-teal-950">
           Overwhelming choices
         </div>
       </div>
       <div className="inline-flex items-center justify-start gap-6">
         <div className="h-2 w-2 rounded-full bg-sky-700" />
-        <div className="text-teal-950 text-xl leading-9">
+        <div className="text-xl leading-9 text-teal-950">
           Lack of information
         </div>
       </div>
       <div className="inline-flex items-center justify-start gap-6">
         <div className="h-2 w-2 rounded-full bg-sky-700" />
-        <div className="text-teal-950 text-xl leading-9">
+        <div className="text-xl leading-9 text-teal-950">
           Endless information
         </div>
       </div>
       <div className="inline-flex items-center justify-start gap-6">
         <div className="h-2 w-2 rounded-full bg-sky-700" />
-        <div className="text-teal-950 text-xl leading-9">
+        <div className="text-xl leading-9 text-teal-950">
           Artificial urgency
         </div>
       </div>
@@ -358,7 +359,7 @@ const dataAnalysis = (
       src="/images/projects/app.png"
       alt="app image"
     />
-    <div className="text-teal-950 text-xl font-normal leading-9">
+    <div className="text-xl font-normal leading-9 text-teal-950">
       What can we do from a design perspective for a user seeking to complete
       online processes in a state of anxiety? How can we adapt flows and make
       our products more usable?
@@ -366,7 +367,7 @@ const dataAnalysis = (
     <div className="inline-flex h-[372px] w-[645px] flex-col items-start justify-center gap-6">
       <div className="inline-flex items-center justify-start gap-6">
         <div className="h-[8px] w-[20px] rounded-full bg-sky-700" />
-        <div className="text-teal-950 text-xl font-normal leading-9">
+        <div className="text-xl font-normal leading-9 text-teal-950">
           UX/UI Redesign: The project involves redesigning the entire delivery
           inquiry flow, including landing pages, data collection screens, and
           success confirmation pages.
@@ -374,7 +375,7 @@ const dataAnalysis = (
       </div>
       <div className="inline-flex items-center justify-start gap-6">
         <div className="h-[8px] w-[20px] rounded-full bg-sky-700" />
-        <div className="text-teal-950 text-xl font-normal leading-9">
+        <div className="text-xl font-normal leading-9 text-teal-950">
           User-Centric Design: The focus is on creating a user-centric
           experience, simplifying complex processes, and ensuring users feel
           confident throughout the inquiry.
@@ -382,7 +383,7 @@ const dataAnalysis = (
       </div>
       <div className="inline-flex w-[645px] items-center justify-start gap-6">
         <div className="h-[8px] w-[20px] rounded-full bg-sky-700" />
-        <div className="text-teal-950 text-xl font-normal leading-9">
+        <div className="text-xl font-normal leading-9 text-teal-950">
           Ethical Considerations: Ethical principles are integrated into the
           design to address concerns about data privacy and security.
         </div>
@@ -405,19 +406,19 @@ const userSurvey = (
       <div className="inline-flex h-[124px] w-[280px] flex-col items-start justify-start gap-2">
         <div className="inline-flex items-center justify-start gap-6">
           <div className="h-2 w-2 rounded-full bg-sky-700" />
-          <div className="text-teal-950 text-xl font-normal leading-9">
+          <div className="text-xl font-normal leading-9 text-teal-950">
             Contrasting services
           </div>
         </div>
         <div className="inline-flex items-center justify-start gap-6">
           <div className="h-2 w-2 rounded-full bg-sky-700" />
-          <div className="text-teal-950 text-xl font-medium leading-9">
+          <div className="text-xl font-medium leading-9 text-teal-950">
             Lack of information
           </div>
         </div>
         <div className="inline-flex items-center justify-start gap-6">
           <div className="h-2 w-2 rounded-full bg-sky-700" />
-          <div className="text-teal-950 text-xl font-medium leading-9">
+          <div className="text-xl font-medium leading-9 text-teal-950">
             Complex process.
           </div>
         </div>
@@ -486,7 +487,7 @@ const NumberSection = ({
     <h4 className="text-xl font-semibold uppercase leading-[30px] text-slate-700 text-opacity-50">
       {title}
     </h4>
-    <div className="text-teal-950 text-lg leading-9">{description}</div>
+    <div className="text-lg leading-9 text-teal-950">{description}</div>
   </div>
 );
 
@@ -510,7 +511,7 @@ const PackagingCase = () => {
       />
       <div className="container mt-24">{myRole}</div>
       <Container>
-        <div className="text-teal-950 text-xl leading-9">
+        <div className="text-xl leading-9 text-teal-950">
           The goal is to design a simple, informative flow accompanied by a UX
           Writing proposal to achieve higher user activation by reducing anxiety
           and increasing confidence through a cleaner design.

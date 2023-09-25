@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Aida Aranguren Portfolio',
   description: `Discover Aida Aranguren's captivating portfolio—a fusion of product design and illustration. With meticulous attention to detail and a flair for storytelling, Aida brings ideas to life through visually stunning artwork. From engaging user interfaces to whimsical illustrations, her versatile creations leave a lasting impression. Explore her portfolio now for a seamless blend of creativity and functionality`,
   keywords: 'Aida Aranguren, Portfolio, designer',
-  manifest: '/images/site.webmanifest',
+  // manifest: '/images/site.webmanifest',
   themeColor: '#ffffff',
   icons: [
     {

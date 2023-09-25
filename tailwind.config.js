@@ -1,5 +1,5 @@
 const colors = require('tailwindcss/colors');
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -54,10 +54,10 @@ module.exports = {
       cream: '#f8eee3',
       infoBg: '#3B4660',
     },
-    fontFamily: {
-      sans: ['var(--font-montserrat)'],
-    },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-montserrat)', ...defaultTheme.fontFamily.sans],
+      },
       boxShadow: {
         main: '0px 4px 20px rgba(74, 91, 102, 0.25)',
       },

@@ -4,6 +4,8 @@
 import Card from 'app/components/card';
 import MiniFooter from 'app/components/mini-footer';
 import PackagingCase from 'app/components/packaging-case';
+import SmartProtectionCase from 'app/components/smart-protection-case';
+
 import Arrow from 'app/components/arrow';
 // import IllustrationSection from 'app/components/illustration-section';
 import { Button } from '#/components/ui/button';
@@ -75,11 +77,17 @@ export default function Home() {
         <div className="flex justify-center">{<Arrow />}</div>
       </section>
       <section
-        className="container relative pt-10 pb-48 md:pt-36 lg:pt-1"
+        className="container relative pb-48 pt-10 md:pt-36 lg:pt-1"
         id="product-design"
       >
         <h2 className="pb-16 text-5xl text-primary">Case studies</h2>
         <div className="flex flex-col items-center justify-center lg:pl-16">
+          <Card
+            title="Smart protection"
+            description="Smart protection."
+            image="/images/projects/package.png"
+            content={<SmartProtectionCase />}
+          />
           <Card
             title="Information request proposal"
             description="Informative flow in a shipping company to reduce anxiety, increase confidence, and achieve higher user activation."
