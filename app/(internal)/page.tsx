@@ -31,12 +31,12 @@ const CardContent = ({
   children?: React.ReactNode;
 }) => (
   <div className="h-screen overflow-auto md:h-full">
-    <div className="flex justify-center">
-      <DialogHeader className="max-w-[75%]">
-        <DialogTitle className="pb-2 text-center text-2xl text-[38px] font-normal leading-[67px]">
+    <div className="mb-4 flex justify-center">
+      <DialogHeader>
+        <DialogTitle className="text-center text-[38px] font-normal leading-relaxed">
           {title}
         </DialogTitle>
-        <DialogDescription className="text-center text-xl font-normal leading-[30px] text-black">
+        <DialogDescription className="max-w-[600px] text-center text-xl font-normal  leading-[30px] text-slate-700 text-opacity-50">
           {description}
         </DialogDescription>
       </DialogHeader>
