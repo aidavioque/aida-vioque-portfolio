@@ -84,8 +84,8 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center lg:pl-16">
           <Card
             title="Smart protection"
-            description="Smart protection."
-            image="/images/projects/package.png"
+            description="Scaling a company that protects intellectual and industrial property rights on the internet."
+            image="/images/projects/smart-protection-button.jpg"
             content={<SmartProtectionCase />}
           />
           <Card
