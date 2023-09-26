@@ -34,15 +34,9 @@ const Section = ({
   </Container>
 );
 
-const Quote = ({ children }: { children: React.ReactNode }) => (
-  <div className="w-[559px] text-2xl font-bold leading-[41px] text-sky-700">
-    {children}
-  </div>
-);
-
 const myRole = (
-  <div className="my-12 flex items-start justify-evenly">
-    <div className="max-w-[250px]">
+  <div className="my-12 flex items-start justify-evenly space-x-2">
+    <div className="max-w-[250px] flex-1">
       <h3 className="text-sm font-bold uppercase leading-relaxed tracking-[3px] text-slate-700 text-opacity-50">
         My role
       </h3>
@@ -50,7 +44,7 @@ const myRole = (
         Graphic and UI Designer
       </div>
     </div>
-    <div className="max-w-[300px]">
+    <div className="max-w-[300px] flex-1">
       <h3 className="text-sm font-bold uppercase leading-relaxed tracking-[3px] text-slate-700 text-opacity-50">
         Teams
       </h3>
@@ -58,7 +52,7 @@ const myRole = (
         Marketing and Product
       </div>
     </div>
-    <div className="max-w-[300px]">
+    <div className="max-w-[300px] flex-1">
       <h3 className="text-sm font-bold uppercase leading-relaxed tracking-[3px] text-slate-700 text-opacity-50">
         when
       </h3>
@@ -76,7 +70,9 @@ const Container = ({
   children: React.ReactNode;
   className?: string;
 }) => (
-  <div className={cx('container mb-[48px] max-w-[680px] px-0', className)}>
+  <div
+    className={cx('container mb-[48px] max-w-[680px] px-4 lg:px-0 ', className)}
+  >
     {children}
   </div>
 );
@@ -138,7 +134,7 @@ const SmartProtectionCase = () => {
       </Section>
       <div className="mb-[106px] flex justify-center">
         <img
-          className="h-[484px] w-[978px] rounded-[20px]"
+          className="rounded-[20px]"
           src="/images/projects/blog-post.jpg"
           alt="Blog post images"
         />

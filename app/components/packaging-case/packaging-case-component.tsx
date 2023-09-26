@@ -87,7 +87,7 @@ const Section = ({
 );
 
 const Quote = ({ children }: { children: React.ReactNode }) => (
-  <div className="w-[559px] text-2xl font-bold leading-[41px] text-sky-700">
+  <div className="max-w-[559px] text-2xl font-bold leading-[41px] text-sky-700">
     {children}
   </div>
 );
@@ -106,31 +106,32 @@ const ResearchCard = ({ title, text }: { title: string; text: string }) => (
     </div>
   </div>
 );
+
 const myRole = (
-  <div className="my-12 flex items-start justify-evenly">
-    <div className="max-w-[250px]">
-      <div className="text-xl font-normal uppercase leading-[34.84px] text-slate-800">
+  <div className="my-12 flex items-start justify-evenly space-x-2">
+    <div className="max-w-[250px] flex-1">
+      <h3 className="text-sm font-bold uppercase leading-relaxed tracking-[3px] text-slate-700 text-opacity-50">
         My role
-      </div>
-      <ul className="text-lg font-medium leading-normal text-slate-700">
+      </h3>
+      <ul className="text-lg font-medium uppercase leading-normal text-slate-700">
         <li>Product Designer</li>
         <li>UX writer</li>
       </ul>
     </div>
-    <div className="max-w-[300px]">
-      <div className="text-xl font-normal uppercase leading-[34.84px] text-slate-800">
-        when
-      </div>
-      <ul className="text-lg font-medium leading-normal text-slate-700">
+    <div className="max-w-[300px] flex-1">
+      <h3 className="text-sm font-bold uppercase leading-relaxed tracking-[3px] text-slate-700 text-opacity-50">
+        When
+      </h3>
+      <ul className="text-lg font-medium uppercase leading-normal text-slate-700">
         <li>July 2023</li>
         <li>September 2023</li>
       </ul>
     </div>
-    <div className="max-w-[300px]">
-      <div className="text-xl font-normal uppercase leading-[34.84px] text-slate-800">
+    <div className="max-w-[300px] flex-1">
+      <h3 className="text-sm font-bold uppercase leading-relaxed tracking-[3px] text-slate-700 text-opacity-50">
         category
-      </div>
-      <div className="text-lg font-medium leading-normal text-slate-700">
+      </h3>
+      <div className="text-lg font-medium uppercase leading-normal text-slate-700">
         Logistic and delivery, B2B, B2C
       </div>
     </div>
@@ -327,15 +328,11 @@ const deskResearch = (
     <h4 className="text-gray-400 mt-4 text-2xl font-semibold uppercase leading-[30px] text-trueGray-400">
       The anxiety in data, Spain
     </h4>
-    <div className="w-[676px] text-xl leading-9 text-stone-900">
+    <div className="max-w-[676px] text-xl leading-9 text-stone-900">
       The figures from the Ministry of Health of the Spanish Government reveal
       alarming data regarding the presence of anxiety disorders.{' '}
     </div>
-    <img
-      className="h-[454px] w-[655px]"
-      src="/images/projects/chart.jpg"
-      alt="anxiety data spain chart"
-    />
+    <img src="/images/projects/chart.jpg" alt="anxiety data spain chart" />
   </Section>
 );
 const dataAnalysis = (
@@ -364,9 +361,9 @@ const dataAnalysis = (
       online processes in a state of anxiety? How can we adapt flows and make
       our products more usable?
     </div>
-    <div className="inline-flex h-[372px] w-[645px] flex-col items-start justify-center gap-6">
+    <div className="inline-flex flex-col justify-center gap-6">
       <div className="inline-flex items-center justify-start gap-6">
-        <div className="h-[8px] w-[20px] rounded-full bg-sky-700" />
+        <div className="h-[8px] min-h-[8px] w-[8px] min-w-[8px] rounded-full bg-sky-700" />
         <div className="text-xl font-normal leading-9 text-teal-950">
           UX/UI Redesign: The project involves redesigning the entire delivery
           inquiry flow, including landing pages, data collection screens, and
@@ -374,15 +371,15 @@ const dataAnalysis = (
         </div>
       </div>
       <div className="inline-flex items-center justify-start gap-6">
-        <div className="h-[8px] w-[20px] rounded-full bg-sky-700" />
+        <div className="h-[8px] min-h-[8px] w-[8px] min-w-[8px] rounded-full bg-sky-700" />
         <div className="text-xl font-normal leading-9 text-teal-950">
           User-Centric Design: The focus is on creating a user-centric
           experience, simplifying complex processes, and ensuring users feel
           confident throughout the inquiry.
         </div>
       </div>
-      <div className="inline-flex w-[645px] items-center justify-start gap-6">
-        <div className="h-[8px] w-[20px] rounded-full bg-sky-700" />
+      <div className="inline-flex max-w-[645px] items-center justify-start gap-6">
+        <div className="h-[8px] min-h-[8px] w-[8px] min-w-[8px] rounded-full bg-sky-700" />
         <div className="text-xl font-normal leading-9 text-teal-950">
           Ethical Considerations: Ethical principles are integrated into the
           design to address concerns about data privacy and security.
@@ -406,7 +403,7 @@ const userSurvey = (
       <div className="inline-flex h-[124px] w-[280px] flex-col items-start justify-start gap-2">
         <div className="inline-flex items-center justify-start gap-6">
           <div className="h-2 w-2 rounded-full bg-sky-700" />
-          <div className="text-xl font-normal leading-9 text-teal-950">
+          <div className="text-xl font-medium leading-9 text-teal-950">
             Contrasting services
           </div>
         </div>
@@ -467,7 +464,9 @@ const takeaways = (
 );
 
 const Container = ({ children }: { children: React.ReactNode }) => (
-  <div className="container mb-[106px] max-w-[680px] px-0">{children}</div>
+  <div className="container mb-[106px] max-w-[680px] px-4 lg:px-0">
+    {children}
+  </div>
 );
 const NumberSection = ({
   number,
@@ -478,7 +477,7 @@ const NumberSection = ({
   title: string;
   description: string;
 }) => (
-  <div className="flex flex-1 flex-col gap-2 rounded-lg px-16 py-6">
+  <div className="flex flex-col gap-2 rounded-lg px-16 py-6 lg:w-[33%]">
     <img
       className="h-16 w-16"
       src={`images/projects/number-${number}.svg`}
@@ -493,7 +492,7 @@ const NumberSection = ({
 
 const PackagingCase = () => {
   return (
-    <div className="h-screen overflow-auto md:h-full">
+    <div className="h-screen overflow-y-auto overflow-x-hidden md:h-full">
       <div className="mb-4 flex justify-center">
         <DialogHeader>
           <DialogTitle className="text-center text-[38px] font-normal leading-relaxed">
@@ -521,7 +520,7 @@ const PackagingCase = () => {
         title="Design process"
         description="To better understand why and to collect valuable insights to guide the redesign."
       />
-      <div className="flex justify-between">
+      <div className="flex flex-wrap justify-between">
         <NumberSection
           number="one"
           title="what"
@@ -544,7 +543,7 @@ const PackagingCase = () => {
       />
       <div id="ux-research" className="relative mb-[106px] bg-sky-50">
         <div className="container mx-auto py-20">
-          <div className="flex flex-wrap justify-between">
+          <div className="flex flex-wrap justify-between gap-8 lg:gap-0">
             <ResearchCard
               title="Problem"
               text="Many visitors arrive at the website but drop out of the sales funnel before requesting a customized quote or exploring the rates."
