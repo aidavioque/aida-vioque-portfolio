@@ -49,7 +49,7 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        'fixed z-50 grid w-full gap-4 rounded-b-lg border border-gray/5 bg-background shadow-lg animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-xl sm:rounded-2xl sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0',
+        'border-gray/5 fixed z-50 grid w-full gap-4 rounded-b-lg border bg-background shadow-lg animate-in data-[state=open]:fade-in-90 data-[state=open]:slide-in-from-bottom-10 sm:max-w-xl sm:rounded-2xl sm:zoom-in-90 data-[state=open]:sm:slide-in-from-bottom-0',
         className,
       )}
       {...props}
@@ -64,7 +64,7 @@ const DialogContent = React.forwardRef<
         <X
           className={
             small
-              ? 'h-8 w-8 text-gray'
+              ? 'h-8 w-8 text-gray-900'
               : 'h-5 w-5 rounded-full border-2 border-slate-400 bg-white p-px text-slate-700'
           }
         />

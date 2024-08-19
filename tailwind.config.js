@@ -50,13 +50,24 @@ module.exports = {
       soft: '#062134',
       primaryButton: '#0B4168',
       background: '#fff',
-      gray: '#4A5B66',
+      gray: {
+        900: '#171923',
+        800: '##1a202c',
+        700: '#2d3748',
+        600: '##4a5568',
+        500: '#718096',
+        400: '#A0AEC0',
+        300: '#CBD5E0',
+        200: '#e2e8f0',
+        100: '#edf2f7',
+      },
       cream: '#f8eee3',
       infoBg: '#3B4660',
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-montserrat)', ...defaultTheme.fontFamily.sans],
+        sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
+        serif: ['var(--font-syne)', ...defaultTheme.fontFamily.serif],
       },
       boxShadow: {
         main: '0px 4px 20px rgba(74, 91, 102, 0.25)',
@@ -84,11 +95,11 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '2rem',
-        sm: '4rem',
-        lg: '6rem',
-        xl: '6rem',
-        '2xl': '10rem',
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '3rem',
+        xl: '3rem',
+        '2xl': '5rem',
       },
     },
   },

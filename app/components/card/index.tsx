@@ -18,10 +18,10 @@ const Card = ({
     button={
       <DialogTrigger asChild>
         <div className="mb-10 flex h-full w-full max-w-[800px] cursor-pointer flex-col items-center justify-between gap-10 rounded-lg px-8 py-4 shadow-main transition-transform hover:scale-[102%] lg:flex-row lg:items-start">
-          <div className="flex h-full min-h-0 flex-col items-start justify-between space-y-2 pt-4 pb-0 lg:min-h-[230px] lg:pb-6">
+          <div className="flex h-full min-h-0 flex-col items-start justify-between space-y-2 pb-0 pt-4 lg:min-h-[230px] lg:pb-6">
             <div>
               <h3 className="pb-2 text-3xl font-bold">{title}</h3>
-              <p className="text-md font-sans leading-relaxed text-gray">
+              <p className="text-md font-sans leading-relaxed text-gray-900">
                 {description}
               </p>
             </div>

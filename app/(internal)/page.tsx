@@ -54,27 +54,27 @@ const CardContent = ({
 export default function Home() {
   return (
     <>
-      <section className="relative flex min-h-[calc(100vh-40px)] flex-col justify-evenly pt-10 md:pt-36 lg:pt-1">
-        <div className="container flex flex-col items-center justify-between space-x-16 lg:flex-row">
-          <div className="min-w-[65%] flex-1">
-            <h1 className="pb-8 font-sans text-4xl lg:text-[52px]">
-              Aida Vioque
-            </h1>
-            <p className="text-gray-600 mb-4 font-sans text-2xl leading-[36.95px]">
-              I am a Product Designer with background in Illustration, Edition
-              and Pedagogy, trying to make meaningful and usable things.
+      <section className="container relative grid min-h-[calc(100vh-40px)] grid-cols-12 flex-col pt-10">
+        <div className="col-span-10 col-start-2 mt-8">
+          <h1 className="mt-8 pb-8 font-serif text-4xl font-semibold lg:text-8xl">
+            Product Designer
+          </h1>
+          <div className="max-w-[512px] text-xl leading-7 text-gray-700">
+            <p className="mb-8">Hi, I&apos;m Aida</p>
+            <p className="mb-8">
+              I care about crafting useful and beautiful designs that solve real
+              problems. I understand the needs and behaviors of people.
             </p>
-            <Contact />
+            <p className="mb-8">
+              My secret spice is my experience in editing, education, and
+              illustration.
+            </p>
           </div>
-          <div className="flex flex-1 items-center justify-end">
-            <img
-              src="/images/cohete.gif"
-              className="mb-10 w-[450px] translate-y-16"
-              alt=""
-            />
-          </div>
+          <Contact />
         </div>
-        <div className="flex justify-center">{<Arrow />}</div>
+        <div className="col-span-10 col-start-2 flex justify-center">
+          {<Arrow />}
+        </div>
       </section>
       <section
         className="container relative pb-48 pt-10 md:pt-36 lg:pt-1"

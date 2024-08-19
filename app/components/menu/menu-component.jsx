@@ -6,16 +6,16 @@ import { usePathname } from 'next/navigation';
 const Menu = () => {
   const pathName = usePathname();
   return (
-    <ul className="container flex justify-center">
+    <ul className="flex items-center justify-end font-serif">
       <li
-        className={cx('pr-10 text-[26px] leading-loose hover:scale-110', {
+        className={cx('pr-10 uppercase leading-tight hover:scale-110', {
           'font-semibold ': pathName === '/',
         })}
       >
         <Link href="/">Home</Link>
       </li>
       <li
-        className={cx('pr-10 text-[26px] leading-loose hover:scale-110', {
+        className={cx('pr-10 uppercase leading-tight hover:scale-110', {
           'font-semibold ': pathName === '/about',
         })}
       >

@@ -167,11 +167,11 @@ const Infografia = () => {
     <div className="flex flex-col items-center justify-center">
       <img src={descriptions[data].image} alt="infografia" className="mb-4" />
       <div className="p-6">
-        <h2 className="mb-1 text-xl uppercase text-gray">
+        <h2 className="mb-1 text-xl uppercase text-gray-900">
           {descriptions[data].title}
         </h2>
-        <p className="mb-4 text-gray">{descriptions[data].city}</p>
-        <p className="mb-4 text-xs text-gray">
+        <p className="mb-4 text-gray-900">{descriptions[data].city}</p>
+        <p className="mb-4 text-xs text-gray-900">
           {descriptions[data].description}
         </p>
       </div>

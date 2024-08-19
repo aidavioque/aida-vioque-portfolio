@@ -63,8 +63,8 @@ type AboutItemType = {
 const AboutItem = ({ image, alt, title, text }: AboutItemType) => (
   <div>
     <img src={image} alt={alt} className="mb-4 w-36" />
-    <h3 className="text-gray-950 text-[38px] leading-[57px]">{title}</h3>
-    <p className="text-teal-950 max-w-[700px] leading-[30px]">{text}</p>
+    <h3 className="text-[38px] leading-[57px] text-gray-900">{title}</h3>
+    <p className="max-w-[700px] leading-[30px] text-teal-900">{text}</p>
   </div>
 );
 
@@ -72,7 +72,7 @@ function About() {
   return (
     <div className="container py-24">
       <div className="max-w-[80%] text-xl leading-8">
-        <div className="text-teal-950 mt-20 mb-10 text-[52px]">About</div>
+        <div className="mb-10 mt-20 text-[52px] text-teal-950">About</div>
         <p className="mb-6 text-xl">
           Hi! I&rsquo;m <span className="font-bold">Aida</span>, a{' '}
           <span className="font-bold">Product Designer</span> (UX/UI), currently
