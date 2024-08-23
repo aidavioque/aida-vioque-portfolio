@@ -54,7 +54,7 @@ module.exports = {
         900: '#171923',
         800: '##1a202c',
         700: '#2d3748',
-        600: '##4a5568',
+        600: '#4a5568',
         500: '#718096',
         400: '#A0AEC0',
         300: '#CBD5E0',
@@ -63,6 +63,7 @@ module.exports = {
       },
       cream: '#f8eee3',
       infoBg: '#3B4660',
+      primary: '#2a8288',
     },
     extend: {
       fontFamily: {

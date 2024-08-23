@@ -3,7 +3,12 @@ import Header from 'app/components/header';
 import { syne } from '../../public/fonts';
 import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  // display: 'swap',
+  variable: '--font-inter',
+});
 
 export default async function RootLayout({
   children,
@@ -13,7 +18,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${syne.variable} ${inter.className} relative scroll-smooth font-sans font-normal text-gray-900`}
+        className={`${syne.variable} ${inter.variable} relative scroll-smooth font-sans font-normal text-gray-900`}
       >
         <Header />
         <main className="w-full">{children}</main>
