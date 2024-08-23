@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import ArrowRight from 'public/images/arrow-right.svg';
 
 const Card = ({
   title,
@@ -20,7 +21,7 @@ const Card = ({
   textPosition?: 'left' | 'right';
 }) => {
   const text = (
-    <div className="flex-0 flex min-h-0 min-w-[340px] flex-col pb-0 pt-4 lg:px-4  lg:py-9">
+    <div className="flex-0 flex min-h-0 flex-shrink flex-col pb-0 pt-4 lg:px-4  lg:py-9">
       <div className="mb-[38px] flex flex-col gap-[30px]">
         <p className="font-serif font-semibold uppercase leading-tight text-gray-600">
           {category}
@@ -33,21 +34,24 @@ const Card = ({
         </p>
       </div>
       <Link href={link || '/#'}>
-        <Button variant="outline" className="flex gap-2 font-serif uppercase">
+        <Button
+          variant="outline"
+          className="group flex gap-2 font-serif uppercase"
+        >
           {buttonText}
-          <img src="/images/arrow-right.svg" alt="" />
+          <ArrowRight className="text-gray-900 group-hover:text-white" />
         </Button>
       </Link>
     </div>
   );
 
   return (
-    <div className="mb-10 flex w-full flex-col items-center justify-between gap-10 rounded-[15px] border border-gray-300 p-7 lg:flex-row lg:items-start">
+    <div className="mb-10 flex w-full flex-col items-center justify-between gap-6 rounded-[15px] border border-gray-300 p-7 lg:flex-row lg:items-start lg:gap-10">
       {textPosition === 'left' && text}
-      <div className="h-[508px] w-[584px] flex-grow rounded-2xl lg:min-w-[584px]">
+      <div className="flex-grow lg:h-[508px] lg:w-[584px] xl:min-w-[584px]">
         <img
           src={image}
-          className="my-auto aspect-square h-[214px] w-[214px] rounded-2xl object-cover pb-4 lg:h-[508px] lg:w-[584px] lg:pb-0"
+          className="rounded-2xl object-cover lg:h-[508px] lg:w-[584px]"
           alt=""
         />
       </div>

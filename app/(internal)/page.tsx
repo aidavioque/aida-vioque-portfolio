@@ -6,8 +6,7 @@ import MiniFooter from 'app/components/mini-footer';
 import PackagingCase from 'app/components/packaging-case';
 import SmartProtectionCase from 'app/components/smart-protection-case';
 
-import Arrow from 'app/components/arrow';
-// import IllustrationSection from 'app/components/illustration-section';
+import Footer from 'app/components/footer';
 import { Button } from '#/components/ui/button';
 export { metadata } from './metadata';
 import {
@@ -73,7 +72,7 @@ export default function Home() {
         </div>
       </section>
       <section className="container relative pb-48" id="product-design">
-        <div className="grid grid-cols-12 gap-20">
+        <div className="gap-row-20 grid grid-cols-12">
           <div className="col-span-10 col-start-2">
             <Card
               title="From networking to signing contracts"
@@ -129,74 +128,10 @@ export default function Home() {
                 />
               }
             />
-            {/* <Card
-            title="Smart Protection"
-            description="Marketing campaign in different media platforms"
-            image="/images/projects/smart-protection.jpg"
-            content={
-              <div className="h-screen overflow-auto md:h-full">
-                <DialogHeader>
-                  <DialogTitle className="text-center font-sans text-2xl font-normal text-black pb-2">
-                    Smart Protection
-                  </DialogTitle>
-                  <DialogDescription className='text-center'>
-                    Marketing campaign in different media platforms
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="py-4">
-                  <img
-                    src="/images/projects/full/smart-protection.jpg"
-                    alt="smart-protection"
-                  />
-                </div>
-                <div id="contact">
-                  <DialogFooter>
-                    <MiniFooter />
-                  </DialogFooter>
-                </div>
-              </div>
-            }
-          /> */}
-          </div>
-          <div className="col-span-10 col-start-2">
-            <Card
-              title="Monuments of the world"
-              description="Interactive illustration of monuments of the world"
-              image="/images/projects/monuments.png"
-              content={
-                <CardContent
-                  title="Monuments of the world"
-                  description="Interactive illustration of monuments of the world."
-                >
-                  <div className="flex w-full flex-col items-center justify-center py-4">
-                    <div className="py-4">
-                      <Link href="/infografia" target="_blank">
-                        <img
-                          className="max-w-[600px]"
-                          src="/images/projects/monuments.png"
-                          alt="monuments of the world"
-                        />
-                      </Link>
-                    </div>
-                    <Button asChild>
-                      <Link href="/infografia" target="_blank">
-                        See the project
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              }
-            />
           </div>
         </div>
       </section>
-      {/* <IllustrationSection />
-      <Footer /> */}
-      <div className="flex justify-end">
-        <div className="container absolute bottom-6 text-right">
-          <Arrow bottom />
-        </div>
-      </div>
+      <Footer />
     </>
   );
 }

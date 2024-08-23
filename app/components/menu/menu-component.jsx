@@ -8,9 +8,9 @@ import { Button } from '@/components/ui/button';
 const Menu = () => {
   const pathName = usePathname();
   return (
-    <ul className="flex items-center justify-end gap-[68px] font-serif font-semibold uppercase leading-tight">
+    <ul className="flex flex-wrap items-center justify-end gap-4 font-serif text-sm font-semibold uppercase leading-tight lg:gap-[68px] lg:text-base">
       <li
-        className={cx({
+        className={cx('hidden lg:block', {
           'font-bold ': pathName === '/',
         })}
       >

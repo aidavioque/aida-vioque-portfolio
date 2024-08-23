@@ -52,7 +52,7 @@ module.exports = {
       background: '#fff',
       gray: {
         900: '#171923',
-        800: '##1a202c',
+        800: '#1a202c',
         700: '#2d3748',
         600: '#4a5568',
         500: '#718096',
@@ -64,6 +64,7 @@ module.exports = {
       cream: '#f8eee3',
       infoBg: '#3B4660',
       primary: '#2a8288',
+      'primary-dark': '#30969d',
     },
     extend: {
       fontFamily: {
@@ -96,11 +97,11 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '3rem',
-        xl: '3rem',
-        '2xl': '5rem',
+        DEFAULT: '0rem',
+        sm: '0rem',
+        lg: '0rem',
+        xl: '0.5rem',
+        '2xl': '3rem',
       },
     },
   },
