@@ -83,12 +83,11 @@ export default function Home() {
               image="/images/projects/smart-protection-button.jpg"
             />
           </div>
-          <div className="col-span-10 col-start-2">
+          {/* <div className="col-span-10 col-start-2">
             <Card
               title="Information request proposal"
               description="Informative flow in a shipping company to reduce anxiety, increase confidence, and achieve higher user activation."
               image="/images/projects/package.png"
-              content={<PackagingCase />}
             />
           </div>
           <div className="col-span-10 col-start-2">
@@ -128,7 +127,7 @@ export default function Home() {
                 />
               }
             />
-          </div>
+          </div> */}
         </div>
       </section>
       <Footer />
