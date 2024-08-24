@@ -1,5 +1,5 @@
 import 'styles/globals.css';
-import Header from 'app/components/header';
+import Header from '#/components/header';
 import { syne } from '../../public/fonts';
 import { Inter } from 'next/font/google';
 

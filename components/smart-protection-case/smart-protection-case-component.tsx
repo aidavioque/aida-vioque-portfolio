@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import cx from 'classnames';
-import MiniFooter from 'app/components/mini-footer';
-import Arrow from 'app/components/arrow';
+import MiniFooter from '@/components/mini-footer';
+import Arrow from '@/components/arrow';
 import {
   DialogDescription,
   DialogHeader,

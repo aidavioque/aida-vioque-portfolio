@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import { useState, useEffect } from 'react';
-import DialogComponent from 'app/components/dialog-component';
+import DialogComponent from '@/components/dialog-component';
 import { DialogTrigger } from '@/components/ui/dialog';
 
 const descriptions = {

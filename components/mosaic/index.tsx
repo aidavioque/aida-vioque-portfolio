@@ -2,7 +2,7 @@
 
 'use client';
 
-import DialogComponent from 'app/components/dialog-component';
+import DialogComponent from '@/components/dialog-component';
 import {
   DialogHeader,
   DialogTitle,
@@ -139,7 +139,7 @@ const Mosaic = () => (
     {imageGroups.map((imageGroup, i) => (
       <div
         key={`image-group-${i}`}
-        className="mb-8 flex w-full flex-col items-center justify-between space-y-6 space-x-6 lg:h-80 lg:flex-row"
+        className="mb-8 flex w-full flex-col items-center justify-between space-x-6 space-y-6 lg:h-80 lg:flex-row"
       >
         {imageGroup.map((image) => (
           <ImageComponent key={image.src} {...image} />

@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import MiniFooter from 'app/components/mini-footer';
-import Arrow from 'app/components/arrow';
+import MiniFooter from '@/components/mini-footer';
+import Arrow from '@/components/arrow';
 import {
   DialogDescription,
   DialogHeader,
@@ -153,7 +153,7 @@ const aarrrFramework = (
       attention on the top of the funnel, in acquisition.
     </div>
     <div className="flex w-full flex-col items-center justify-center text-center">
-      <div className="text-gray-600 mb-4 text-2xl font-semibold uppercase leading-[30px]">
+      <div className="mb-4 text-2xl font-semibold uppercase leading-[30px] text-gray-600">
         AARRR framework
       </div>
       <img
@@ -253,7 +253,7 @@ const deskResearch = (
     title="Desk research and insights"
     description="To better understand why and to collect valuable insights to guide the redesign."
   >
-    <h4 className="text-gray-400 mt-4 text-2xl font-semibold uppercase leading-[30px] text-trueGray-400">
+    <h4 className="mt-4 text-2xl font-semibold uppercase leading-[30px] text-gray-400 text-trueGray-400">
       We stand for Responsible design
     </h4>
     <div className="text-xl font-normal leading-9">
@@ -325,7 +325,7 @@ const deskResearch = (
         </div>
       </div>
     </div>
-    <h4 className="text-gray-400 mt-4 text-2xl font-semibold uppercase leading-[30px] text-trueGray-400">
+    <h4 className="mt-4 text-2xl font-semibold uppercase leading-[30px] text-gray-400 text-trueGray-400">
       The anxiety in data, Spain
     </h4>
     <div className="max-w-[676px] text-xl leading-9 text-stone-900">

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import { useRef, useState, useEffect } from 'react';
-import Mosaic from 'app/components/mosaic';
+import Mosaic from '@/components/mosaic';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useIsMobile } from '#/lib/isMobile';
 
@@ -40,7 +40,7 @@ const IllustrationSection = () => {
   );
   return (
     <div className="overflow-hidden" ref={illustrationSectionRef}>
-      <section className="container relative pt-10 pb-24 md:pt-36 lg:pt-1 ">
+      <section className="container relative pb-24 pt-10 md:pt-36 lg:pt-1 ">
         <h2 className="pb-16 text-5xl text-primary">Design and Illustration</h2>
         {
           <motion.div

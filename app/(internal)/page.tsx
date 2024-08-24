@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
-import Card from 'app/components/card';
+import Card from '@/components/card';
 
-import Footer from 'app/components/footer';
+import Footer from '#/components/footer';
 export { metadata } from './metadata';
 
 export default function Home() {

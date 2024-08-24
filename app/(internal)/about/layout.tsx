@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Footer from 'app/components/footer';
+import Footer from '#/components/footer';
 
 export const metadata: Metadata = {
   title: 'Aida Aranguren Portfolio - About me',
