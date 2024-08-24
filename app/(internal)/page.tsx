@@ -1,61 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
-// import Footer from 'app/components/footer';
 import Card from 'app/components/card';
-import MiniFooter from 'app/components/mini-footer';
-import PackagingCase from 'app/components/packaging-case';
-import SmartProtectionCase from 'app/components/smart-protection-case';
 
 import Footer from 'app/components/footer';
-import { Button } from '#/components/ui/button';
 export { metadata } from './metadata';
-import {
-  DialogDescription,
-  DialogHeader,
-  DialogFooter,
-  DialogTitle,
-} from '@/components/ui/dialog';
-
-import Contact from 'app/components/contact';
-import Link from 'next/link';
-const CardContent = ({
-  image,
-  title,
-  description,
-  children,
-}: {
-  image?: React.ReactNode;
-  title: string;
-  description: string;
-  children?: React.ReactNode;
-}) => (
-  <div className="h-screen overflow-auto md:h-full">
-    <div className="mb-4 flex justify-center">
-      <DialogHeader>
-        <DialogTitle className="text-center text-[38px] font-normal leading-relaxed">
-          {title}
-        </DialogTitle>
-        <DialogDescription className="max-w-[600px] text-center text-xl font-normal  leading-[30px] text-slate-700 text-opacity-50">
-          {description}
-        </DialogDescription>
-      </DialogHeader>
-    </div>
-    <div className="py-4">{image}</div>
-    {children}
-    <div id="contact">
-      <DialogFooter>
-        <MiniFooter />
-      </DialogFooter>
-    </div>
-  </div>
-);
 
 export default function Home() {
   return (
     <>
       <section className="container relative my-10 grid grid-cols-12 flex-col">
-        <div className="col-span-10 col-start-2 my-8">
-          <h1 className="mt-8 pb-8 font-serif text-4xl font-semibold lg:text-8xl">
+        <div className="col-span-12 my-8">
+          <h1 className="lg:text-8xl mt-8 pb-8 font-serif text-4xl font-semibold">
             Product Designer
           </h1>
           <div className="max-w-[512px] text-xl leading-7 text-gray-700">
@@ -71,9 +26,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container relative pb-48" id="product-design">
+      <section className="container relative pb-48" id="projects">
         <div className="gap-row-20 grid grid-cols-12">
-          <div className="col-span-10 col-start-2">
+          <div className="col-span-12">
             <Card
               title="From networking to signing contracts"
               category="Product design"
@@ -83,14 +38,14 @@ export default function Home() {
               image="/images/projects/smart-protection-button.jpg"
             />
           </div>
-          {/* <div className="col-span-10 col-start-2">
+          {/* <div className="col-span-12">
             <Card
               title="Information request proposal"
               description="Informative flow in a shipping company to reduce anxiety, increase confidence, and achieve higher user activation."
               image="/images/projects/package.png"
             />
           </div>
-          <div className="col-span-10 col-start-2">
+          <div className="col-span-12">
             <Card
               title="Contest registration flow"
               description="Registration flow to participate in a contest to win a Monstera plant."
@@ -109,7 +64,7 @@ export default function Home() {
               }
             />
           </div>
-          <div className="col-span-10 col-start-2">
+          <div className="col-span-12">
             <Card
               title="Simple payment screens"
               description="Simple design exercise to investigate and test with forms."

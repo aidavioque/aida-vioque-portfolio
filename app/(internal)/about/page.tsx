@@ -1,100 +1,135 @@
 /* eslint-disable @next/next/no-img-element */
 
-import Contact from '#/app/components/contact';
+import { ReactNode } from 'react';
+import Image from 'next/image';
 
-const aboutItems = [
-  {
-    image: '/images/web.png',
-    alt: 'Web icon',
-    title: 'Product Designer',
-    text: 'As a designer on the Product team, I deliver solutions to expand product awareness. I also design communications for our clients and teams, assist with UX writing, research, redefine flows, and contribute to social media marketing.',
-  },
-  {
-    image: '/images/teacher.png',
-    alt: 'Teacher-book icon',
-    title: 'Teaching Assistant at The Hero Camp',
-    text: 'As a teaching assistant at The Hero Camp. I provided feedback and identified areas to help improve the overall learning experience.',
-  },
-  {
-    image: '/images/text-book.png',
-    alt: 'Text-book icon',
-    title: 'Digital Content Editor',
-    text: 'EdTech world: worked with Product & developers to bring innovative educational products. UX writing and Editing on products & LMS.',
-  },
-  {
-    image: '/images/marketing.png',
-    alt: 'Marketing icon',
-    title: 'Marketing and Brand identity at Amarillo Restaurant',
-    text: 'I supported and participated in a new culinary project with incredible potential and created a content strategy for it.',
-  },
-  {
-    image: '/images/editor.png',
-    alt: 'Editor icon',
-    title: 'History Magazine of UAM',
-    text: 'I became Editor as a reflection of my love for words and meaning. I was just a few steps ahead of discovering UX Writing.',
-  },
-  {
-    image: '/images/brush.png',
-    alt: 'Freelance Illustration and Design icon',
-    title: 'Freelance Illustration and Design',
-    text: 'I had some jobs and commissions, also personal projects which helped to discover organised and understand my style.',
-  },
-  {
-    image: '/images/t-shirt.png',
-    alt: 'Clothing design icon',
-    title: 'Clothing design freelancing',
-    text: 'I started a little service for people to make personalised gifts. It was a success and it escalated so we had to become more reachable.',
-  },
-  {
-    image: '/images/jewelry.png',
-    alt: 'Jewelry icon',
-    title: 'Jewelry freelancing',
-    text: 'My first attempt at product design was in jewellery. My main goal was to get a harmonic combination between aesthetics and wearability.',
-  },
-];
-
-type AboutItemType = {
-  image: string;
-  alt: string;
+const Block = ({
+  title,
+  text,
+  className,
+  TitleTag = 'div',
+}: {
   title: string;
-  text: string;
+  text: ReactNode;
+  className?: string;
+  TitleTag?: keyof JSX.IntrinsicElements;
+}) => {
+  return (
+    <div className={className}>
+      <div className="flex flex-col gap-8 text-black lg:max-w-[524px]">
+        <TitleTag className="font-serif text-4xl font-semibold text-gray-900">
+          {title}
+        </TitleTag>
+        <div className="font-sans text-xl leading-7 text-gray-700">{text}</div>
+      </div>
+    </div>
+  );
 };
-
-const AboutItem = ({ image, alt, title, text }: AboutItemType) => (
-  <div>
-    <img src={image} alt={alt} className="mb-4 w-36" />
-    <h3 className="text-[38px] leading-[57px] text-gray-900">{title}</h3>
-    <p className="max-w-[700px] leading-[30px] text-teal-900">{text}</p>
-  </div>
-);
 
 function About() {
   return (
-    <div className="container py-24">
-      <div className="max-w-[80%] text-xl leading-8">
-        <div className="mb-10 mt-20 text-[52px] text-teal-950">About</div>
-        <p className="mb-6 text-xl">
-          Hi! I&rsquo;m <span className="font-bold">Aida</span>, a{' '}
-          <span className="font-bold">Product Designer</span> (UX/UI), currently
-          based in Spain.
-        </p>
-        <p className="mb-2">
-          My career path has led me through diverse fields and roles, including{' '}
-          <span className="font-bold">illustration</span>
-          <span> and design, </span>
-          <span className="font-bold">education</span>
-          <span>, and </span>
-          <span className="font-bold">editorial</span>
-          <span>.</span>
-        </p>
-        <Contact />
-      </div>
-      <div className="mt-20 flex">
-        <div className="flex-1 space-y-16">
-          {aboutItems.map((item) => (
-            <AboutItem key={item.title} {...item} />
-          ))}
-        </div>
+    <div className="container grid py-24">
+      <div className="grid-cols-12 space-y-12">
+        <Block
+          TitleTag="h2"
+          title="A few words about me"
+          text={
+            <>
+              Hello, my name is Aida, I am a digital product designer with a
+              broad professional background.
+              <br /> I am <span className="font-bold">curious</span>.
+            </>
+          }
+        />
+        <Image
+          src="/images/about-1.png"
+          className="w-full"
+          alt=""
+          width={1231}
+          height={396}
+        />
+        <Image
+          src="/images/about-2.png"
+          className="!mt-0 w-full"
+          alt=""
+          width={1231}
+          height={396}
+        />
+        <Block
+          TitleTag="h2"
+          title="I am a generalist"
+          text={
+            <>
+              I consider myself a multipotential or generalist. My experience is
+              in fact diverse: encompassing work in the tech world, service
+              sector, education, publishing, illustration, and design.
+            </>
+          }
+        />
+        <Block
+          TitleTag="h2"
+          title="Product trio + data"
+          text={
+            <div className="flex flex-col gap-8">
+              <p>
+                I am most effective when part of a dynamic team that values good
+                communication and support.
+              </p>
+              <p>
+                I believe that <span className="font-bold">Product Trio</span>{' '}
+                is crucial to delivering products that meet the requirements of
+                good design, usability, and business objectives. Also, the data
+                team is the best add-on.
+              </p>{' '}
+            </div>
+          }
+        />
+        <Block
+          TitleTag="h2"
+          title="Glasses I use to see the world"
+          text={
+            <>
+              I am heavily{' '}
+              <span className="font-bold">influenced by psychology</span> in
+              everything I do, see, and read. I spend a lot of my free time
+              trying to understand human behavior.
+            </>
+          }
+        />
+        <Block
+          TitleTag="h2"
+          title="What inspires me?"
+          text={
+            <div className="flex flex-col gap-8">
+              <p>
+                I am passionate about observing the{' '}
+                <span className="font-bold">geometry present in nature</span>{' '}
+                and the environment. I enjoy capturing the different moods of
+                light with my camera.
+              </p>
+              <p>
+                In my spare time, when gardening, I am drawn to the colors,
+                shapes, and textures found in nature, which often inspire my
+                work. To me,{' '}
+                <span className="font-bold">understanding nature is</span>{' '}
+                crucial for{' '}
+                <span className="font-bold">understanding design.</span>
+              </p>
+            </div>
+          }
+        />
+        <Block
+          TitleTag="h2"
+          title="Aiming for the future"
+          text={
+            <>
+              I have led small teams and have thoroughly enjoyed it. In the
+              future, I aspire to mentor others,{' '}
+              <span className="font-bold">helping them grow</span> and gain
+              confidence in their chosen paths.
+            </>
+          }
+        />
       </div>
     </div>
   );

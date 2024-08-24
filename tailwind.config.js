@@ -11,6 +11,19 @@ module.exports = {
     './ui/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontSize: {
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': ['42px', '46px'],
+      '5xl': '3rem',
+      '6xl': '4rem',
+      '7xl': '5rem',
+    },
     colors: {
       ...colors,
       border: 'hsl(var(--border))',
@@ -64,7 +77,6 @@ module.exports = {
       cream: '#f8eee3',
       infoBg: '#3B4660',
       primary: '#2a8288',
-      'primary-dark': '#30969d',
     },
     extend: {
       fontFamily: {
@@ -97,8 +109,8 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '0rem',
-        sm: '0rem',
+        DEFAULT: '1rem',
+        sm: '1rem',
         lg: '0rem',
         xl: '0.5rem',
         '2xl': '3rem',

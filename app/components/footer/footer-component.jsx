@@ -7,7 +7,10 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="flex w-full flex-col justify-center gap-[94px] bg-gray-800 px-6 pb-16 pt-6 text-white backdrop-blur-[50px] md:px-12 lg:px-[94px]">
+    <footer
+      id="contact"
+      className="flex w-full flex-col justify-center gap-[94px] bg-gray-800 px-6 pb-16 pt-6 text-white backdrop-blur-[50px] md:px-12 lg:px-[94px]"
+    >
       <div className="h-px self-stretch bg-gray-500" />
       <div className="flex h-[315px] flex-col items-start justify-center gap-[94px]">
         <div className="flex h-[167px] flex-col items-start justify-start gap-10">
@@ -17,17 +20,17 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center gap-6">
-            <Link
+            <a
               href="mailto:aida.aranvio@gmail.com"
               className="inline-flex items-center gap-2"
             >
-              <div className="relative flex h-7 w-7 items-center justify-center rounded bg-primary-dark">
+              <div className="relative flex h-7 w-7 items-center justify-center rounded bg-primary">
                 <Mail className="text-white" />
               </div>
               <span className="font-serif font-semibold uppercase leading-tight underline">
                 aida.aranvio@gmail.com
               </span>
-            </Link>
+            </a>
             <Link
               target="_blank"
               href="https://www.linkedin.com/in/aida-aranvio/"

@@ -16,9 +16,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="!scroll-smooth">
       <body
-        className={`${syne.variable} ${inter.variable} relative scroll-smooth font-sans font-normal text-gray-900`}
+        className={`${syne.variable} ${inter.variable} relative font-sans font-normal text-gray-900`}
       >
         <Header />
         <main className="w-full">{children}</main>

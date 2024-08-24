@@ -20,10 +20,10 @@ const Menu = () => {
       </li>
       <li
         className={cx({
-          'font-bold ': pathName === '/projects',
+          'font-bold ': pathName === '/#projects',
         })}
       >
-        <Link href="/projects">
+        <Link href="/#projects" scroll={false}>
           <AnimatedUnderline>Projects</AnimatedUnderline>
         </Link>
       </li>
@@ -38,10 +38,10 @@ const Menu = () => {
       </li>
       <li
         className={cx({
-          'font-bold ': pathName === '/contact',
+          'font-bold ': pathName === '/#contact',
         })}
       >
-        <Link href="/contact">
+        <Link href="/#contact" scroll={false}>
           <Button variant="primary">Contact</Button>
         </Link>
       </li>
