@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Block from '@/components/block';
+
 import ViewMoreCard from '@/components/view-more-card';
 
 function SmartProtection() {
@@ -12,33 +13,50 @@ function SmartProtection() {
           <section className="container relative grid grid-cols-12 flex-col">
             <div className="col-span-12 max-w-[720px]">
               <h1 className="mt-8 pb-8 font-serif text-4xl font-semibold lg:text-8xl">
-                Boosting Product Awareness
+                From networking to signing contracts
               </h1>
               <p className="font-sans text-xl leading-7 text-gray-700">
-                How to effectively communicate product improvements to customers
-                and attract new users.
+                How to ran a design sprint to redesign the E-learning Experience
+                and achieve higher retention rates.
               </p>
             </div>
           </section>
           <Image
-            src="/images/projects/smart-protection-1.png"
+            src="/images/projects/samoo-1.png"
             className="w-full"
             alt=""
             width={1252}
-            height={751}
+            height={691}
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
-            title="Esto es un título mega guay"
+            category="Context"
+            title={
+              <div>
+                <span className="text-[42px] font-semibold leading-[46px] text-[#2a8288]">
+                  What is
+                </span>
+                <span className="text-[42px] font-semibold leading-[46px] text-[#171923]">
+                  {' '}
+                  e-learning Experience?
+                </span>
+              </div>
+            }
             text={
-              <>
-                Work resulting from collaboration between Product and Marketing
-                departments. Focused on reaching new users, engaging with the
-                community, providing quality information through publications,
-                and enhancing communication between users and the Product
-                department.
-              </>
+              <div className="flex flex-col gap-4 lg:gap-8">
+                <p>
+                  We live in a world where constant updating in the professional
+                  field is essential, and events that allow professionals to
+                  connect and present technological advances are increasingly
+                  relevant.
+                </p>
+                <p>
+                  This is the case of Samoo&apos;s e-Learning Experience, a
+                  two-day event designed to promote networking and close
+                  contracts between attendees and companies in the educational
+                  sector.{' '}
+                </p>
+              </div>
             }
             text2={
               <>
@@ -53,15 +71,15 @@ function SmartProtection() {
                           Client
                         </div>
                         <div className="text-xl font-normal leading-7 text-gray-900">
-                          Smart Protection
+                          Samoo
                         </div>
                       </div>
                       <div className="flex flex-col gap-1">
                         <div className="font-serif font-semibold uppercase leading-tight text-gray-500">
-                          teams
+                          Project type
                         </div>
                         <div className="text-xl font-normal leading-7 text-gray-900">
-                          Product and Marketing
+                          Web app
                         </div>
                       </div>
                       <div className="flex flex-col gap-1">
@@ -69,15 +87,15 @@ function SmartProtection() {
                           my role
                         </div>
                         <div className="text-xl font-normal leading-7 text-gray-900">
-                          Visual designer
+                          Product designer
                         </div>
                       </div>
                       <div className="flex flex-col gap-1">
                         <div className="font-serif font-semibold uppercase leading-tight text-gray-500">
-                          when
+                          timeline
                         </div>
                         <div className="text-xl font-normal leading-7 text-gray-900">
-                          Nov, 2022 - May, 2023
+                          2 weeks
                         </div>
                       </div>
                     </div>

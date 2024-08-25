@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <section className="container relative my-10 grid grid-cols-12 flex-col">
         <div className="col-span-12 my-8">
-          <h1 className="lg:text-8xl mt-8 pb-8 font-serif text-4xl font-semibold">
+          <h1 className="mt-8 pb-8 font-serif text-4xl font-semibold lg:text-8xl">
             Product Designer
           </h1>
           <div className="max-w-[512px] text-xl leading-7 text-gray-700">
@@ -27,15 +27,26 @@ export default function Home() {
         </div>
       </section>
       <section className="container relative pb-48" id="projects">
-        <div className="gap-row-20 grid grid-cols-12">
+        <div className="grid grid-cols-12 gap-y-20">
           <div className="col-span-12">
             <Card
               title="From networking to signing contracts"
               category="Product design"
               description="How to ran a design sprint to redesign the E-learning Experience and achieve higher retention rates."
               buttonText="View case study"
+              link="/projects/samoo"
+              image="/images/home-1.png"
+            />
+          </div>
+          <div className="col-span-12">
+            <Card
+              title="Boosting product awareness"
+              textPosition="right"
+              category="ui design"
+              description="How to effectively communicate product improvements to customers and attract new users."
+              buttonText="View case study"
               link="/projects/smart-protection"
-              image="/images/projects/smart-protection-button.jpg"
+              image="/images/home-2.png"
             />
           </div>
           {/* <div className="col-span-12">

@@ -6,7 +6,7 @@ import Linkedin from 'public/icons/linkedin.svg';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-const Footer = ({ theme = 'black' }: { theme: 'white' | 'black' }) => {
+const Footer = ({ theme = 'black' }: { theme?: 'white' | 'black' }) => {
   const textColor = theme === 'black' ? 'text-white' : 'text-black';
   const iconsColor = theme === 'black' ? 'text-black' : 'text-white';
   const bgColor = theme === 'black' ? 'bg-gray-800' : 'bg-white';

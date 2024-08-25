@@ -17,7 +17,7 @@ const Block = ({
   layout = 'default',
 }: {
   category?: string;
-  title: string;
+  title: string | ReactNode;
   text: ReactNode;
   text2?: ReactNode;
   className?: string;
@@ -35,7 +35,7 @@ const Block = ({
       src={image}
       height={imageHeight}
       width={imageWidth}
-      alt={title}
+      alt={typeof title === 'string' ? title : ''}
     />
   );
   return (
