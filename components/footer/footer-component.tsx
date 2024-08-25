@@ -4,6 +4,7 @@ import Logo from 'public/logo.svg';
 import Mail from 'public/icons/mail.svg';
 import Linkedin from 'public/icons/linkedin.svg';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 const Footer = ({ theme = 'black' }: { theme: 'white' | 'black' }) => {
   const textColor = theme === 'black' ? 'text-white' : 'text-black';
@@ -25,22 +26,27 @@ const Footer = ({ theme = 'black' }: { theme: 'white' | 'black' }) => {
           <div className="flex flex-col justify-center gap-6">
             <a
               href="mailto:aida.aranvio@gmail.com"
-              className="inline-flex items-center gap-2"
+              className="group inline-flex items-center gap-2"
             >
-              <div className="relative flex h-7 w-7 items-center justify-center rounded bg-primary">
+              <div className="relative flex h-7 w-7 items-center justify-center rounded bg-primary transition-transform duration-500 group-hover:scale-110">
                 <Mail className={iconsColor} />
               </div>
-              <span className="font-serif font-semibold uppercase leading-tight underline">
+              <span className="font-serif font-semibold uppercase leading-tight underline transition-transform duration-500 group-hover:translate-x-1">
                 aida.aranvio@gmail.com
               </span>
             </a>
             <Link
               target="_blank"
               href="https://www.linkedin.com/in/aida-aranvio/"
-              className="inline-flex items-center gap-2"
+              className="group inline-flex items-center gap-2"
             >
-              <Linkedin className={iconsColor} />
-              <span className="font-serif font-semibold uppercase leading-tight underline">
+              <Linkedin
+                className={cn(
+                  'transition-transform duration-500 group-hover:scale-110',
+                  iconsColor,
+                )}
+              />
+              <span className="font-serif font-semibold uppercase leading-tight underline transition-transform duration-500 group-hover:translate-x-1">
                 linkedin.com/aida-aranvio
               </span>
             </Link>
