@@ -2,29 +2,7 @@
 
 import { ReactNode } from 'react';
 import Image from 'next/image';
-
-const Block = ({
-  title,
-  text,
-  className,
-  TitleTag = 'div',
-}: {
-  title: string;
-  text: ReactNode;
-  className?: string;
-  TitleTag?: keyof JSX.IntrinsicElements;
-}) => {
-  return (
-    <div className={className}>
-      <div className="flex flex-col gap-8 text-black lg:max-w-[524px]">
-        <TitleTag className="font-serif text-4xl font-semibold text-gray-900">
-          {title}
-        </TitleTag>
-        <div className="font-sans text-xl leading-7 text-gray-700">{text}</div>
-      </div>
-    </div>
-  );
-};
+import Block from '@/components/block';
 
 function About() {
   return (

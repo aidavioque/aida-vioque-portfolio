@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Footer from '#/components/footer';
 
 export const metadata: Metadata = {
-  title: 'Aida Aranguren Portfolio - About me',
+  title: 'Aida Aranguren Portfolio - Project - Smart Protection',
 };
 export default async function AboutLayout({
   children,
@@ -12,7 +12,7 @@ export default async function AboutLayout({
   return (
     <div className="w-full">
       {children}
-      <Footer />
+      <Footer theme="white" />
     </div>
   );
 }
