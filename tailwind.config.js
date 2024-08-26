@@ -74,6 +74,7 @@ module.exports = {
         300: '#CBD5E0',
         200: '#e2e8f0',
         100: '#edf2f7',
+        50: '#f6f8fb',
       },
       cream: '#f8eee3',
       infoBg: '#3B4660',

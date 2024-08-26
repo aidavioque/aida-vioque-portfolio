@@ -125,3 +125,10 @@ a {
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
+
+.text-gradient {
+  background: linear-gradient(to right, #de1a3d, #ab3d83, #5261f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
