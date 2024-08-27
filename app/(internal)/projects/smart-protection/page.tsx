@@ -401,10 +401,16 @@ function SmartProtection() {
               <ViewMoreCard
                 link="/projects/smart-protection"
                 image="/images/projects/interested-1.png"
+                category="ui design"
+                title="Boosting product awareness"
+                text="How to effectively communicate product improvements to customers and attract new users."
               />
               <ViewMoreCard
                 link="/projects/samoo"
                 image="/images/projects/interested-2.png"
+                category="ui design"
+                title="Boosting product awareness"
+                text="How to effectively communicate product improvements to customers and attract new users."
               />
             </div>
           </div>

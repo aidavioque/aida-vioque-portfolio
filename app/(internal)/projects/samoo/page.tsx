@@ -31,7 +31,7 @@ const TriBlock = ({
   return (
     <div
       className={cn(
-        'inline-flex w-full flex-wrap justify-between gap-y-12',
+        'inline-flex w-full flex-wrap justify-center gap-y-12 lg:justify-between',
         className,
       )}
     >
@@ -218,13 +218,13 @@ function SmartProtection() {
                 is essential to ensure the success of the project. In
                 collaboration with the Data team, we establish what will be the{' '}
                 <span className="font-bold">
-                  key metrics to measure Samoo's objectives.
+                  key metrics to measure Samoo&apos;s objectives.
                 </span>{' '}
                 We identified three main focuses that would define our success:
               </>
             }
           />
-          <div className="inline-flex w-full flex-wrap items-center justify-between gap-y-12">
+          <div className="inline-flex w-full flex-wrap items-center justify-center gap-y-12 lg:justify-between">
             <div className="inline-flex w-[343px] flex-col items-center justify-start gap-8">
               <Image
                 src="/images/projects/samoo-1.svg"
@@ -582,7 +582,7 @@ function SmartProtection() {
               </div>
             }
           />
-          <div className="inline-flex w-full items-start justify-center gap-12">
+          <div className="inline-flex w-full flex-wrap items-start justify-center gap-12">
             <div className="inline-flex w-[342px] flex-col gap-6 rounded-lg bg-gray-50 p-6 lg:min-h-[258px]">
               <div className="font-serif text-3xl font-bold text-gray-900">
                 REGISTRATION
@@ -615,7 +615,7 @@ function SmartProtection() {
               </ul>
             </div>
           </div>
-          <div className="inline-flex w-full items-start justify-center gap-12">
+          <div className="inline-flex w-full flex-wrap items-start justify-center gap-12">
             <div className="inline-flex w-[342px] flex-col gap-6 rounded-lg bg-gray-50 p-6 lg:min-h-[258px]">
               <div className="font-serif text-3xl font-bold text-gray-900">
                 DASHBOARD
@@ -678,6 +678,13 @@ function SmartProtection() {
                 before entering the development phase.
               </>
             }
+          />
+          <Image
+            src="/images/projects/samoo-11.png"
+            className="w-full"
+            alt=""
+            width={4096}
+            height={2450}
           />
         </div>
       </div>
