@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import ArrowRight from 'public/images/arrow-right.svg';
+import { cn } from '@/lib/utils';
 
 const Card = ({
   title,
@@ -46,7 +47,15 @@ const Card = ({
   );
 
   return (
-    <div className="mb-10 flex h-full w-full flex-col items-center justify-between gap-6 rounded-[15px] border border-gray-300 p-7 lg:flex-row lg:items-start lg:gap-10">
+    <div
+      className={cn(
+        'mb-10 flex h-full w-full flex-col items-center justify-between gap-6 rounded-[15px] border border-gray-300 p-7 lg:flex-row lg:items-start lg:gap-10',
+        {
+          'flex-col-reverse': textPosition === 'left',
+          'flex-col': textPosition === 'right',
+        },
+      )}
+    >
       {textPosition === 'left' && text}
       <div className="aspect-[584/508] flex-grow lg:w-[60%] lg:min-w-[700px]">
         <img
