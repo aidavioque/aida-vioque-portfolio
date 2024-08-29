@@ -12,6 +12,7 @@ const Card = ({
   buttonText,
   link,
   textPosition = 'left',
+  imageBgColor,
 }: {
   title: string;
   category: string;
@@ -19,6 +20,7 @@ const Card = ({
   description: string;
   link: string;
   image: string;
+  imageBgColor?: string;
   textPosition?: 'left' | 'right';
 }) => {
   const text = (
@@ -57,10 +59,18 @@ const Card = ({
       )}
     >
       {textPosition === 'left' && text}
-      <div className="aspect-[584/508] flex-grow lg:w-[60%] lg:min-w-[700px]">
+      <div
+        className={cn(
+          'aspect-[584/508] flex-grow lg:w-[60%] lg:min-w-[700px]',
+          imageBgColor,
+        )}
+      >
         <img
           src={image}
-          className="h-full w-full rounded-2xl object-cover"
+          className={cn('flex h-full w-full rounded-2xl object-cover', {
+            'h-1/2 w-1/2 items-center justify-center object-none':
+              !!imageBgColor,
+          })}
           alt=""
         />
       </div>

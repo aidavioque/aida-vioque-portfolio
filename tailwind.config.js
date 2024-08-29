@@ -79,6 +79,7 @@ module.exports = {
       cream: '#f8eee3',
       infoBg: '#3B4660',
       primary: '#2a8288',
+      index: '#4EC2C0',
     },
     extend: {
       fontFamily: {

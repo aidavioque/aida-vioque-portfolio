@@ -49,6 +49,17 @@ export default function Home() {
               image="/images/home-2.png"
             />
           </div>
+          <div className="col-span-12">
+            <Card
+              title="Poor UX research insights undermine designers"
+              textPosition="left"
+              category="product design"
+              description="How we overcame challenges and adjusted efforts to successfully complete the project despite initial research flaws."
+              buttonText="View case study"
+              link="/projects/index"
+              image="/images/video/index-home.gif"
+            />
+          </div>
           {/* <div className="col-span-12">
             <Card
               title="Information request proposal"
