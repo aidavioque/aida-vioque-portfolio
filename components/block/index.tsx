@@ -17,8 +17,8 @@ const Block = ({
   layout = 'default',
 }: {
   category?: string;
-  title: string | ReactNode;
-  text: ReactNode;
+  title?: string | ReactNode;
+  text?: ReactNode;
   text2?: ReactNode;
   className?: string;
   TitleTag?: keyof JSX.IntrinsicElements;
@@ -61,10 +61,16 @@ const Block = ({
             {category}
           </div>
         )}
-        <TitleTag className="font-serif text-4xl font-semibold text-gray-900">
-          {title}
-        </TitleTag>
-        <div className="font-sans text-xl leading-7 text-gray-700">{text}</div>
+        {title && (
+          <TitleTag className="font-serif text-4xl font-semibold text-gray-900">
+            {title}
+          </TitleTag>
+        )}
+        {text && (
+          <div className="font-sans text-xl leading-7 text-gray-700">
+            {text}
+          </div>
+        )}
       </div>
       {text2 && (
         <div className="text-x font-sans leading-7 text-gray-700">{text2}</div>

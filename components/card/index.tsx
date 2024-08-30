@@ -13,6 +13,7 @@ const Card = ({
   link,
   textPosition = 'left',
   imageBgColor,
+  disabled,
 }: {
   title: string;
   category: string;
@@ -22,6 +23,7 @@ const Card = ({
   image: string;
   imageBgColor?: string;
   textPosition?: 'left' | 'right';
+  disabled?: boolean;
 }) => {
   const text = (
     <div className="flex h-full flex-col justify-between pb-0 pt-4 lg:px-4 lg:py-9">
@@ -36,10 +38,14 @@ const Card = ({
           {description}
         </p>
       </div>
-      <Link href={link || '/#'}>
+      <Link
+        href={link || '/#'}
+        className={cn('mb-8', disabled ? 'pointer-events-none' : undefined)}
+      >
         <Button
           variant="outline"
-          className="group flex gap-2 font-serif uppercase"
+          className="group flex gap-2 font-serif uppercase disabled:bg-gray-50"
+          disabled={disabled}
         >
           {buttonText}
           <ArrowRight className="text-gray-900 group-hover:text-white" />

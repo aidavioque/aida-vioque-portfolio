@@ -29,8 +29,12 @@ function SmartProtection() {
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
-            title="Esto es un título mega guay"
+            category="Context"
+            title={
+              <>
+                <span className="text-primary">Why</span> are we here?
+              </>
+            }
             text={
               <>
                 Work resulting from collaboration between Product and Marketing
@@ -88,7 +92,7 @@ function SmartProtection() {
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
+            category="Goals"
             title="Podcast: let’s keep it simple"
             image="/images/projects/smart-protection-2.png"
             imageHeight={1303}
@@ -116,7 +120,7 @@ function SmartProtection() {
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
+            category="Solutions"
             title="Social Media Content"
             image="/images/projects/smart-protection-4.png"
             imageHeight={635}
@@ -131,8 +135,12 @@ function SmartProtection() {
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
-            title="Esto es un título"
+            title={
+              <>
+                Applying
+                <span className="text-primary"> behavioural design</span>
+              </>
+            }
             text={
               <>
                 The aesthetic is friendly, with a contemporary language, soft
@@ -152,7 +160,7 @@ function SmartProtection() {
           </div>
           <Block
             TitleTag="h3"
-            category="Esto es un título"
+            category="solution: product newsletter to clients"
             title="Product Newsletters"
             layout="image-left"
             image="/images/projects/smart-protection-6.png"
@@ -167,8 +175,13 @@ function SmartProtection() {
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
-            title="Esto es un título"
+            category="solution: illustrations"
+            title={
+              <>
+                An <span className="title-primary">illustrative</span> way to
+                provide updates
+              </>
+            }
             image="/images/projects/smart-protection-7.png"
             imageHeight={736}
             imageWidth={708}
@@ -181,8 +194,14 @@ function SmartProtection() {
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
-            title="Product Newsletters"
+            category="solution: keep the team updated"
+            title={
+              <>
+                Effective{' '}
+                <span className="text-primary"> internal communication</span> is
+                key
+              </>
+            }
             layout="image-left"
             image="/images/projects/smart-protection-8.png"
             imageHeight={620}
@@ -197,7 +216,7 @@ function SmartProtection() {
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
+            category="solution: storytelling"
             title="Instagram content strategy"
             text={
               <>
@@ -219,8 +238,13 @@ function SmartProtection() {
           </div>
           <Block
             TitleTag="h3"
-            category="Esto es un título"
-            title="Product Newsletters"
+            title={
+              <>
+                The importance of clearly communicating the
+                <span className="text-primary"> value you can provide</span> to
+                your clients
+              </>
+            }
             image="/images/projects/smart-protection-10.png"
             imageHeight={688}
             imageWidth={676}
@@ -235,8 +259,12 @@ function SmartProtection() {
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
-            title="Product Newsletters"
+            title={
+              <>
+                And the hability to
+                <span className="text-primary"> understand their needs</span>
+              </>
+            }
             layout="image-left"
             image="/images/projects/smart-protection-11.png"
             imageHeight={346}
@@ -251,8 +279,6 @@ function SmartProtection() {
           />
           <Block
             TitleTag="h3"
-            category="Esto es un título"
-            title="Product Newsletters"
             textClassName="lg:max-w-[512px]"
             text={
               <>
@@ -272,7 +298,7 @@ function SmartProtection() {
           </div>
           <Block
             TitleTag="h3"
-            category="Esto es un título"
+            category="Design system"
             title="Colour palette"
             textClassName="lg:max-w-[512px]"
             text={
@@ -335,18 +361,12 @@ function SmartProtection() {
           <Block
             TitleTag="h3"
             category="key learning"
-            title="Product Newsletters"
-            textClassName="lg:max-w-[512px]"
-            text={
+            title={
               <>
-                More important than following the same steps in the right order
-                every time is the ability to understand when and how each method
-                should be used, and why it will help the designer come up with a
-                better solution to a problem. Designers who can think for
-                themselves will make better decisions when their first real
-                project arises.
+                What have I <span className="text-primary">learned</span>
               </>
             }
+            textClassName="lg:max-w-[512px]"
           />
           <div className="flex w-full flex-col justify-between gap-12 lg:flex-row lg:items-center lg:gap-6">
             <div className="inline-flex min-w-[200px] max-w-[342px] flex-col items-start justify-start gap-6">
@@ -399,11 +419,11 @@ function SmartProtection() {
             </div>
             <div className="flex w-full flex-wrap items-center justify-center gap-16 py-6">
               <ViewMoreCard
-                link="/projects/smart-protection"
-                image="/images/projects/interested-1.png"
-                category="ui design"
-                title="Boosting product awareness"
-                text="How to effectively communicate product improvements to customers and attract new users."
+                link="/projects/index"
+                image="/images/projects/interested-3.png"
+                category="product design"
+                title="Poor UX research insights undermine designers"
+                text="How we overcame challenges and adjusted efforts to successfully complete the project despite initial research flaws."
               />
               <ViewMoreCard
                 link="/projects/samoo"

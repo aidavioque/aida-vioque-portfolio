@@ -60,6 +60,18 @@ export default function Home() {
               image="/images/video/index-home.gif"
             />
           </div>
+          <div className="col-span-12">
+            <Card
+              title="Navigating the quest to find a partner in the digital age"
+              textPosition="right"
+              category="product design"
+              description="Full research and design process of a digital solution aimed at helping users find a partner."
+              buttonText="Coming soon"
+              disabled
+              link="/projects/vera"
+              image="/images/home-3.png"
+            />
+          </div>
           {/* <div className="col-span-12">
             <Card
               title="Information request proposal"

@@ -825,13 +825,29 @@ function SmartProtection() {
               </div>
             }
           />
-          <Image
-            src="/images/projects/samoo-9.png"
-            className="w-full"
-            alt=""
-            width={1252}
-            height={765}
-          />
+          <div className="flex h-full w-full justify-end gap-6 pb-20">
+            <Image
+              src="/images/projects/samoo-mobile-1.png"
+              className="shadow-lg"
+              alt="samoo mobile 1"
+              width={260}
+              height={562}
+            />
+            <Image
+              src="/images/projects/samoo-mobile-2.png"
+              className="shadow-lg"
+              alt="amoo mobile 2"
+              width={260}
+              height={562}
+            />
+            <Image
+              src="/images/projects/samoo-mobile-3.png"
+              className="shadow-lg"
+              alt="samoo mobile 3"
+              width={260}
+              height={562}
+            />
+          </div>
           <Block
             TitleTag="h3"
             category="solution: instant feedback"
@@ -922,8 +938,8 @@ function SmartProtection() {
                 link="/projects/index"
                 image="/images/projects/interested-3.png"
                 category="product design"
-                title="Scientific literature is a profitable business"
-                text="More important than following the same steps in the right order every time is ..."
+                title="Poor UX research insights undermine designers"
+                text="How we overcame challenges and adjusted efforts to successfully complete the project despite initial research flaws."
               />
             </div>
           </div>

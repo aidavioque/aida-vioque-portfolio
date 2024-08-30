@@ -35,13 +35,19 @@ function About() {
         />
         <Block
           TitleTag="h2"
-          title="I am a generalist"
+          title="I am wide range"
           text={
-            <>
-              I consider myself a multipotential or generalist. My experience is
-              in fact diverse: encompassing work in the tech world, service
-              sector, education, publishing, illustration, and design.
-            </>
+            <div className="space-y-8">
+              <p>
+                I firmly believe that having a wide range of knowledge and
+                experience can lead to innovation and professional success.
+              </p>
+              <p>
+                My experience is in fact diverse: encompassing work in the tech
+                world, service sector, education, publishing, illustration, and
+                design.
+              </p>
+            </div>
           }
         />
         <Block
