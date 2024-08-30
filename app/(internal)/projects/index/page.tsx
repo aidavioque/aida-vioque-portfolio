@@ -438,7 +438,7 @@ function Index() {
                 text="How to effectively communicate product improvements to customers and attract new users."
               />
               <ViewMoreCard
-                link="/projects/index"
+                link="/projects/samoo"
                 image="/images/projects/interested-2.png"
                 category="product design"
                 title="From networking to signing contracts"
