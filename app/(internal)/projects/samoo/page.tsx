@@ -827,21 +827,21 @@ function SmartProtection() {
           <div className="flex h-full w-full justify-end gap-6 pb-20">
             <Image
               src="/images/projects/samoo-mobile-1.png"
-              className="shadow-lg"
+              className="shadow-lg min-w-[260px]"
               alt="samoo mobile 1"
               width={260}
               height={562}
             />
             <Image
               src="/images/projects/samoo-mobile-2.png"
-              className="shadow-lg"
+              className="shadow-lg min-w-[260px]"
               alt="amoo mobile 2"
               width={260}
               height={562}
             />
             <Image
               src="/images/projects/samoo-mobile-3.png"
-              className="shadow-lg"
+              className="shadow-lg min-w-[260px]"
               alt="samoo mobile 3"
               width={260}
               height={562}
