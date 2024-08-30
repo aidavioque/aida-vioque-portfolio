@@ -317,7 +317,6 @@ function SmartProtection() {
         <div className="container grid space-y-12 py-12">
           <Block
             TitleTag="h3"
-            category="Esto es un título"
             title={
               <div className="text-white">
                 Addressing{' '}
