@@ -26,7 +26,27 @@ module.exports = {
       '8xl': ['84px', '76px'],
     },
     colors: {
-      ...colors,
+      // Explicitly include necessary colors from tailwindcss/colors
+      // and use new names for deprecated ones.
+      transparent: colors.transparent,
+      current: colors.current,
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray, // Uses the new 'gray' (formerly coolGray)
+      red: colors.red,
+      yellow: colors.yellow,
+      green: colors.green,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      purple: colors.purple,
+      pink: colors.pink,
+      sky: colors.sky, // New name for lightBlue
+      stone: colors.stone, // New name for warmGray
+      neutral: colors.neutral, // New name for trueGray
+      slate: colors.slate, // New name for blueGray
+      // Remove ...colors spread to avoid pulling in deprecated names
+
+      // Custom/project-specific colors below
       border: 'hsl(var(--border))',
       input: 'hsl(var(--input))',
       ring: 'hsl(var(--ring))',
@@ -60,10 +80,13 @@ module.exports = {
         DEFAULT: 'hsl(var(--card))',
         foreground: 'hsl(var(--card-foreground))',
       },
-      primary: '#020C14',
+      primary: '#020C14', // This overrides tailwind's primary if it exists
       soft: '#062134',
       primaryButton: '#0B4168',
-      background: '#fff',
+      background: '#fff', // This overrides tailwind's background if it exists
+      // Custom gray palette
+      // Note: The 'gray' from tailwindcss/colors is already included above.
+      // This custom 'gray' will take precedence for classes like 'text-gray-900'.
       gray: {
         900: '#171923',
         800: '#1a202c',
@@ -80,6 +103,11 @@ module.exports = {
       infoBg: '#3B4660',
       primary: '#2a8288',
       index: '#4EC2C0',
+      // New colors from Figma design
+      syneBlue: '#15A5AE', // Used for hero antetitle, nav button
+      brandBlack: '#052123', // Dark text color for logo, nav links
+      tagAquaBg: '#6DDBF4', // Background for project card tags
+      tagAquaText: '#063844', // Text and border for project card tags
     },
     extend: {
       fontFamily: {

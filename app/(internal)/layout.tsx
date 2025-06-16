@@ -21,7 +21,7 @@ export default async function RootLayout({
         className={`${syne.variable} ${inter.variable} relative font-sans font-normal text-gray-900`}
       >
         <Header />
-        <main className="w-full">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
