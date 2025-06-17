@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
-import Footer from '#/components/footer'; // Assuming Footer component is correctly imported
+import Footer from '@/components/footer'; // Assuming Footer component is correctly imported
+import HoverImages from '@/components/hover-images'; // Assuming Footer component is correctly imported
 import Image from 'next/image'; // Import Next.js Image component
 export { metadata } from './metadata';
 import AnimateInView from '@/components/animations/animate-in-view';
@@ -82,7 +83,8 @@ export default function Home() {
       tags: ['product design', 'design system'],
       description:
         'Full research and design process of a digital solution aimed at helping users find a partner.',
-      link: '/projects/vera',
+      link: '/#',
+      buttonText: 'Coming soon',
       image: '/images/home-3.png',
       textPosition: 'left',
     },
@@ -105,57 +107,33 @@ export default function Home() {
               <div className="max-w-[740px]">
                 <p className="mb-2 font-serif text-[32px] font-semibold leading-[41.6px] text-gray-800 inview:animate-in duration-1000 ease-in-out fade-in">
                   I care about{' '}
-                  <span className="text-syneBlue"> impact, accessibility</span>{' '}
+                  <span className="text-syneBlue">
+                    {' '}
+                    <HoverImages
+                      className="inline"
+                      images={[
+                        'images/acc1.svg',
+                        'images/acc2.svg',
+                        'images/acc3.svg',
+                      ]}
+                    >
+                      impact
+                    </HoverImages>
+                    ,{' '}
+                    <HoverImages
+                      spreadAngle={40}
+                      className="inline"
+                      images={['images/acc4.svg', 'images/acc5.svg']}
+                    >
+                      accessibility
+                    </HoverImages>
+                  </span>{' '}
                   and designing for a more sustainable world
                 </p>
                 <p className="font-inter text-[20px] leading-[28px] text-gray-600">
                   My secret spice is my background in social sciences and data
                   informed mindset
                 </p>
-              </div>
-            </div>
-            {/* Animated Images - Positioning needs to be fine-tuned with actual image sizes and Tailwind */}
-            <div className="absolute right-[10%] top-[20%] hidden lg:block">
-              <div className="relative h-48 w-72">
-                <Image
-                  src="/images/figma/hero_accessibility_magnifier.png"
-                  alt="Accessibility magnifier icon"
-                  width={78}
-                  height={78}
-                  className="absolute right-0 top-0 shadow-lg"
-                />
-                <Image
-                  src="/images/figma/hero_accessibility_interaction.png"
-                  alt="Accessibility interaction icon"
-                  width={74}
-                  height={74}
-                  className="absolute left-0 top-1 shadow-lg"
-                />
-              </div>
-            </div>
-            <div className="absolute bottom-[15%] right-[25%] hidden lg:block">
-              <div className="relative h-32 w-60">
-                <Image
-                  src="/images/figma/hero_data_monitor.png"
-                  alt="Data monitor icon"
-                  width={54}
-                  height={54}
-                  className="absolute bottom-0 left-0 shadow-lg"
-                />
-                <Image
-                  src="/images/figma/hero_data_target.png"
-                  alt="Data target icon"
-                  width={44}
-                  height={44}
-                  className="absolute right-8 top-0 shadow-lg"
-                />
-                <Image
-                  src="/images/figma/hero_sociology_brain.png"
-                  alt="Sociology brain icon"
-                  width={57}
-                  height={57}
-                  className="absolute bottom-0 right-0 shadow-lg"
-                />
               </div>
             </div>
           </div>

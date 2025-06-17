@@ -14,16 +14,6 @@ export const metadata: Metadata = {
       url: '/images/safari-pinned-tab.svg',
     },
     {
-      rel: 'icon',
-      sizes: '32x32',
-      url: '/images/favicon-32x32.png',
-    },
-    {
-      rel: 'icon',
-      sizes: '16x16',
-      url: '/images/favicon-16x16.png',
-    },
-    {
       rel: 'favicon',
       url: '/favicon.ico',
     },

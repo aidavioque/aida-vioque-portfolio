@@ -11,6 +11,8 @@ type ProjectCardItem = {
   link: string;
   image: string;
   textPosition: string;
+  disabled?: boolean;
+  buttonText?: string;
 };
 
 type ProjectDisplayListProps = {
@@ -30,7 +32,8 @@ export default function ProjectDisplayList({
             description={card.description}
             link={card.link}
             image={card.image}
-            buttonText="View case study"
+            disabled={card.disabled}
+            buttonText={card.buttonText || 'View case study'}
           />
         )) as any
       }
