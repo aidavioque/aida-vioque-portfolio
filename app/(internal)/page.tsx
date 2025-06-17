@@ -70,13 +70,14 @@ export default function Home() {
       textPosition: 'left',
     },
     {
-      title: 'Poor UX research insights undermine designers',
+      title: 'Designing clarity into AI powered sales automation',
       tags: ['product design', 'design system'],
       description:
-        'How we overcame challenges and adjusted efforts to successfully complete the project despite initial research flaws.',
-      link: '/projects/index',
-      image: '/images/macbook.png',
+        'Redesign a human focused experience for a B2B SaaS tool to generate LinkedIn leads with AI.',
+      image: '/images/projects/neety.png',
       textPosition: 'left',
+      link: '/#',
+      buttonText: 'Coming soon',
     },
     {
       title: 'Navigating the quest to find a partner in the digital age',
@@ -86,6 +87,15 @@ export default function Home() {
       link: '/#',
       buttonText: 'Coming soon',
       image: '/images/home-3.png',
+      textPosition: 'left',
+    },
+    {
+      title: 'Poor UX research insights undermine designers',
+      tags: ['product design', 'design system'],
+      description:
+        'How we overcame challenges and adjusted efforts to successfully complete the project despite initial research flaws.',
+      link: '/projects/index',
+      image: '/images/macbook.png',
       textPosition: 'left',
     },
   ];

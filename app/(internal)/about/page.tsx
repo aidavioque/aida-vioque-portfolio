@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { ReactNode } from 'react';
 import Image from 'next/image';
 import Block from '@/components/block';
 
 function About() {
   return (
     <div className="container grid py-36">
-      <div className="grid-cols-12 space-y-12">
+      <div className="grid-cols-12 space-y-6">
         <Block
           TitleTag="h2"
+          animate
           title="A few words about me"
           text={
             <>
@@ -47,6 +47,7 @@ function About() {
             textClassName="flex-row lg:min-w-full justify-between"
             titleClassName="lg:min-w-[400px]"
             text1ClassName="text-lg lg:max-w-[550px]"
+            animate
             text={
               <p>
                 I firmly believe that having a wide range of knowledge and
@@ -60,6 +61,7 @@ function About() {
             textClassName="flex-row lg:min-w-full justify-between"
             titleClassName="lg:min-w-[400px]"
             text1ClassName="text-lg lg:max-w-[550px]"
+            animate
             text={
               <p>
                 I am most effective when part of a dynamic team that values good
@@ -73,6 +75,7 @@ function About() {
             textClassName="flex-row lg:min-w-full justify-between"
             titleClassName="lg:min-w-[400px]"
             text1ClassName="text-lg lg:max-w-[550px]"
+            animate
             text={
               <>
                 I am heavily{' '}
@@ -90,6 +93,7 @@ function About() {
             textClassName="flex-row lg:min-w-full justify-between"
             titleClassName="lg:min-w-[400px]"
             text1ClassName="text-lg lg:max-w-[550px]"
+            animate
             text={
               <p>
                 I am drawn to the colors, shapes, and textures found in nature,

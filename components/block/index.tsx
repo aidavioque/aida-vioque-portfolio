@@ -17,6 +17,7 @@ const Block = ({
   text1ClassName,
   titleClassName,
   layout = 'default',
+  animate = false,
 }: {
   category?: string;
   title?: string | ReactNode;
@@ -32,6 +33,7 @@ const Block = ({
   text1ClassName?: string;
   titleClassName?: string;
   layout?: 'default' | 'image-left';
+  animate?: boolean;
 }) => {
   const imageComponent = image && (
     <Image
@@ -69,6 +71,10 @@ const Block = ({
           <TitleTag
             className={cn(
               'font-serif text-4xl font-semibold text-gray-900',
+              {
+                'animate-in slide-in-from-top-24 fade-in duration-1000':
+                  animate,
+              },
               titleClassName,
             )}
           >
