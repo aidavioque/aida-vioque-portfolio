@@ -22,7 +22,7 @@ const Footer = ({ theme = 'black' }: { theme?: 'white' | 'black' }) => {
   return (
     <footer
       id="contact"
-      className={`flex w-full flex-col justify-center gap-y-16 ${currentBgColor} ${currentTextColor} px-6 py-16 md:px-12 lg:px-24`}
+      className={`flex w-full flex-col justify-center gap-y-16 ${currentBgColor} ${currentTextColor} pb-24 px-4 py-16 md:px-12 lg:px-24`}
     >
       {/* Removed the top border line as it's not in Figma footer */}
       <div className="mx-auto flex w-full max-w-7xl flex-col items-start justify-center gap-16">

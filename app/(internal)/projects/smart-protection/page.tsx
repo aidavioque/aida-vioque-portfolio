@@ -7,10 +7,10 @@ import ViewMoreCard from '@/components/view-more-card';
 function SmartProtection() {
   return (
     <>
-      <div className="container grid py-12">
+      <div className="container grid py-12 pt-24">
         <div className="grid-cols-12 space-y-16">
           <section className="container relative grid grid-cols-12 flex-col">
-            <div className="col-span-12 max-w-[720px]">
+            <div className="col-span-12 max-w-full lg:max-w-[720px]">
               <h1 className="mt-8 pb-8 font-serif text-4xl font-semibold lg:text-8xl">
                 Boosting Product Awareness
               </h1>
@@ -22,7 +22,7 @@ function SmartProtection() {
           </section>
           <Image
             src="/images/projects/smart-protection-1.png"
-            className="w-full"
+            className="w-full max-w-full"
             alt=""
             width={1252}
             height={751}
@@ -313,11 +313,11 @@ function SmartProtection() {
               </>
             }
           />
-          <div className="flex max-w-[676px] flex-col gap-2 pb-12">
+          <div className="flex max-w-full lg:max-w-[676px] flex-col gap-2 pb-12">
             <div className=" text-xl font-medium leading-9 text-gray-400">
               Fluor blue: primary actions, brand identity
             </div>
-            <div className="inline-flex gap-4">
+            <div className="inline-flex gap-4 flex-wrap">
               <div className="h-[94px] w-[94px] bg-[#0122e0]" />
               <div className="h-[94px] w-[94px] bg-[#0122e0]/75" />
               <div className="h-[94px] w-[94px] bg-[#0122e0]/50" />
@@ -332,7 +332,7 @@ function SmartProtection() {
                 Fluor green: secondary
               </div>
             </div>
-            <div className=" inline-flex gap-4">
+            <div className=" inline-flex gap-4 flex-wrap">
               <div className="h-[94px] w-[94px] bg-[#c3eb3c]" />
               <div className="h-[94px] w-[94px] bg-[#c3eb3c]/75" />
               <div className="h-[94px] w-[94px] bg-[#c3eb3c]/50" />
@@ -347,7 +347,7 @@ function SmartProtection() {
                 Dark blue: texts
               </div>
             </div>
-            <div className=" inline-flex gap-4">
+            <div className=" inline-flex gap-4  flex-wrap">
               <div className="h-[94px] w-[94px] bg-[#000832]" />
               <div className="h-[94px] w-[94px] bg-[#000832]/75" />
               <div className="h-[94px] w-[94px] bg-[#000832]/50" />
