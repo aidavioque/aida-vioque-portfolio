@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, MotionValue } from 'framer-motion';
 
-type AnimatedItemsProps<T> = {
+type AnimatedItemsProps<T> = React.PropsWithChildren<{
   items: T[];
   children: (item: T) => React.ReactNode;
-};
+}>;
 
 function AnimatedItems<T>({ items, children }: AnimatedItemsProps<T>) {
   return (
