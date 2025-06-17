@@ -81,7 +81,7 @@ const TriBlock = ({
 function SmartProtection() {
   return (
     <>
-      <div className="container grid py-12">
+      <div className="container grid py-12 pt-24">
         <div className="grid-cols-12 space-y-16">
           <section className="relative grid grid-cols-12 flex-col">
             <div className="col-span-12 max-w-[720px]">
