@@ -4,11 +4,11 @@ import Footer from '#/components/footer'; // Assuming Footer component is correc
 import Image from 'next/image'; // Import Next.js Image component
 export { metadata } from './metadata';
 import AnimateInView from '@/components/animations/animate-in-view';
+
 // import AnimatedItems from '#/components/animated-items'; // No longer directly used
 // import Card from '@/components/card'; // No longer directly used
 import ProjectDisplayList from '#/components/project-display-list'; // Importing the new component
 import HowIWorkDisplayList from '#/components/how-i-work-display-list'; // Importing the new component for How I Work section
-
 export default function Home() {
   const howIWorkItems = [
     {
@@ -60,30 +60,30 @@ export default function Home() {
       textPosition: 'left',
     },
     {
-      title: 'Good networking increase conversion rates',
-      tags: ['product design', 'design system'],
+      title: 'Boosting product awareness',
+      tags: ['UI design', 'design system'],
       description:
-        'How to ran a design sprint to redesign the E-learning Experience and achieve higher retention rates.',
+        'How to effectively communicate product improvements to customers and attract new users.',
       link: '/projects/smart-protection',
       image: '/images/projects/smart-protection.jpg',
       textPosition: 'left',
     },
     {
-      title: 'Good networking increase conversion rates',
+      title: 'Poor UX research insights undermine designers',
       tags: ['product design', 'design system'],
       description:
-        'How to ran a design sprint to redesign the E-learning Experience and achieve higher retention rates.',
+        'How we overcame challenges and adjusted efforts to successfully complete the project despite initial research flaws.',
       link: '/projects/index',
-      image: '/images/projects/index-2.png',
+      image: '/images/macbook.png',
       textPosition: 'left',
     },
     {
-      title: 'Good networking increase conversion rates',
+      title: 'Navigating the quest to find a partner in the digital age',
       tags: ['product design', 'design system'],
       description:
-        'How to ran a design sprint to redesign the E-learning Experience and achieve higher retention rates.',
+        'Full research and design process of a digital solution aimed at helping users find a partner.',
       link: '/projects/vera',
-      image: '/images/projects/monstera.jpg',
+      image: '/images/home-3.png',
       textPosition: 'left',
     },
   ];
@@ -92,12 +92,12 @@ export default function Home() {
     <div className="min-h-screen bg-white text-brandBlack w-full">
       <div className="flex min-h-screen flex-col">
         <section className="relative bg-gradient-to-b from-white via-gray-100 to-gray-300">
-          <div className="container flex w-full flex-col items-center justify-center px-6 sm:px-16 lg:px-[94px] h-[600px] lg:h-screen">
+          <div className="container flex w-full flex-col items-center justify-center py-10 px-6 sm:px-16 lg:px-[94px] h-[600px] lg:h-screen">
             <div className="z-10 flex w-full max-w-[1250px] flex-col items-start">
               <div className="mb-1 font-serif text-[20px] font-medium text-syneBlue animate-bounce duration-1000 ease-in-out">
                 Hi, I’m Aida
               </div>
-              <h1 className="mb-10 font-serif text-[84px] font-semibold leading-[76px] text-gray-900 transform inview:animate-in duration-1000 ease-in-out slide-in-from-top-24 fade-in">
+              <h1 className="mb-10 font-serif text-[38px] lg:text-[84px] font-semibold leading-[76px] text-gray-900 transform inview:animate-in duration-1000 ease-in-out slide-in-from-top-24 fade-in">
                 <AnimateInView className="animate-in slide-in-from-top-24 duration-1000 ease-in-out fade-in">
                   Product Designer
                 </AnimateInView>

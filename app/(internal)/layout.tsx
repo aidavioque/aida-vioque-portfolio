@@ -2,6 +2,7 @@ import 'styles/globals.css';
 import Header from '#/components/header';
 import { syne } from '../../public/fonts';
 import { Inter } from 'next/font/google';
+import Cursor from '#/components/cursor';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,6 +23,7 @@ export default async function RootLayout({
       >
         <Header />
         <main>{children}</main>
+        <Cursor />
       </body>
     </html>
   );
