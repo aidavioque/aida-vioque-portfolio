@@ -2,6 +2,7 @@ import 'styles/globals.css';
 import Header from '#/components/header';
 import { syne } from '../../public/fonts';
 import { Inter } from 'next/font/google';
+import Cursor from '#/components/cursor';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -21,7 +22,8 @@ export default async function RootLayout({
         className={`${syne.variable} ${inter.variable} relative font-sans font-normal text-gray-900`}
       >
         <Header />
-        <main className="w-full">{children}</main>
+        <main>{children}</main>
+        <Cursor />
       </body>
     </html>
   );

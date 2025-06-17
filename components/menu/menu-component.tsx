@@ -137,9 +137,11 @@ const Menu = () => {
             'font-bold ': pathName === '/#contact',
           })}
         >
-          <Link href="/#contact" scroll={false}>
-            <Button variant="primary">Contact</Button>
-          </Link>
+          <Button variant="primary" asChild>
+            <Link href="/#contact" scroll={false}>
+              Contact
+            </Link>
+          </Button>
         </li>
       </ul>
     </>
