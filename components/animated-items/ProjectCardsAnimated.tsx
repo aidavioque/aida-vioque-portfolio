@@ -19,7 +19,7 @@ type Props = {
 
 export default function ProjectCardsAnimated({ projectCards }: Props) {
   return (
-    <AnimatedItems<ProjectCard> items={projectCards}>
+    <AnimatedItems items={projectCards}>
       {(card: ProjectCard) => (
         <Card
           title={card.title}

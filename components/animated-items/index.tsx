@@ -3,10 +3,10 @@
 import React from 'react';
 import { AnimatePresence, motion, MotionValue } from 'framer-motion';
 
-type AnimatedItemsProps<T> = React.PropsWithChildren<{
+type AnimatedItemsProps<T> = {
   items: T[];
   children: (item: T) => React.ReactNode;
-}>;
+};
 
 function AnimatedItems<T>({ items, children }: AnimatedItemsProps<T>) {
   return (
