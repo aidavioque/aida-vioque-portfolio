@@ -40,12 +40,12 @@ function About() {
           width={1231}
           height={396}
         />
-        <div className="lg:space-y-[184px] lg:pt-10">
+        <div className="space-y-8 lg:space-y-[184px] pt-2 lg:pt-10">
           <Block
             TitleTag="h2"
             title="I am wide range"
-            textClassName="flex-row lg:min-w-full justify-between"
-            titleClassName="lg:min-w-[400px]"
+            textClassName="flex-col lg:flex-row lg:min-w-full justify-between"
+            titleClassName="text-3xl lg:text-4xl lg:min-w-[400px]"
             text1ClassName="text-lg lg:max-w-[550px]"
             animate
             text={
@@ -58,8 +58,8 @@ function About() {
           <Block
             TitleTag="h2"
             title="Product trio + data"
-            textClassName="flex-row lg:min-w-full justify-between"
-            titleClassName="lg:min-w-[400px]"
+            textClassName="flex-col lg:flex-row lg:min-w-full justify-between"
+            titleClassName="text-3xl lg:text-4xl g:min-w-[400px]"
             text1ClassName="text-lg lg:max-w-[550px]"
             animate
             text={
@@ -72,8 +72,8 @@ function About() {
           <Block
             TitleTag="h2"
             title="Human after all"
-            textClassName="flex-row lg:min-w-full justify-between"
-            titleClassName="lg:min-w-[400px]"
+            textClassName="flex-col lg:flex-row lg:min-w-full justify-between"
+            titleClassName="text-3xl lg:text-4xl lg:min-w-[400px]"
             text1ClassName="text-lg lg:max-w-[550px]"
             animate
             text={
@@ -90,8 +90,8 @@ function About() {
           <Block
             TitleTag="h2"
             title="What inspires me?"
-            textClassName="flex-row lg:min-w-full justify-between"
-            titleClassName="lg:min-w-[400px]"
+            textClassName="flex-col lg:flex-row lg:min-w-full justify-between"
+            titleClassName="text-3xl lg:text-4xl lg:min-w-[400px]"
             text1ClassName="text-lg lg:max-w-[550px]"
             animate
             text={
