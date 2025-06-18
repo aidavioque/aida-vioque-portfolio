@@ -50,8 +50,8 @@ export default function CustomCursor() {
         <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
           <feTurbulence
             type="fractalNoise"
-            baseFrequency="0.008 0.008"
-            numOctaves="2"
+            baseFrequency="0.004 0.004"
+            numOctaves="1"
             seed="92"
             result="noise"
           />
