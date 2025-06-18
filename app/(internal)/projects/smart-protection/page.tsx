@@ -10,11 +10,11 @@ function SmartProtection() {
       <div className="container grid py-12 pt-24">
         <div className="grid-cols-12 space-y-16">
           <section className="container relative grid grid-cols-12 flex-col">
-            <div className="col-span-12 max-w-full lg:max-w-[720px]">
+            <div className="col-span-12 max-w-full">
               <h1 className="mt-8 pb-8 font-serif text-4xl font-semibold lg:text-8xl">
                 Boosting Product Awareness
               </h1>
-              <p className="font-sans text-xl leading-7 text-gray-700">
+              <p className="font-sans text-xl leading-7 text-gray-700/70">
                 How to effectively communicate product improvements to customers
                 and attract new users.
               </p>

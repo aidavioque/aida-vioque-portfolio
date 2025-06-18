@@ -85,11 +85,11 @@ function Index() {
       <div className="container grid py-24">
         <div className="grid-cols-12 space-y-16">
           <section className="relative grid grid-cols-12 flex-col">
-            <div className="col-span-12 max-w-[780px]">
+            <div className="col-span-12">
               <h1 className="mt-8 pb-8 font-serif text-4xl font-semibold leading-[75.60px] lg:text-8xl">
                 Poor UX research insights undermine designers
               </h1>
-              <p className="max-w-[740px] font-sans text-xl leading-7 text-gray-700">
+              <p className="max-w-[740px] font-sans text-xl leading-7 text-gray-700/70">
                 How we overcame challenges and adjusted efforts to successfully
                 complete the project despite initial research flaws.
               </p>
@@ -441,9 +441,8 @@ function Index() {
                 link="/projects/samoo"
                 image="/images/projects/interested-2.png"
                 category="product design"
-                title="From networking to signing contracts"
-                text="How to ran a design sprint to redesign the E-learning Experience
-                and achieve higher retention rates."
+                title="Good networking increase conversion rates"
+                text="How to ran a design sprint to redesign the E-learning Experience and achieve higher retention rates."
               />
             </div>
           </div>

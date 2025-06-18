@@ -78,17 +78,17 @@ const TriBlock = ({
     </div>
   );
 };
-function SmartProtection() {
+function Samoo() {
   return (
     <>
       <div className="container grid py-12 pt-24">
         <div className="grid-cols-12 space-y-16">
           <section className="relative grid grid-cols-12 flex-col">
-            <div className="col-span-12 max-w-[720px]">
+            <div className="col-span-12">
               <h1 className="mt-8 pb-8 font-serif text-4xl font-semibold lg:text-8xl">
-                From networking to signing contracts
+                Good networking increase conversion rates
               </h1>
-              <p className="font-sans text-xl leading-7 text-gray-700">
+              <p className="font-sans text-xl leading-7 text-gray-700/70">
                 How to ran a design sprint to redesign the E-learning Experience
                 and achieve higher retention rates.
               </p>
@@ -165,10 +165,10 @@ function SmartProtection() {
                       </div>
                       <div className="flex flex-col gap-1">
                         <div className="font-serif font-semibold uppercase leading-tight text-gray-500">
-                          timeline
+                          Product
                         </div>
                         <div className="text-xl font-normal leading-7 text-gray-900">
-                          2 weeks
+                          B2B SaaS
                         </div>
                       </div>
                     </div>
@@ -179,20 +179,45 @@ function SmartProtection() {
           />
         </div>
       </div>
+      <div className="container grid space-y-12 py-12">
+        <Block
+          TitleTag="h3"
+          category="netnography"
+          textClassName="lg:max-w-[640px]"
+          title={
+            <>
+              <span className="text-primary">Why</span> is E-learning Experience
+              important?
+            </>
+          }
+        />
+        <TriBlock
+          bigText1={<div className="text-8xl">+5.000</div>}
+          bigText2={<div className="text-8xl">+6%</div>}
+          bigText3={
+            <div className="text-8xl">
+              3<sup className="text-4xl">rd</sup>
+            </div>
+          }
+          text1="millions of euros invoiced in e-learning in Spain in 2021"
+          text2="annual growth foreseed in Spain’s e-Learning market until 2026"
+          text3="largest market worldwide in 2019"
+        />
+      </div>
       <div className="inline-flex w-full flex-col items-center justify-center gap-12 bg-gray-900">
         <div className="grid py-[72px]">
           <div className="container inline-flex grid-cols-12 flex-col gap-8 font-serif">
             <div className="text-center text-base font-semibold uppercase leading-tight text-white/80">
               the brief
             </div>
-            <div className="w-full text-center">
-              <span className="text-[42px] font-semibold leading-[46px] text-white">
+            <div className="w-full text-center max-w-[800px]">
+              <span className="text-[32px] font-semibold leading-[46px] text-white">
                 Design and development of a{' '}
               </span>
-              <span className="text-gradient text-[42px] font-semibold leading-[46px]">
+              <span className="text-syneBlue text-[36px] font-semibold leading-[46px]">
                 mobile first solution
               </span>
-              <span className="font-serif text-[42px] font-semibold leading-[46px] text-white">
+              <span className="font-serif text-[32px] font-semibold leading-[46px] text-white">
                 {' '}
                 for the management, promotion and communication of events,
                 focused on E-learning Experience 2025.
@@ -210,17 +235,6 @@ function SmartProtection() {
               <>
                 How does <span className="text-primary">success</span> looks
                 like for Samoo?
-              </>
-            }
-            text={
-              <>
-                For us, aligning the client&apos;s objectives with the results
-                is essential to ensure the success of the project. In
-                collaboration with the Data team, we establish what will be the{' '}
-                <span className="font-bold">
-                  key metrics to measure Samoo&apos;s objectives.
-                </span>{' '}
-                We identified three main focuses that would define our success:
               </>
             }
           />
@@ -261,81 +275,226 @@ function SmartProtection() {
           </div>
         </div>
       </div>
-      <div className="bg-gray-50">
-        <div className="container grid space-y-12 py-12">
+      <div className="container grid py-12">
+        <div className="grid-cols-12 space-y-16">
           <Block
             TitleTag="h3"
-            category="secondary research: netnography"
+            category="The solution"
             title={
               <>
-                <span className="text-primary">Why</span> is E-learning
-                Experience important?
+                We focused on improving chances of
+                <span className="text-primary"> making connections</span>
               </>
             }
             text={
               <>
-                I search for information and data about the current state of
-                e-learning on a global scale.{' '}
-                <span className="font-bold">
-                  I have experience designing, developing, and reviewing content
-                  for e-learning programs,
-                </span>{' '}
-                so the search process should be more manageable for me.{' '}
-                <p className="mt-8">
-                  It is a niche with growing global influence every day.
-                </p>
+                It involves collecting interests in a personalized and
+                interactive agenda and providing clear, instant updates on the
+                event&apos;s progress through the collection of qualitative and
+                quantitative data.
               </>
             }
           />
-          <TriBlock
-            bigText1={<div className="text-8xl">+5.000</div>}
-            bigText2={<div className="text-8xl">+6%</div>}
-            bigText3={
-              <div className="text-8xl">
-                3<sup className="text-4xl">rd</sup>
+          <Image
+            src="/images/projects/samoo-4.png"
+            className="w-full"
+            alt=""
+            width={1252}
+            height={432}
+          />
+          <Block
+            TitleTag="h3"
+            title={
+              <>
+                <span className="text-primary">What needs </span>
+                do we identified in the users?
+              </>
+            }
+            text={
+              <p>
+                During the interviews, we discovered that a key action point
+                involved{' '}
+                <span className="font-bold">promoting networking.</span>
+              </p>
+            }
+          />
+        </div>
+        <TriBlock
+          className="mt-12 items-start"
+          bigText1={
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/projects/user1.png"
+                alt=""
+                className="rounded-full"
+                width={30}
+                height={30}
+              />
+              <div className="text-left font-serif text-3xl font-bold text-gray-900">
+                Networking
+              </div>
+            </div>
+          }
+          bigText2={
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/projects/user2.png"
+                alt=""
+                className="rounded-full"
+                width={30}
+                height={30}
+              />
+              <div className="text-left font-serif text-3xl font-bold text-gray-900">
+                Lost feedback
+              </div>
+            </div>
+          }
+          bigText3={
+            <div className="flex items-center gap-4">
+              <Image
+                src="/images/projects/user3.png"
+                alt=""
+                className="rounded-full"
+                width={30}
+                height={30}
+              />
+              <div className="text-left font-serif text-3xl font-bold text-gray-900">
+                Personal agenda
+              </div>
+            </div>
+          }
+          text1={
+            <div className="text-left">
+              “I didn&apos;t know the list of attendees in advance, something I
+              was really missing. I imagine people who come from far away and
+              don&apos;t have the option of networking beforehand. I was lucky
+              and, by chance, we started talking to some teachers.”
+            </div>
+          }
+          text2={
+            <div className="text-left">
+              “We received two emails after the event: one with a certificate
+              and another with a Typeform for feedback, but I don&apos;t think
+              we completed it.”
+            </div>
+          }
+          text3={
+            <div className="text-left">
+              “We were clear about some topics that we couldn&apos;t miss. We
+              saw that other people were looking at the welcome pack brochure
+              and writing down what they found most interesting.”
+            </div>
+          }
+        />
+      </div>
+      <div className="bg-gray-50">
+        <div className="container grid py-12 text-center font-serif text-4xl font-semibold">
+          <div className="inline">
+            “I got lucky while networking and{' '}
+            <span className="text-primary">by chance</span> we started talking
+            to some teachers.”
+          </div>
+        </div>
+      </div>
+      <div className="pt-12">
+        <div className="container grid w-full py-12">
+          <Block
+            TitleTag="h3"
+            category="user centered"
+            title={
+              <>
+                Their
+                <span className="text-primary"> preferences </span>
+                will make it personal
+              </>
+            }
+            text={
+              <div className="space-y-8 text-xl font-normal text-gray-700">
+                <p>
+                  The program displayed will depend on the type of ticket
+                  purchased.
+                </p>
+                <ul className="list-disc pl-6">
+                  <li>
+                    Personalized agenda that records each person&apos;s
+                    preferences and organizes One to One meetings.
+                  </li>
+                  <li>Search by filters</li>
+                  <li>Filter events by topic.</li>
+                </ul>
               </div>
             }
-            text1="millions of euros invoiced in e-learning in Spain in 2021"
-            text2="annual growth foreseed in Spain’s e-Learning market until 2026"
-            text3="largest market worldwide in 2019"
+          />
+          <Image
+            src="/images/projects/samoo-9.png"
+            className="w-full"
+            alt=""
+            width={1252}
+            height={765}
           />
         </div>
       </div>
-      <div className="container grid py-12">
-        <div className="mt-14 space-y-12">
-          <div className="flex text-xl lg:justify-end">
-            <div className="max-w-[511px]">
-              After asking ourselves a few questions, we can begin to sketch out
-              what the client needs, what the value of the event is within the
-              overall context, how we understand where we want to go and what
-              the user needs.
+
+      <div className="container grid w-full py-12">
+        <Block
+          TitleTag="h3"
+          category="solution: instant feedback"
+          title={<>An easy and accesible way to drop some feedback</>}
+          text={
+            <div className="text-xl text-gray-700">
+              We have improved the feedback collection system by making it
+              instant and accessible from different points.
             </div>
-          </div>
+          }
+          image="/images/projects/samoo-14.png"
+          imageHeight={932}
+          imageWidth={718}
+          layout="image-left"
+          textClassName="lg:max-w-[511px]"
+        />
+      </div>
+      <div className="bg-gray-100">
+        <div className="container grid w-full py-12">
+          <Block
+            TitleTag="h3"
+            category="data informed"
+            title={<>How can the algorithm help?</>}
+            text={
+              <div className="space-y-8 text-xl font-normal text-gray-700">
+                <p>
+                  Personalized suggestions: an algorithm processes LinkedIn
+                  profiles and selected tags.
+                </p>
+                <ul className="list-disc pl-6">
+                  <li>
+                    Filters: attendees can filter by their most interesting
+                    tags.
+                  </li>
+                  <li>
+                    Networking: list of all registered attendees available
+                    before the event.
+                  </li>
+                  <li>Connection via QR code.</li>
+                </ul>
+              </div>
+            }
+            image="/images/projects/samoo-10.png"
+            imageHeight={657}
+            imageWidth={702}
+            textClassName="lg:max-w-[511px]"
+          />
         </div>
       </div>
       <div className="bg-gray-800">
         <div className="container grid space-y-12 py-12">
           <Block
             TitleTag="h3"
+            category="Challenges"
             title={
               <div className="text-white">
                 Addressing{' '}
                 <span className="text-primary">the significant issues:</span>{' '}
                 where should we focus our attention
-              </div>
-            }
-            text={
-              <div className="space-y-8 text-white">
-                <p>
-                  We have considered the challenge from various perspectives and
-                  we have identified three key challenges that will guide us in
-                  developing solutions that can
-                  <span className="font-bold">make a significant impact.</span>
-                </p>
-                <p>
-                  However, things must be said, it is quite ambitious to achieve
-                  all of them within the limited time available.
-                </p>
               </div>
             }
           />
@@ -383,429 +542,11 @@ function SmartProtection() {
           />
         </div>
       </div>
-      <div className="container grid py-12">
-        <div className="grid-cols-12 space-y-16">
-          <Block
-            TitleTag="h3"
-            category="The solution"
-            title={
-              <>
-                The solution focuses on
-                <span className="text-primary"> improving the metrics</span>
-              </>
-            }
-            text={
-              <>
-                Our solution aims to facilitate the connection of work profiles
-                based on their business affinities. It involves collecting
-                interests in a personalized and interactive agenda and providing
-                clear, instant updates on the event&apos;s progress through the
-                collection of qualitative and quantitative data.
-              </>
-            }
-          />
-          <Image
-            src="/images/projects/samoo-4.png"
-            className="w-full"
-            alt=""
-            width={1252}
-            height={432}
-          />
-          <Block
-            TitleTag="h3"
-            category="primary research: interview"
-            title={
-              <>
-                <span className="text-primary">How </span>
-                was the experience for the users in the past edition?
-              </>
-            }
-            text={
-              <div className="space-y-8">
-                <p>
-                  The numbers help us understand the event&apos;s importance for
-                  Samoo and its clients, but we still need to know what the
-                  experience is like for the attendees and how we can make it
-                  flawless.
-                </p>
-                <p>
-                  We contacted users from the last edition and sought to{' '}
-                  <span className="font-bold">
-                    understand the potential issues between user needs and
-                    Samoo&apos;s objectives.
-                  </span>
-                </p>
-              </div>
-            }
-          />
-          <Block
-            TitleTag="h3"
-            title={
-              <>
-                And then,
-                <span className="text-primary"> what specific needs </span>
-                do we identified in the user?
-              </>
-            }
-            text={
-              <p>
-                During the interviews, we discovered that a key action point
-                involved{' '}
-                <span className="font-bold">promoting networking:</span>{' '}
-                reducing chance and facilitating active and meaningful
-                connections between contacts.
-              </p>
-            }
-          />
-        </div>
-        <TriBlock
-          className="mt-12 items-start"
-          bigText1={
-            <div className="text-left font-serif text-3xl font-bold text-gray-900">
-              Networking
-            </div>
-          }
-          bigText2={
-            <div className="text-left font-serif text-3xl font-bold text-gray-900">
-              Feedback
-            </div>
-          }
-          bigText3={
-            <div className="text-left font-serif text-3xl font-bold text-gray-900">
-              Personal agenda
-            </div>
-          }
-          text1={
-            <div className="text-left">
-              “I didn&apos;t know the list of attendees in advance, something I
-              was really missing. I imagine people who come from far away and
-              don&apos;t have the option of networking beforehand. I was lucky
-              and, by chance, we started talking to some teachers.”
-            </div>
-          }
-          text2={
-            <div className="text-left">
-              “We received two emails after the event: one with a certificate
-              and another with a Typeform for feedback, but I don&apos;t think
-              we completed it.”
-            </div>
-          }
-          text3={
-            <div className="text-left">
-              “We were clear about some topics that we couldn&apos;t miss. We
-              saw that other people were looking at the welcome pack brochure
-              and writing down what they found most interesting.”
-            </div>
-          }
-        />
-      </div>
-      <div className="bg-gray-50">
-        <div className="container grid py-12 text-center font-serif text-4xl font-semibold">
-          <div className="inline">
-            “I got lucky while networking and{' '}
-            <span className="text-primary">by chance</span> we started talking
-            to some teachers.”
-          </div>
-        </div>
-      </div>
-      <div className="container grid py-12">
-        <div className="grid-cols-12 space-y-16">
-          <Block
-            TitleTag="h3"
-            category="touchpoints of the event"
-            title={
-              <>
-                Let&apos; map out the
-                <span className="text-primary"> key moments </span>
-                in the event experience.
-              </>
-            }
-            text={
-              <p>
-                We outline user interaction steps during the event and ask them
-                specific questions about how they solved certain issues. For
-                example, we inquire about their networking approach, agenda
-                organization, and experiences providing feedback.
-              </p>
-            }
-            image="/images/projects/samoo-5.png"
-            imageHeight={390}
-            imageWidth={718}
-            layout="image-left"
-            textClassName="lg:max-w-[511px]"
-          />
-          <Block
-            TitleTag="h3"
-            category="user persona"
-            title={
-              <>
-                <span className="text-primary">Empathy</span> with the user is
-                crucial
-              </>
-            }
-            text={
-              <p>
-                Understanding their needs, thoughts, and emotions is essential
-                for providing an unforgettable and fruitful experience.
-              </p>
-            }
-          />
-          <Image
-            src="/images/projects/samoo-6.png"
-            className="w-full"
-            alt="user persona"
-            width={1252}
-            height={875}
-          />
-          <Block
-            TitleTag="h3"
-            category="user persona"
-            title={
-              <>
-                <span className="text-primary">Jot down ideas</span> and bring
-                them to the team for discussion
-              </>
-            }
-            text={
-              <div>
-                <p>
-                  We now clearly understand our{' '}
-                  <span className="font-bold">objectives</span>, the
-                  <span className="font-bold"> problems</span> we need to solve,
-                  and the friction users suffered from previous editions.
-                </p>
-                <p>
-                  One of the most enjoyable aspects of the design process for me
-                  is <span className="font-bold">ideation.</span>
-                </p>
-              </div>
-            }
-          />
-          <div className="inline-flex w-full flex-wrap items-start justify-center gap-12">
-            <div className="inline-flex w-[342px] flex-col gap-6 rounded-lg bg-gray-50 p-6 lg:min-h-[258px]">
-              <div className="font-serif text-3xl font-bold text-gray-900">
-                REGISTRATION
-              </div>
-              <ul className="list-disc pl-6 text-xl text-gray-900">
-                <li>Registration of attendees to the event</li>
-                <li>Profile registration process.</li>
-              </ul>
-            </div>
-            <div className="inline-flex w-[342px] flex-col gap-6 rounded-lg bg-gray-50 p-6 lg:min-h-[258px]">
-              <div className="font-serif text-3xl font-bold text-gray-900">
-                EVENTS
-              </div>
-              <ul className="list-disc pl-6 text-xl text-gray-900">
-                <li>List of attendees to the event</li>
-                <li>Event information with complete details of the event.</li>
-              </ul>
-            </div>
-            <div className="inline-flex w-[342px] flex-col gap-6 rounded-lg bg-gray-50 p-6 lg:min-h-[258px]">
-              <div className="font-serif text-3xl font-bold text-gray-900">
-                NETWORKING
-              </div>
-              <ul className="list-disc pl-6 text-xl text-gray-900">
-                <li>
-                  Matching algorithm based on tastes, tags, and data collected
-                  from LinkedIn
-                </li>
-                <li>QR generation for matching between attendees</li>
-                <li>One to One planning.</li>
-              </ul>
-            </div>
-          </div>
-          <div className="inline-flex w-full flex-wrap items-start justify-center gap-12">
-            <div className="inline-flex w-[342px] flex-col gap-6 rounded-lg bg-gray-50 p-6 lg:min-h-[258px]">
-              <div className="font-serif text-3xl font-bold text-gray-900">
-                DASHBOARD
-              </div>
-              <ul className="list-disc pl-6 text-xl text-gray-900">
-                <li>Feedback on presentations</li>
-                <li>Management during the event</li>
-                <li>Programming for the next edition.</li>
-              </ul>
-            </div>
-            <div className="inline-flex w-[342px] flex-col gap-6 rounded-lg bg-gray-50 p-6 lg:min-h-[258px]">
-              <div className="font-serif text-3xl font-bold text-gray-900">
-                BOOKING
-              </div>
-              <ul className="list-disc pl-6 text-xl text-gray-900">
-                <li>Accommodation proposal</li>
-                <li>Transportation proposal</li>
-              </ul>
-            </div>
-            <div className="inline-flex w-[342px] flex-col gap-6 rounded-lg bg-gray-50 p-6 lg:min-h-[258px]">
-              <div className="font-serif text-3xl font-bold text-gray-900">
-                PAYMENT
-              </div>
-              <ul className="list-disc pl-6 text-xl text-gray-900">
-                <li>Payment platform integrated</li>
-                <li>Automatic verification</li>
-                <li>Unify the entire process within the app.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="bg-gray-900">
-        <div className="container grid py-12 font-serif text-4xl font-semibold text-white">
-          <div className="mb-8 font-serif text-base font-semibold uppercase leading-tight text-white/80">
-            the hypothesis
-          </div>
-          <div className="inline">
-            If event management is automated and professional profiles are
-            encouraged to connect, the E-learning Experience will become a
-            reference.
-          </div>
-        </div>
-      </div>
-      <div className="container grid py-12">
-        <div className="grid-cols-12 space-y-16">
-          <Block
-            TitleTag="h3"
-            category="Wireflow"
-            title={
-              <>
-                How can the user efficiently
-                <span className="text-primary"> accomplish tasks?</span>
-              </>
-            }
-            text={
-              <>
-                This outline combines the user flow structure with design
-                screens, enabling us to spot potential obstacles or confusion
-                before entering the development phase.
-              </>
-            }
-          />
-          <Image
-            src="/images/projects/samoo-11.png"
-            className="w-full"
-            alt=""
-            width={4096}
-            height={2450}
-          />
-        </div>
-      </div>
-      <div className="bg-gray-100">
-        <div className="container grid w-full py-12">
-          <Block
-            TitleTag="h3"
-            category="solution"
-            title={
-              <>
-                The user can get the ticket and
-                <span className="text-primary"> share their data </span>
-                easily
-              </>
-            }
-            text={
-              <div className="space-y-8 text-xl font-normal text-gray-700">
-                <p>
-                  Process of accessing the platform where all the necessary data
-                  is collected from users when creating their account for the
-                  event.
-                </p>
-                <ul className="list-disc pl-6">
-                  <li>Access for attendees and collaborators.</li>
-                  <li>
-                    Setting up topics of interest helps to organize the agenda
-                    and connect with other attendees.
-                  </li>
-                  <li>
-                    Entry via LinkedIn saves time and helps with matching
-                    between people.
-                  </li>
-                  <li>
-                    Integrated purchasing process verifies payment and automates
-                    credentials.
-                  </li>
-                </ul>
-              </div>
-            }
-            image="/images/projects/samoo-8.png"
-            imageHeight={390}
-            imageWidth={718}
-            layout="image-left"
-            textClassName="lg:max-w-[511px]"
-          />
-        </div>
-      </div>
       <div className="pt-12">
         <div className="container grid w-full py-12">
           <Block
             TitleTag="h3"
-            category="solution"
-            title={
-              <>
-                Their
-                <span className="text-primary"> preferences </span>
-                will make it personal
-              </>
-            }
-            text={
-              <div className="space-y-8 text-xl font-normal text-gray-700">
-                <p>
-                  The program displayed will depend on the type of ticket
-                  purchased.
-                </p>
-                <ul className="list-disc pl-6">
-                  <li>
-                    Personalized agenda that records each person&apos;s
-                    preferences and organizes One to One meetings.
-                  </li>
-                  <li>Search by filters</li>
-                  <li>Filter events by topic.</li>
-                </ul>
-              </div>
-            }
-          />
-          <Image
-            src="/images/projects/samoo-9.png"
-            className="w-full"
-            alt=""
-            width={1252}
-            height={765}
-          />
-        </div>
-      </div>
-      <div className="bg-gray-100">
-        <div className="container grid w-full py-12">
-          <Block
-            TitleTag="h3"
-            category="solution"
-            title={<>How can the algorithm help?</>}
-            text={
-              <div className="space-y-8 text-xl font-normal text-gray-700">
-                <p>
-                  Personalized suggestions: an algorithm processes LinkedIn
-                  profiles and selected tags.
-                </p>
-                <ul className="list-disc pl-6">
-                  <li>
-                    Filters: attendees can filter by their most interesting
-                    tags.
-                  </li>
-                  <li>
-                    Networking: list of all registered attendees available
-                    before the event.
-                  </li>
-                  <li>Connection via QR code.</li>
-                </ul>
-              </div>
-            }
-            image="/images/projects/samoo-10.png"
-            imageHeight={657}
-            imageWidth={702}
-            textClassName="lg:max-w-[511px]"
-          />
-        </div>
-      </div>
-      <div className="pt-12">
-        <div className="container grid w-full py-12">
-          <Block
-            TitleTag="h3"
-            category="solution: dashboard"
+            category="mobile dashboard"
             title={
               <>
                 How can a client feel that
@@ -818,7 +559,6 @@ function SmartProtection() {
             }
             text={
               <div className="text-gray-700">
-                All necessary management will be provided during the event days.
                 Data visualization involves collecting and displaying data from
                 previous editions to enhance planning for future editions.
               </div>
@@ -847,28 +587,12 @@ function SmartProtection() {
               height={562}
             />
           </div>
-          <Block
-            TitleTag="h3"
-            category="solution: instant feedback"
-            title={<>An easy and accesible way to drop some feedback</>}
-            text={
-              <div className="text-xl text-gray-700">
-                We have improved the feedback collection system by making it
-                instant and accessible from different points.
-              </div>
-            }
-            image="/images/projects/samoo-14.png"
-            imageHeight={932}
-            imageWidth={718}
-            layout="image-left"
-            textClassName="lg:max-w-[511px]"
-          />
           <div className="inline-flex flex-col gap-8 py-6">
             <div className="font-serif text-base font-semibold uppercase leading-tight text-gray-500">
               key learning
             </div>
             <div className="font-serif text-4xl font-semibold text-gray-900">
-              What did I learn?
+              What have I <span className="text-primary">learned?</span>
             </div>
           </div>
           <TriBlock
@@ -912,6 +636,7 @@ function SmartProtection() {
           />
         </div>
       </div>
+
       <div className="bg-gray-800">
         <div className="container grid w-full gap-4 pb-24">
           <div className="grid-cols-12">
@@ -948,4 +673,4 @@ function SmartProtection() {
   );
 }
 
-export default SmartProtection;
+export default Samoo;
