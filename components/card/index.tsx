@@ -5,6 +5,7 @@ import ArrowRight from 'public/images/arrow-right.svg';
 import { cn } from '@/lib/utils';
 
 const Card = ({
+  pretitle,
   title,
   description,
   image,
@@ -16,6 +17,7 @@ const Card = ({
   disabled,
   tags, // Add tags prop
 }: {
+  pretitle: string;
   title: string;
   category?: string; // Made category optional
   buttonText: string;
@@ -38,6 +40,9 @@ const Card = ({
         <div className="mb-4 flex flex-col gap-2">
           {' '}
           {/* Figma: Title to Paragraph gap is 8px (gap-2) */}
+          <div className="font-serif font-semibold uppercase leading-tight text-gray-500">
+            {pretitle}
+          </div>
           <h3 className="font-serif text-2xl font-semibold leading-tight text-gray-900">
             {' '}
             {/* Syne, 600, 24px */}

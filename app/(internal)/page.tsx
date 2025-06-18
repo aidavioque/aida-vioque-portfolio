@@ -52,8 +52,9 @@ export default function Home() {
 
   const projectCards = [
     {
+      pretitle: 'Samoo',
       title: 'Good networking increase conversion rates',
-      tags: ['product design', 'design system'],
+      tags: ['product design', 'mobile app'],
       description:
         'How to ran a design sprint to redesign the E-learning Experience and achieve higher retention rates.',
       link: '/projects/samoo',
@@ -61,8 +62,9 @@ export default function Home() {
       textPosition: 'left',
     },
     {
+      pretitle: 'Smart Protection',
       title: 'Boosting product awareness',
-      tags: ['UI design', 'design system'],
+      tags: ['product marketing', 'visual design'],
       description:
         'How to effectively communicate product improvements to customers and attract new users.',
       link: '/projects/smart-protection',
@@ -70,8 +72,9 @@ export default function Home() {
       textPosition: 'left',
     },
     {
+      pretitle: 'Neety',
       title: 'Designing clarity into AI powered sales automation',
-      tags: ['product design', 'design system'],
+      tags: ['data informed', 'design system', 'product design'],
       description:
         'Redesign a human focused experience for a B2B SaaS tool to generate LinkedIn leads with AI.',
       image: '/images/projects/neety.png',
@@ -80,16 +83,18 @@ export default function Home() {
       buttonText: 'Coming soon',
     },
     {
-      title: 'Navigating the quest to find a partner in the digital age',
-      tags: ['product design', 'design system'],
+      pretitle: 'Vera',
+      title: 'Improving the impact on romantic relatioships',
+      tags: ['mobile app', 'design system', 'ethical design'],
       description:
-        'Full research and design process of a digital solution aimed at helping users find a partner.',
+        'A mobile app for conscious connection with emotionally safer dating experience.',
       link: '/#',
       buttonText: 'Coming soon',
       image: '/images/home-3.png',
       textPosition: 'left',
     },
     {
+      pretitle: 'Index',
       title: 'Poor UX research insights undermine designers',
       tags: ['product design', 'design system'],
       description:

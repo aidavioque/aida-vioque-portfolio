@@ -5,6 +5,7 @@ import AnimatedItems from '#/components/animated-items';
 import Card from '@/components/card';
 
 type ProjectCardItem = {
+  pretitle: string;
   title: string;
   tags: string[];
   description: string;
@@ -27,6 +28,7 @@ export default function ProjectDisplayList({
       {
         ((card: ProjectCardItem) => (
           <Card
+            pretitle={card.pretitle}
             title={card.title}
             tags={card.tags}
             description={card.description}

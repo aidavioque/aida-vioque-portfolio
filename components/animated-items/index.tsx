@@ -14,7 +14,7 @@ function AnimatedItems<T>({ items, children }: AnimatedItemsProps<T>) {
       {items.map((item, index) => (
         <motion.div
           key={index}
-          className="max-w-[600px] w-full relative"
+          className="max-w-[720px] w-full relative"
           initial={{ opacity: 0, y: 60 }}
           whileInView="visible"
           variants={{

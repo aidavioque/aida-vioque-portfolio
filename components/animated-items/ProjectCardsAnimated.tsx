@@ -5,6 +5,7 @@ import Card from '../card';
 import React from 'react';
 
 type ProjectCard = {
+  pretitle: string;
   title: string;
   tags: string[];
   description: string;
@@ -22,6 +23,7 @@ export default function ProjectCardsAnimated({ projectCards }: Props) {
     <AnimatedItems items={projectCards}>
       {(card: ProjectCard) => (
         <Card
+          pretitle={card.pretitle}
           title={card.title}
           tags={card.tags}
           description={card.description}
