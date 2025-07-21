@@ -163,10 +163,10 @@ export default function Home() {
         {/* Projects Section */}
         <section
           id="projects"
-          className="w-full bg-[#1A202C] px-6 py-40 sm:px-16 lg:px-[94px]"
+          className="w-full bg-[#1A202C] px-6 py-0 lg:py-40 sm:px-16 lg:px-[94px]"
         >
           <div className="container max-w-[1360px] flex flex-col justify-between gap-8 px-0">
-            <div className="hidden lg:block sticky top-40 right-0 h-[373px] min-w-[320px]">
+            <div className="relative md:sticky top-16 md:top-40 right-0 h-[180px] min-w-full">
               <h2 className="font-serif text-[64px] font-semibold leading-[58px] text-white inview:animate-in duration-1000 ease-in-out slide-in-from-left-24 fade-in">
                 <AnimateInView className="animate-in inview:slide-in-from-top-24 duration-1000 ease-in-out inview:fade-in">
                   Projects
