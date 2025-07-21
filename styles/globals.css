@@ -1,11 +1,5 @@
 @tailwind base;
-a,
-button,
-[role='button'],
-[tabindex='0'],
-input[type='button'],
-input[type='submit'],
-input[type='reset'] {
+* {
   cursor: none !important;
 }
 

@@ -114,12 +114,12 @@ export default function Home() {
               <div className="mb-1 font-serif text-[20px] font-medium text-syneBlue animate-bounce duration-1000 ease-in-out">
                 Hi, I’m Aida
               </div>
-              <h1 className="mb-10 font-serif text-[38px] lg:text-[84px] font-semibold leading-[76px] text-gray-900 transform inview:animate-in duration-1000 ease-in-out slide-in-from-top-24 fade-in">
+              <h1 className="mb-10 font-serif text-[38px] lg:text-[84px] font-semibold leading-[44px] lg:leading-[76px] text-gray-900 transform inview:animate-in duration-1000 ease-in-out slide-in-from-top-24 fade-in">
                 <AnimateInView className="animate-in slide-in-from-top-24 duration-1000 ease-in-out fade-in">
                   Product Designer
                 </AnimateInView>
               </h1>
-              <div className="max-w-[740px]">
+              <div className="max-w-[900px]">
                 <p className="mb-2 font-serif text-[32px] font-semibold leading-[41.6px] text-gray-800 inview:animate-in duration-1000 ease-in-out fade-in">
                   I care about{' '}
                   <span className="text-syneBlue">
@@ -140,10 +140,17 @@ export default function Home() {
                       className="inline"
                       images={['images/acc4.svg', 'images/acc5.svg']}
                     >
-                      accessibility
+                      inclusivity
                     </HoverImages>
-                  </span>{' '}
-                  and designing for a more sustainable world
+                    <span className="text-gray-800">, and </span>
+                    <HoverImages
+                      spreadAngle={40}
+                      className="inline"
+                      images={['images/acc4.svg', 'images/acc5.svg']}
+                    >
+                      sustainability
+                    </HoverImages>
+                  </span>
                 </p>
                 <p className="font-inter text-[20px] leading-[28px] text-gray-600">
                   My secret spice is my background in social sciences and data
