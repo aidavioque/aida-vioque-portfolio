@@ -143,13 +143,13 @@ export default function Home() {
                       inclusivity
                     </HoverImages>
                     <span className="text-gray-800">, and </span>
-                    <HoverImages
+                    sustainability
+                    {/* <HoverImages
                       spreadAngle={40}
                       className="inline"
                       images={['images/acc4.svg', 'images/acc5.svg']}
                     >
-                      sustainability
-                    </HoverImages>
+                    </HoverImages> */}
                   </span>
                 </p>
                 <p className="font-inter text-[20px] leading-[28px] text-gray-600">
