@@ -26,21 +26,17 @@ function About() {
           width={17}
           height={17}
         />
-        <Image
-          src="/images/about-1.png"
-          className="w-full"
-          alt=""
-          width={1231}
-          height={396}
-        />
-        <Image
-          src="/images/about-2.png"
-          className="!mt-0 w-full"
-          alt=""
-          width={1231}
-          height={396}
-        />
-        <div className="space-y-8 lg:space-y-[184px] pt-2 lg:pt-10">
+        <div className="flex gap-6 items-end justify-end">
+          <Image src="/images/about-a.png" alt="" width={296} height={394} />
+          <Image src="/images/about-b.png" alt="" width={296} height={394} />
+          <Image src="/images/about-c.png" alt="" width={296} height={394} />
+        </div>
+        <div className="flex gap-6 justify-end">
+          <Image src="/images/about-d.png" alt="" width={591} height={394} />
+          <Image src="/images/about-e.png" alt="" width={296} height={394} />
+          <Image src="/images/about-f.png" alt="" width={296} height={394} />
+        </div>
+        <div className="space-y-8 lg:space-y-[600px] pt-2 lg:pt-[90px]">
           <Block
             TitleTag="h2"
             title="I am wide range"
