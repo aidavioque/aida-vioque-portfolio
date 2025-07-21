@@ -53,7 +53,7 @@ export default function Home() {
     {
       pretitle: 'Samoo',
       title: 'Good networking increase conversion rates',
-      tags: ['product design', 'mobile app'],
+      // tags: ['product design', 'mobile app'],
       description:
         'How to ran a design sprint to redesign the E-learning Experience and achieve higher retention rates.',
       link: '/projects/samoo',
@@ -63,17 +63,17 @@ export default function Home() {
     {
       pretitle: 'Smart Protection',
       title: 'Boosting product awareness',
-      tags: ['product marketing', 'visual design'],
+      // tags: ['product marketing', 'visual design'],
       description:
         'How to effectively communicate product improvements to customers and attract new users.',
       link: '/projects/smart-protection',
-      image: '/images/projects/smart-protection.jpg',
+      image: '/images/projects/smart-protection.png',
       textPosition: 'left',
     },
     {
       pretitle: 'Neety',
       title: 'Designing clarity into AI powered sales automation',
-      tags: ['data informed', 'design system', 'product design'],
+      // tags: ['data informed', 'design system', 'product design'],
       description:
         'Redesign a human focused experience for a B2B SaaS tool to generate LinkedIn leads with AI.',
       image: '/images/projects/neety.png',
@@ -84,7 +84,7 @@ export default function Home() {
     {
       pretitle: 'Vera',
       title: 'Improving the impact on romantic relatioships',
-      tags: ['mobile app', 'design system', 'ethical design'],
+      // tags: ['mobile app', 'design system', 'ethical design'],
       description:
         'A mobile app for conscious connection with emotionally safer dating experience.',
       link: '/#',
@@ -95,7 +95,7 @@ export default function Home() {
     {
       pretitle: 'Index',
       title: 'Poor UX research insights undermine designers',
-      tags: ['product design', 'design system'],
+      // tags: ['product design', 'design system'],
       description:
         'How we overcame challenges and adjusted efforts to successfully complete the project despite initial research flaws.',
       link: '/projects/index',
@@ -109,7 +109,7 @@ export default function Home() {
       <div className="flex min-h-screen flex-col">
         <section className="relative bg-gradient-to-b from-white via-gray-100 to-gray-300">
           <div className="container flex w-full flex-col items-center justify-center py-10 px-6 sm:px-16 lg:px-[94px] h-[600px] lg:h-screen">
-            <div className="z-10 flex w-full max-w-[1250px] flex-col items-start">
+            <div className="z-10 flex w-full max-w-[1360px] flex-col items-start">
               <div className="mb-1 font-serif text-[20px] font-medium text-syneBlue animate-bounce duration-1000 ease-in-out">
                 Hi, I’m Aida
               </div>
@@ -163,9 +163,9 @@ export default function Home() {
         {/* Projects Section */}
         <section
           id="projects"
-          className="w-full bg-[#1A202C] px-6 py-20 sm:px-16 lg:px-[94px]"
+          className="w-full bg-[#1A202C] px-6 py-40 sm:px-16 lg:px-[94px]"
         >
-          <div className="container max-w-[1360px] flex flex-row justify-between gap-8">
+          <div className="container max-w-[1360px] flex flex-col justify-between gap-8 px-0">
             <div className="hidden lg:block sticky top-40 right-0 h-[373px] min-w-[320px]">
               <h2 className="font-serif text-[64px] font-semibold leading-[58px] text-white inview:animate-in duration-1000 ease-in-out slide-in-from-left-24 fade-in">
                 <AnimateInView className="animate-in inview:slide-in-from-top-24 duration-1000 ease-in-out inview:fade-in">

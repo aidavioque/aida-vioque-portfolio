@@ -7,7 +7,7 @@ import Card from '@/components/card';
 type ProjectCardItem = {
   pretitle: string;
   title: string;
-  tags: string[];
+  tags?: string[];
   description: string;
   link: string;
   image: string;

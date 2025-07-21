@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import ArrowRight from 'public/images/arrow-right.svg';
+// import { Button } from '@/components/ui/button';
+// import ArrowRight from 'public/images/arrow-right.svg';
 import { cn } from '@/lib/utils';
 
 const Card = ({
@@ -9,23 +9,19 @@ const Card = ({
   title,
   description,
   image,
-  category,
-  buttonText,
+  // buttonText,
   link,
-  textPosition = 'left',
   imageBgColor,
   disabled,
   tags, // Add tags prop
 }: {
   pretitle: string;
   title: string;
-  category?: string; // Made category optional
   buttonText: string;
   description: string;
   link: string;
   image: string;
   imageBgColor?: string;
-  textPosition?: 'left' | 'right';
   disabled?: boolean;
   tags?: string[]; // Define tags prop type
 }) => {
@@ -73,32 +69,32 @@ const Card = ({
         )}
       </div>
       {/* Button */}
-      <Button
-        variant="outline"
-        // Figma: White bg, black border, black arrow. Rounded 24px. Padding 10px. Size 48x48px.
-        // The existing button is text based. Figma shows an icon-only button for the card.
-        // For now, I'll style the existing button to be a small circle with an arrow.
-        className="absolute right-8 bottom-12 group flex h-12 w-12 group-hover:w-[200px] transition-all items-center justify-center rounded-full border border-gray-900 bg-white p-2.5 group-hover:px-1 text-gray-900 hover:bg-gray-900 hover:text-white disabled:border-gray-300 disabled:bg-gray-100 disabled:text-gray-400"
-        disabled={disabled}
-        aria-label={buttonText || 'View case study'} // Accessibility for icon button
-        // asChild prop removed as Button is no longer a Link
-      >
-        {/* If is hovered it should contain the text VIEW CASE STUDY */}
-        <div className="group-hover:block hidden text-xs font-semibold leading-none uppercase pr-2">
-          {buttonText || 'View case study'}
-        </div>
-        {/* Arrow icon */}
-        <ArrowRight className="h-[15px] w-[15px] stroke-current" />
-      </Button>
     </div>
   );
+  // <Button
+  //   variant="outline"
+  //   // Figma: White bg, black border, black arrow. Rounded 24px. Padding 10px. Size 48x48px.
+  //   // The existing button is text based. Figma shows an icon-only button for the card.
+  //   // For now, I'll style the existing button to be a small circle with an arrow.
+  //   className="absolute right-8 bottom-12 group flex h-12 w-12 group-hover:w-[200px] transition-all items-center justify-center rounded-full border border-gray-900 bg-white p-2.5 group-hover:px-1 text-gray-900 hover:bg-gray-900 hover:text-white disabled:border-gray-300 disabled:bg-gray-100 disabled:text-gray-400"
+  //   disabled={disabled}
+  //   aria-label={buttonText || 'View case study'} // Accessibility for icon button
+  // // asChild prop removed as Button is no longer a Link
+  // >
+  //   {/* If is hovered it should contain the text VIEW CASE STUDY */}
+  //   <div className="group-hover:block hidden text-xs font-semibold leading-none uppercase pr-2">
+  //     {buttonText || 'View case study'}
+  //   </div>
+  //   {/* Arrow icon */}
+  //   <ArrowRight className="h-[15px] w-[15px] stroke-current" />
+  // </Button>
 
   return (
     <Link
       href={disabled ? '#' : link || '/#'} // If disabled, link to '#' to prevent navigation but keep it focusable for screen readers if needed.
       className={cn(
         // Figma: bg white, padding 24px, rounded 16px, no border
-        'flex h-auto w-full flex-col items-stretch justify-between gap-8 rounded-[16px] bg-white p-6 shadow-sm lg:h-[373px] lg:flex-row hover:scale-105 transition-all duration-500 group',
+        'flex h-auto w-full flex-col items-stretch justify-between gap-8 rounded-[16px] bg-white p-6 shadow-sm lg:h-[520px] lg:flex-row hover:scale-105 transition-all duration-500 group',
         // Removed conditional flex-col-reverse as text is always left
         disabled ? 'pointer-events-none cursor-default opacity-50' : '', // Add opacity for disabled state
       )}
@@ -110,16 +106,10 @@ const Card = ({
         }
       }}
     >
-      {/* Text container taking roughly half width on larger screens */}
-      <div className="flex w-full flex-col justify-between lg:w-[calc(100%-252px-32px)]">
-        {' '}
-        {/* 252px image, 32px gap */}
-        {textContent}
-      </div>
       {/* Image container */}
       <div
         className={cn(
-          'h-[317px] w-full flex-shrink-0 overflow-hidden rounded-[16px] lg:w-[252px]', // Fixed dimensions from Figma
+          'h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] lg:w-[411px]', // Fixed dimensions from Figma
           imageBgColor, // Kept for potential future use, though placeholder is an image
         )}
       >
@@ -130,6 +120,12 @@ const Card = ({
           )}
           alt={title || 'Project image'} // Added alt text
         />
+      </div>
+      {/* Text container taking roughly half width on larger screens */}
+      <div className="flex w-full flex-col justify-between lg:w-[calc(100%-252px-32px)]">
+        {' '}
+        {/* 252px image, 32px gap */}
+        {textContent}
       </div>
     </Link>
   );
