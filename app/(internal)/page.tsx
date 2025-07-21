@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import Footer from '@/components/footer'; // Assuming Footer component is correctly imported
 import HoverImages from '@/components/hover-images'; // Assuming Footer component is correctly imported
-import Image from 'next/image'; // Import Next.js Image component
 export { metadata } from './metadata';
 import AnimateInView from '@/components/animations/animate-in-view';
 
@@ -182,8 +181,8 @@ export default function Home() {
 
         {/* How I Work Section */}
         <section className="w-full bg-white px-6 py-20 sm:px-16 lg:px-[94px]">
-          <div className="mx-auto max-w-[1360px]">
-            <h2 className="mb-8 text-left font-serif text-[64px] font-semibold leading-[58px] text-[#1A202C]">
+          <div className="mx-auto max-w-[1360px] mb-6">
+            <h2 className="mb-[96px] text-left font-serif text-[64px] font-semibold leading-[58px] text-[#1A202C]">
               How I work
             </h2>
             <HowIWorkDisplayList howIWorkItems={howIWorkItems} />

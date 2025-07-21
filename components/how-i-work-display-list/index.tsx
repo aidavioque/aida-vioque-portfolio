@@ -17,7 +17,7 @@ export default function HowIWorkDisplayList({
   howIWorkItems,
 }: HowIWorkDisplayListProps) {
   return (
-    <div className="grid grid-cols-1 gap-x-16 gap-y-[42px] md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-x-[50px] gap-y-[96px] md:grid-cols-3">
       <AnimatedItems<HowIWorkItem> items={howIWorkItems}>
         {
           ((item: HowIWorkItem) => (
