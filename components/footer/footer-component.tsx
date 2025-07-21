@@ -3,14 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image'; // Added for new SVG icons
 
-// Re-using FigmaLogo component from Header, assuming it's made available globally or passed as prop
-// For simplicity here, I'll redefine it. Ideally, it would be a shared component.
-const FigmaLogo = ({ dark = true }: { dark?: boolean }) => {
-  const queImage = dark ? '/images/logo-dark.svg' : '/images/logo-white.svg';
-
-  return <Image src={queImage} alt="Aranguren logo" width={112} height={50} />;
-};
-
 const Footer = ({ theme = 'black' }: { theme?: 'white' | 'black' }) => {
   // Figma design uses a dark footer (bg-gray-800 equivalent) with light text
   const isDarkTheme = theme === 'black';
@@ -74,7 +66,6 @@ const Footer = ({ theme = 'black' }: { theme?: 'white' | 'black' }) => {
           </div>
         </div>
         <div className="inline-flex w-full items-center justify-between self-stretch">
-          <FigmaLogo dark={false} /> {/* Use light version of the logo */}
           <div className="font-sans text-xl font-normal leading-7 text-gray-50">
             2025. All rights reserved {/* Updated year */}
           </div>

@@ -44,14 +44,16 @@ export default function CustomCursor() {
     document.addEventListener('mousemove', handleMouseMove);
     document.body.addEventListener('mouseenter', handleMouseEnter);
     document.body.addEventListener('mouseleave', handleMouseLeave);
-    document.body.style.cursor = 'none'; // Hide default cursor
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
       document.body.removeEventListener('mouseenter', handleMouseEnter);
       document.body.removeEventListener('mouseleave', handleMouseLeave);
-      document.body.style.cursor = 'auto'; // Restore default cursor
     };
+  }, []);
+
+  useEffect(() => {
+    document.body.style.cursor = 'none';
   }, []);
 
   if (!isVisible) {
@@ -60,14 +62,12 @@ export default function CustomCursor() {
 
   return (
     <div
+      className="cursor-none fixed pointer-events-none transition-transform"
       style={{
-        position: 'fixed',
         top: position.y,
         left: position.x,
         transform: `translate(-50%, -50%)`,
-        pointerEvents: 'none',
         zIndex: 9999,
-        transition: 'transform 0.15s cubic-bezier(.4,0,.2,1)',
       }}
     >
       <div
