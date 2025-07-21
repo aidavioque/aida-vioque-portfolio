@@ -58,9 +58,6 @@ importers:
       styled-components:
         specifier: 6.0.0-beta.2
         version: 6.0.0-beta.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      tailwind-inview:
-        specifier: ^1.0.14
-        version: 1.0.14(tailwindcss@3.3.2)
       tailwind-merge:
         specifier: ^1.13.2
         version: 1.14.0
@@ -4933,14 +4930,6 @@ packages:
     engines: { node: '>=14.0.0' }
     hasBin: true
 
-  tailwind-inview@1.0.14:
-    resolution:
-      {
-        integrity: sha512-A++zHPDDX+aUyn+9HbWkSnDI9Lvv7nIqfoB0D7/K2IQRcZLgCghoitHKSbeBqVlAR2NgHGa8+lNpSDYW0p0pQw==,
-      }
-    peerDependencies:
-      tailwindcss: ^3.0.0
-
   tailwind-merge@1.14.0:
     resolution:
       {
@@ -8558,10 +8547,6 @@ snapshots:
       css-what: 6.1.0
       csso: 5.0.5
       picocolors: 1.1.1
-
-  tailwind-inview@1.0.14(tailwindcss@3.3.2):
-    dependencies:
-      tailwindcss: 3.3.2
 
   tailwind-merge@1.14.0: {}
 
