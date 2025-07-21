@@ -26,12 +26,12 @@ function About() {
           width={17}
           height={17}
         />
-        <div className="flex gap-6 items-end justify-end">
+        <div className="flex flex-col items-center lg:flex-row gap-6 lg:items-end justify-end">
           <Image src="/images/about-a.png" alt="" width={296} height={394} />
           <Image src="/images/about-b.png" alt="" width={296} height={394} />
           <Image src="/images/about-c.png" alt="" width={296} height={394} />
         </div>
-        <div className="flex gap-6 justify-end">
+        <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-end justify-end lg:max-w-[70%] lg:ml-auto">
           <Image src="/images/about-d.png" alt="" width={591} height={394} />
           <Image src="/images/about-e.png" alt="" width={296} height={394} />
           <Image src="/images/about-f.png" alt="" width={296} height={394} />
