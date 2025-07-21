@@ -4,20 +4,10 @@ import { cn } from '@/lib/utils';
 
 function isPointerElement(target: EventTarget | null): boolean {
   if (!(target instanceof Element)) return false;
-  const tag = target.tagName.toLowerCase();
-  if (
-    tag === 'a' ||
-    tag === 'button' ||
-    tag === 'input' ||
-    tag === 'select' ||
-    tag === 'textarea'
-  )
-    return true;
-  if (
-    target.getAttribute('role') === 'button' ||
-    target.getAttribute('tabindex') === '0'
-  )
-    return true;
+  // Check if the element or any ancestor matches pointer selectors
+  const pointerSelector =
+    'a,button,[role="button"],[tabindex="0"],input[type="button"],input[type="submit"],input[type="reset"]';
+  if (target.closest(pointerSelector)) return true;
   if (getComputedStyle(target).cursor === 'pointer') return true;
   return false;
 }
