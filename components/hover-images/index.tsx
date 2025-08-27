@@ -19,13 +19,13 @@ export default function HoverImages({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div
+    <span
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`relative ${className}`}
+      className={`relative inline-block ${className || ''}`}
     >
       {children}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <AnimatePresence>
           {isHovered &&
             images.map((src, index) => {
@@ -37,7 +37,7 @@ export default function HoverImages({
               const translateY = -Math.cos((angle * Math.PI) / 180) * 20 - 70; // Adjust 20 for vertical positioning
 
               return (
-                <motion.div
+                <motion.span
                   key={src}
                   initial={{
                     opacity: 0,
@@ -80,11 +80,11 @@ export default function HoverImages({
                     className="object-cover rounded-lg shadow-xl"
                     priority={index < 3} // Prioritize loading for first few images
                   />
-                </motion.div>
+                </motion.span>
               );
             })}
         </AnimatePresence>
-      </div>
-    </div>
+      </span>
+    </span>
   );
 }

@@ -9,6 +9,7 @@ import AnimateInView from '@/components/animations/animate-in-view';
 // import Card from '@/components/card'; // No longer directly used
 import ProjectDisplayList from '#/components/project-display-list'; // Importing the new component
 import HowIWorkDisplayList from '#/components/how-i-work-display-list'; // Importing the new component for How I Work section
+import StickyShrinkingHeading from '#/components/projects/sticky-shrinking-heading';
 export default function Home() {
   const howIWorkItems = [
     {
@@ -166,12 +167,10 @@ export default function Home() {
           className="w-full bg-[#1A202C] px-6 py-0 lg:py-40 sm:px-16 lg:px-[94px]"
         >
           <div className="container max-w-[1360px] flex flex-col justify-between gap-8 px-0">
-            <div className="relative md:sticky top-16 md:top-40 right-0 h-[180px] min-w-full">
-              <h2 className="font-serif text-[64px] font-semibold leading-[58px] text-white inview:animate-in duration-1000 ease-in-out slide-in-from-left-24 fade-in">
-                <AnimateInView className="animate-in inview:slide-in-from-top-24 duration-1000 ease-in-out inview:fade-in">
-                  Projects
-                </AnimateInView>
-              </h2>
+            <div className="relative md:sticky top-16 md:top-40 right-0 h-[180px] min-w-full z-20">
+              <StickyShrinkingHeading className="font-serif text-[64px] font-semibold leading-[58px] text-white">
+                Projects
+              </StickyShrinkingHeading>
             </div>
             <div className="flex-1 flex flex-col items-end gap-y-[48px]">
               <ProjectDisplayList projectCards={projectCards} />
