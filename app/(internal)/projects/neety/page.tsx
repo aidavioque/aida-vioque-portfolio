@@ -38,7 +38,7 @@ const TriBlock = ({
   return (
     <div
       className={cn(
-        'flex w-full flex-wrap justify-center gap-y-12 lg:justify-between',
+        'flex w-full flex-wrap justify-center gap-y-12 gap-x-8 lg:justify-between',
         className,
       )}
     >
@@ -195,7 +195,7 @@ function Neety() {
             }
           />
           <TriBlock
-            className="container justify-start lg:justify-center"
+            className="container justify-start lg:justify-center p-4"
             bigText1={<>Low trust in automation</>}
             text1={
               <>
