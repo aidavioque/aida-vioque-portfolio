@@ -406,12 +406,11 @@ function Neety() {
             align: 'start',
             loop: true,
           }}
-          className="mx-24"
+          className="mx-12 lg:mx-24 my-6 lg:my-0"
         >
-          <CarouselContent className="mx-[200px] gap-4">
+          <CarouselContent className="lg:mx-[200px] gap-4">
             <CarouselItem className="pb-4 border border-gray-200 rounded-2xl">
               <Image
-                className="min-w-[510px]"
                 src="/images/projects/neety/DS1.png"
                 alt="Design System Button"
                 width={1019}
@@ -421,7 +420,6 @@ function Neety() {
             </CarouselItem>
             <CarouselItem className="pb-4 border border-gray-200 rounded-2xl">
               <Image
-                className="min-w-[510px]"
                 src="/images/projects/neety/DS-2.png"
                 alt="Design System Selection Cards"
                 width={1019}
@@ -431,7 +429,6 @@ function Neety() {
             </CarouselItem>
             <CarouselItem className="pb-4 border border-gray-200 rounded-2xl">
               <Image
-                className="min-w-[510px]"
                 src="/images/projects/neety/DS3.png"
                 alt="Design System Campaign Status"
                 width={1019}
@@ -441,7 +438,6 @@ function Neety() {
             </CarouselItem>
             <CarouselItem className="pb-4 border border-gray-200 rounded-2xl">
               <Image
-                className="min-w-[510px]"
                 src="/images/projects/neety/DS4.png"
                 alt="Design System Alert"
                 width={1019}
@@ -451,7 +447,6 @@ function Neety() {
             </CarouselItem>
             <CarouselItem className="pb-4 border border-gray-200 rounded-2xl">
               <Image
-                className="min-w-[510px]"
                 src="/images/projects/neety/DS5.png"
                 alt="Design System Foundations"
                 width={1019}
