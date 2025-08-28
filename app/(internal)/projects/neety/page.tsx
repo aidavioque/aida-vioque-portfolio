@@ -455,8 +455,8 @@ function Neety() {
               <p className="text-center text-gray-600">Foundations</p>
             </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="p-0" />
+          <CarouselNext className="p-0" />
         </Carousel>
       </div>
       <Block
