@@ -79,8 +79,7 @@ export default function Home() {
         'Redesign a human focused experience for a B2B SaaS tool to generate LinkedIn leads with AI.',
       image: '/images/projects/neety.png',
       textPosition: 'left',
-      link: '/#',
-      buttonText: 'Coming soon',
+      link: '/projects/neety',
     },
     {
       pretitle: 'Vera',
