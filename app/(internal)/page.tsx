@@ -52,6 +52,16 @@ export default function Home() {
 
   const projectCards = [
     {
+      pretitle: 'Neety',
+      title: ' Redesign AI sales tool to make it feel human',
+      // tags: ['data informed', 'design system', 'product design'],
+      description:
+        ' From confusion to conversion: redesign an informed and human-focused experience for a B2B SaaS tool to generate LinkedIn leads with AI.',
+      image: '/images/projects/neety.png',
+      textPosition: 'left',
+      link: '/projects/neety',
+    },
+    {
       pretitle: 'Samoo',
       title: 'Good networking increase conversion rates',
       // tags: ['product design', 'mobile app'],
@@ -70,16 +80,6 @@ export default function Home() {
       link: '/projects/smart-protection',
       image: '/images/projects/smart-protection.png',
       textPosition: 'left',
-    },
-    {
-      pretitle: 'Neety',
-      title: 'Designing clarity into AI powered sales automation',
-      // tags: ['data informed', 'design system', 'product design'],
-      description:
-        'Redesign a human focused experience for a B2B SaaS tool to generate LinkedIn leads with AI.',
-      image: '/images/projects/neety.png',
-      textPosition: 'left',
-      link: '/projects/neety',
     },
     {
       pretitle: 'Vera',

@@ -9,6 +9,10 @@ const Block = ({
   text2,
   className,
   TitleTag = 'div',
+  video,
+  videoHeight,
+  videoWidth,
+  videoClassName,
   image,
   imageHeight,
   imageWidth,
@@ -25,6 +29,10 @@ const Block = ({
   text2?: ReactNode;
   className?: string;
   TitleTag?: keyof JSX.IntrinsicElements;
+  video?: string;
+  videoHeight?: number;
+  videoWidth?: number;
+  videoClassName?: string;
   image?: string;
   imageHeight?: number;
   imageWidth?: number;
@@ -35,6 +43,17 @@ const Block = ({
   layout?: 'default' | 'image-left';
   animate?: boolean;
 }) => {
+  const videoComponent = video && (
+    <video
+      autoPlay
+      loop
+      className={videoClassName}
+      src={video}
+      height={videoHeight}
+      width={videoWidth}
+      controls
+    />
+  );
   const imageComponent = image && (
     <Image
       className={imageClassName}
@@ -56,6 +75,7 @@ const Block = ({
       )}
     >
       {layout === 'image-left' && imageComponent}
+      {layout === 'image-left' && videoComponent}
       <div
         className={cn(
           'flex flex-col gap-8 text-black lg:max-w-[524px]',
@@ -96,6 +116,7 @@ const Block = ({
         <div className="text-x font-sans leading-7 text-gray-700">{text2}</div>
       )}
       {layout !== 'image-left' && imageComponent}
+      {layout !== 'image-left' && videoComponent}
     </div>
   );
 };
