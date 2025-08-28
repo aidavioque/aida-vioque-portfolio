@@ -22,4 +22,31 @@ const syne = localFont({
   variable: '--font-syne',
 });
 
-export { syne };
+const Inter = localFont({
+  src: [
+    {
+      path: './Inter_18pt-Black.ttf',
+      weight: '900',
+      style: 'normal',
+    },
+    {
+      path: './Inter_18pt-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './Inter_18pt-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './Inter_18pt-Thin.ttf',
+      weight: '200',
+      style: 'italic',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+export { syne, Inter };

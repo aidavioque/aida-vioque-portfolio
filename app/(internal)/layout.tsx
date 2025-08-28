@@ -1,15 +1,8 @@
 import 'styles/globals.css';
 import Header from '#/components/header';
 import { syne } from '../../public/fonts';
-import { Inter } from 'next/font/google';
+import { Inter } from '../../public/fonts';
 import Cursor from '#/components/cursor';
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '600'],
-  // display: 'swap',
-  variable: '--font-inter',
-});
 
 export default async function RootLayout({
   children,
@@ -19,7 +12,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${syne.variable} ${inter.variable} relative font-sans font-normal text-gray-900`}
+        className={`${syne.variable} ${Inter.variable} relative font-sans font-normal text-gray-900`}
       >
         <Header />
         <main>{children}</main>
